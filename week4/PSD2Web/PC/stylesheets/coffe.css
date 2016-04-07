@@ -1,0 +1,515 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+body {
+	font-size: 12px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+/* 左右两侧背景图案自适应 */
+.wrapper {
+	width: 100%;
+	min-width: 981px;
+	max-width: 1600px;
+	height: 1374px;
+	background: #877769;
+	display: flex;
+    display: -webkit-flex;
+}
+
+/* 左侧背图案从右侧渲染且宽度自适应 */
+#bg_left {
+	width: 20px;
+	height: 1374px;
+	background: #877769 no-repeat right url(../img/bg_left.png);
+	flex: 1;
+    -webkit-flex: 1;
+}
+
+/* 主题内容容器固定大小 */
+#bg_middle{
+	width: 961px;
+	height: 1374px;
+	background: #877769 no-repeat url(../img/bg_middle.png);
+}
+
+/* 右侧背图案宽度自适应 */
+#bg_right {
+/*	max-width: 321px;*/
+	width: 20px;
+	height: 1374px;
+	background: #877769 no-repeat url(../img/bg_right.png);
+	flex: 1;
+    -webkit-flex: 1;
+}
+
+/* 定义页面头部宽度和高度 */
+header {
+	width: 961px;
+	height: 116px;
+}
+/* Logo容器属性 */
+.logo {
+	width: 250px;
+	height: 116px;
+	float: left;
+}
+/* Logo图片 */
+.logo img {
+	margin-left: 38px;
+  	margin-top: 5px;
+}
+/* 头部右上角三个链接的容器 */
+.siteset {
+	width: 711px;
+	height: 40px;
+	float: right;
+	text-align: right;
+}
+.siteset .siteset-wrap {
+	margin-top: 10px;
+	margin-right: 18px;
+}
+
+/* 链接字体设置 */
+.siteset .siteset-wrap a:link,
+.siteset .siteset-wrap a:visited {
+	color: #7B7B7B;
+}
+
+.siteset .siteset-wrap a:hover {
+	color: #000;
+}
+
+/* 小图标位置微调 */
+#setmain,
+#addcollect,
+#contactus {
+	position: relative;
+	top: 2px;
+}
+#addcollect {
+	top: 3px;
+}
+
+/* 导航菜单大小与样式 */
+nav {
+	width: 711px;
+	height: 76px;
+	float: right;
+	text-align: center;
+}
+
+.nav {
+	float: right;
+}
+/* 设置导航菜单链接字体 */
+nav a:link,
+nav a:visited {
+	color: #737373;
+	font-size: 13px;
+	font-weight: bolder;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+nav a span {
+	width: 87px;
+	height: 37px;
+	padding-top: 11px;
+	margin-top: 24px;
+	display: inline-block;
+}
+/* 鼠标悬停时的按钮样式 */
+nav a:hover span {
+	background: no-repeat url(../img/Btnhover.png);
+}
+/* 按下按钮的样式 */
+nav a:active span {
+	background: no-repeat url(../img/BtnOnClick.png);
+}
+
+/* 横幅展示内容容器 */
+.banner {
+	width: 961px;
+	height: 400px;
+}
+/* 横幅展示动画容器 */
+.adshow {
+	width: 961px;
+  	height: 351px;
+  	background: url(../img/bannerbg.png) no-repeat;
+}
+/* 左侧星星容器 */
+.adshow_left {
+	width: 400px;
+	height: 351px;
+	float: left;
+}
+
+/* 设置星星闪烁的动画效果*/
+@keyframes starspark {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;;}
+}
+
+@-webkit-keyframes starspark {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+/* 以背景的形式展示图片 */
+.shinystars {
+	width: 189px;
+	height: 133px;
+	position: relative;
+	top: 83px;
+  	left: 88px;
+	background: url(../img/shinystars.png) no-repeat;
+	animation: starspark linear infinite 2.5s;
+	-webkit-animation: starspark linear infinite 2.5s;
+}
+
+/* 横幅页面按钮容器 */
+.adflip {
+	width: 961px;
+  	height: 49px;
+  	text-align: center;
+}
+/* 横幅页面按钮属性 */
+.ad_btn_on,
+.ad_btn_off {
+	display: inline-block;
+	height: 19px;
+	width: 19px;
+	background: url(../img/navi_icon.png) no-repeat;
+	margin-top: 10px;
+}
+.ad_btn_on {
+	position: relative;
+	top: 1px;
+	background: url(../img/navi_icon_selected.png) no-repeat;
+}
+
+/* 右侧人物容器 */
+.adshow_right {
+	width: 561px;
+	height: 351px;
+	float: left;
+}
+
+/* 人物模糊动画效果设置 */
+@keyframes blurfigure {
+	0%{opacity: 0.9;}
+	50%{opacity: 0.5;}
+	100%{opacity: 0.9;;}
+}
+@-webkit-keyframes blurfigure {
+	0%{opacity: 0.9;}
+	50%{opacity: 0.5;}
+	100%{opacity: 0.9;}
+}
+
+/* 人物模糊图层属性 */
+.figureblur {
+	width: 427px;
+	height: 299px;
+	position: relative;
+	top: 63px;
+	left: 63px;
+	background: url(../img/figureblur.png) no-repeat;
+	animation: blurfigure linear infinite 3s;
+	-webkit-animation: blurfigure linear infinite 3s;
+}
+/* 鼠标悬停取消模糊 */
+.banner:hover .figureblur{
+	display: none;
+}
+
+/* 对话欢迎文字容器 */
+.welcome_text {
+	width: 132px;
+	height: 120px;
+	position: relative;
+	top: 60px;
+  	left: 380px;
+  	text-align: center;
+  	line-height: 17px;
+  	padding-top: 30px;
+  	padding-left: 5px;
+	background: url(../img/dialogue.png) no-repeat;
+	display: none;
+}
+
+.welcome_text .p1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #EA0E0E;
+}
+.welcome_text .p2 {
+	color: #7B4B3A
+}
+
+.welcome_text a {
+	background: #8C5844;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.welcome_text a:link,
+.welcome_text a:visited {
+	color: #FFF;
+}
+
+.banner:hover .welcome_text{
+	display: block;
+}
+
+/* 主体内容容器 */
+.main {
+	width: 961px;
+  	height: 420px;
+}
+
+/* 主要文字内容容器 */
+.content_wrap {
+	width: 921px;
+	height: 217px;
+	background: url(../img/about_bg2.png);
+	margin: auto;
+	margin-top: 13px;
+}
+
+.content_wrap .about_wrap,
+.content_wrap .news_wrap,
+.content_wrap .recom_wrap {
+	display: inline-block;
+}
+/* 主题内容标题文字设置 */
+h1 {
+	font-size: 22px;
+	color: #ECE1E1;
+	text-shadow: 1px 1px 2px rgba(36, 36, 36, 0.7);
+	position: relative;
+}
+
+.about_wrap h1 {
+	top: 18px;
+	left: 12px;
+}
+
+.news_wrap h1 {
+	top: 18px;
+	left: 88px;
+}
+
+.recom_wrap h1 {
+	top: 21px;
+	left: 155px;
+}
+
+/* 公司简介内容容器 */
+.content_wrap .about {
+	width: 219px;
+  	height: 120px;
+  	display: inline-block;
+  	position: relative;
+  	top: 60px;
+  	left: 12px;
+  	text-indent: 2em;
+  	color: #333;
+}
+/* 新闻动态内容容器 */
+.content_wrap .news {
+	width: 300px;
+	height: 120px;
+	display: inline-block;
+	position: relative;
+	top: 60px;
+	left: 70px;
+}
+
+/* 新闻日期右对齐 */
+.content_wrap .news li span {
+	display: inline-block;
+	float: right;
+}
+
+.content_wrap .news li a:link,
+.content_wrap .news li a:visited {
+	color: #333;
+}
+
+.content_wrap .news li a:hover {
+	text-decoration: underline;
+}
+
+.about, .news {
+	line-height: 1.7em;
+}
+
+/* 每日推荐内容容器 */
+.content_wrap .recom {
+	width: 200px;
+	height: 115px;
+	display: inline-block;
+	position: relative;
+	top: 33px;
+	left: 185px;
+}
+/* 推荐产品容器属性设置 */
+.recom_pro1,
+.recom_pro2 {
+	width: 200px;
+	height: 46px;
+}
+
+.recom_pro2 {
+	margin-top: 23px;
+}
+
+.recom div h2 {
+	color: #EDEDED;
+	line-height: 2em;
+}
+
+.recom div a:link,
+.recom div a:visited {
+	color: #F7F7F7;
+	line-height: 1.5em;
+}
+
+.recom div a:hover {
+	color: #85593C;
+}
+
+/* 产品展示部分 */
+.pro_display {
+	width: 935px;
+	height: 168px;
+	margin: auto;
+	margin-top: 20px;
+	text-align: right;
+	background: url(../img/exhibit_bg.png);
+}
+
+.pro_display div{
+	width: 242px;
+	height: 110px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 27px;
+}
+
+.pro_display div a {
+	display: block;
+	height: 110px;
+	width: 242px;
+	text-align: center;
+}
+
+.pro_display div a span {
+	position: relative;
+	top: -13px;
+	right: -66px;
+	display: inherit;
+	color: #A06B49;
+}
+
+/* 页脚信息部分样式 */
+.ft_content {
+	width: 961px;
+	height: 346px;
+	text-align: bottom;
+}
+
+.ft_content div {
+	float: left;
+	margin-left: 10px;
+}
+
+.figure_solo {
+	width: 148px;
+	height: 297px;
+	margin-top: 49px;
+	background: url(../img/conta_figure_clear.png) no-repeat;
+}
+
+.join,
+.share {
+	margin-top: 96px;
+	width: 250px;
+	height: 210px;
+	padding-top: 40px;
+}
+
+/* 调整分享链接图片位置 */
+.share a {
+	position: relative;
+	top: 10px;
+	left: 20px;
+}
+
+#txwbshare {
+	top: 15px;
+	left: 30px;
+}
+
+.join ul{
+	position: relative;
+	top: 10px;
+	left: 20px;
+	line-height: 2em;
+	list-style-image: url(../img/contarrow.png);
+}
+
+.join ul a:link,
+.join ul a:visited {
+	color: #6B4A4A;
+}
+
+.join ul a:hover {
+	color: #743F1A;
+	font-weight: bold;
+}
+
+ .contact {
+	width: 264px;
+	height: 210px;
+	margin-top: 91px;
+	text-align: center;
+	padding-top: 44px;
+	background: url(../img/contactbg.png) no-repeat;
+}
+
+/* 统一设置页脚标题文字颜色 */
+.join h2,
+.share h2,
+.contact h2{
+	color: #743F1A;
+}
+
+/* 设置页脚样式 */
+.foot {
+	width: 961px;
+	height: 78px;
+	line-height: 20px;
+	padding-left: 185px;
+	padding-top: 10px;
+	color: #C7C7C7;
+}

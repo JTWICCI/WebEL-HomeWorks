@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>迷你计算器</title>
+<link rel="stylesheet" type="text/css" href="css/calculator.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="container">
+			<div class="box">
+				<!--显示屏-->
+				<div class="screen-wrap">
+					<div class="screen">
+						<span id="display">0</span>
+					</div>
+				</div>
+				<!--额外加的一排按钮-->
+				<div class="addbuttons">
+					<div id="sin" class="addbtn"><span>sin</span></div>
+					<div id="cos" class="addbtn"><span>cos</span></div>
+					<div id="tan" class="addbtn"><span>tan</span></div>
+					<div id="xtwo" class="addbtn"><span>x<SUP>2</SUP></span></div>
+					<div id="xthree" class="addbtn"><span>x<SUP>3</SUP></span></div>
+				</div>
+				<!--按钮部分-->
+				<div class="buttons" id="buttons">
+					<!--最上层按钮-->
+					<div class="set">
+						<div class="set-wrap">
+							<div id="del" class="btn"><span>Del</span></div>
+							<div id="ac" class="btn"><span>AC</span></div>
+							<div id="clear" class="btn"><span>C</span></div>
+							<div id="pn" class="btn"><span>+/-</span></div>
+							<div id="recip" class="btn"><span>1/x</span></div>
+						</div>
+					</div>
+					<!--数字按钮部分-->
+					<div class="num">
+						<div class="num_wrap" id="num-board">
+							<div id="num7" class="btn"><span>7</span></div>
+							<div id="num8" class="btn"><span>8</span></div>
+							<div id="num9" class="btn"><span>9</span></div>
+							<div id="num4" class="btn"><span>4</span></div>
+							<div id="num5" class="btn"><span>5</span></div>
+							<div id="num6" class="btn"><span>6</span></div>
+							<div id="num1" class="btn"><span>1</span></div>
+							<div id="num2" class="btn"><span>2</span></div>
+							<div id="num3" class="btn"><span>3</span></div>
+							<div id="num0" class="btn"><span>0</span></div>
+							<div id="deci" class="btn"><span>.</span></div>
+						</div>
+					</div>
+					<!--加减乘除按钮-->
+					<div class="ope">
+						<div class="ope-wrap" id="ope_keys">
+							<div id="divi" class="btn"><span>÷</span></div>
+							<div id="mult" class="btn"><span>×</span></div>
+							<div id="minus" class="btn"><span>-</span></div>
+							<div id="plus" class="btn"><span>+</span></div>
+						</div>
+					</div>
+					<!--最右侧一列按钮-->
+					<div class="res">
+						<div class="res-wrap">
+							<div id="pers" class="btn"><span>%</span></div>
+							<div id="root" class="btn"><span>√￣</span></div>
+							<div id="equl" class="btn"><span>=</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/calculator.js"></script>
+</body>
+</html>

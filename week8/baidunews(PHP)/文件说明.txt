@@ -1,0 +1,7 @@
+1.导出的数据库文件是baidunews.sql
+
+2.可以访问create_db创建数据库
+
+3.后台界面是back-stage.php
+
+4.可以在mysql_connect.php修改链接服务器的参数

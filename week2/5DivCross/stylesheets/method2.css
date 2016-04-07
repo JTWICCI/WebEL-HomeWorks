@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* Method2的css文件 */
+/* 用更简单的方法实现了内容在页面的居中显示 */
+* {
+    /* 设置整个浏览器的边距为0 */
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    height: 300px;
+    width: 300px;
+    border: none;    /* 为了使效果和div一样取消边框 */
+    border-spacing: 0;    /* 为了使效果和div一样使边框间距为0 */
+    position: absolute;    /* 将最外层容器居中于页面正中央 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    text-align: center;	/* 设置内部元素的水平居中 */
+}
+
+/* 设置要显示的块有阴影效果*/
+.block {
+    -webkit-box-shadow: 3px 3px 3px #A3C0BF inset;    /* 设置为内部阴影 */
+    box-shadow: 3px 3px 3px #A3C0BF inset;    /* 设置为内部阴影 */
+}
+
+#top {
+    background-color: #E0F4FF;    /* 设置顶部块的背景颜色 */
+}
+
+#left {
+    background-color: #F8FCBF;    /* 设置左边块的背景颜色 */
+}
+
+#middle {
+    background-color: #FFFFFF;    /* 设置中间块的背景颜色 */
+    -webkit-box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+    box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+}
+
+#right {
+    background-color: #C4FFE9;    /* 设置右边块的背景颜色 */
+}
+
+#bottom {
+    background-color: #FFE0E0;    /* 设置底部块的背景颜色 */
+}

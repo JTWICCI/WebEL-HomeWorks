@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* 这个css文件是从百度html中复制整理的 */
+/* CSS Document */
+
+.uzv34 {
+    margin: 0 28px;
+}
+
+.uzv34 li {
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+}
+
+.uzv34 li:empty {
+    display: none;
+}
+
+.uzv34 a {
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    display: block;
+    padding-left: 21px;
+    font-size: 13px;
+    color: #555;
+    background: none no-repeat 0 center;
+    -webkit-background-size: 15px 11px;
+}
+
+.has-skin .uzv34 a {
+    color: #fff;
+}
+
+.has-background .uzv34 a {
+    color: #fff;
+}
+
+.uzv34 .hotIcon a:after {
+    content: '\e626';
+    position: absolute;
+    top: 6px;
+    left: -3px;
+    font: 21px/1 icons;
+    color: #ed5353;
+}
+
+.uzv34 .baiduIcon a {
+    background-image: url(http://m.baidu.com/static/index/icon/w_icon2.png);
+    -webkit-background-size: 15px 15px;
+}

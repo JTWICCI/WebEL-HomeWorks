@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, 
+body,
+.wrapper {
+	width: 100%;
+	height: 100%;
+}
+/* 字体大小预设 */
+.body {
+	font-size: 16.25%;
+}
+/* 最外层容器 */
+.wrapper {
+	background: #FFF url(../img/bg.png) no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+/* 设置每个部分的高度 */
+.head {
+	height: 26%;
+}
+/* 主体菜单 */
+.menu {
+	height: 36.8%;
+}
+/* 两个长按钮容器 */
+.direct {
+	height: 27%;
+}
+
+/* 底部菜单容器 */
+.foot {
+	height: 10.2%;
+}
+/* 页面住结构的高度分配结束 */
+
+
+/* 统一设置主菜单的上、下行按钮容器大小 */
+.upper_menu,
+.lower_menu {
+	height: 50%;
+	width: 100%;
+}
+
+
+/* 主体菜单按钮的外侧容器 包括文字 */
+.menu_btn_block {
+	float: left;
+	height: 84%;
+	width: 19.33%;
+	margin: 5% 7% 0 7%;
+	text-align: center;
+}
+
+/* 设置主体菜单文字样式 */
+.menu_btn_block span {
+	display: block;
+	font-size: 2.5rem;
+	color: #FFF;
+	margin-top: 13%;
+}
+/* 设置主体菜单按钮样式以及透明效果 */
+.btn_shape {
+	height: 72.5%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	padding-top: 2%;
+	border-radius: 15%;
+}
+
+/* 主体菜单按钮的图片容器属性 */
+.btn_shape div {
+	height: 75%;
+	width: 75%;
+	margin: 12% 15% 0 15%;
+}
+/*
+* 以下是主体菜单按钮样式图片导入
+*/
+#aboutus {
+	background: url(../img/aboutus.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#intro {
+	background: url(../img/introduction.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#newest {
+	background: url(../img/newest.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#viponly {
+	background: url(../img/viponly.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#joinus {
+	background: url(../img/joinus.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#cdact {
+	background: url(../img/cdactivity.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*
+* 图片导入结束
+*/
+
+/* 主题菜单下方两个长按钮容器属性 */
+.direct div {
+	width: 88%;
+	height: 36%;
+	margin: 0% 6%;
+	border-top-left-radius: 5% 23%;
+	border-top-right-radius: 5% 23%;
+	border-bottom-right-radius: 5% 23%;
+	border-bottom-left-radius: 5% 23%;
+	box-shadow: -2px -2px 4px 3px rgba(0,0,0,0.2) inset;
+	background: url(../img/btn_bg2.png);
+}
+
+/* 设置主体菜单按钮与“联系我们”按钮之间的间距 */
+.direct p {
+	display: block;
+	height: 7%;
+}
+/* 设置长按钮的字体样式 */
+.direct div span {
+	display: inline-block;
+	font-size: 2.5rem;
+	line-height: 4em;
+	color: #FFF;
+}
+/* 调整iconfont图标样式 */
+.direct div .icon-5 {
+	float: right;
+	color: rgba(180, 149, 119, 0.7);
+	font-size: 5rem;
+	line-height: 10rem;
+}
+/* 调整“在线订餐”按钮与上方的间距 */
+#orderonline {
+	margin-top: 5%;
+}
+/* 底部菜单按钮外层容器 */
+.ftmenu_block {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background: #ad8d65;
+	text-align: center;
+}
+/* 点击底部换页按钮时改变按钮颜色 */
+.ftmenu_block:active {
+	background: #8F6942;
+}
+/* 底部菜单按钮与文字容器 */
+.ftmenu_bnt {
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	font-size: 2.5rem;
+	line-height: 4em;
+}

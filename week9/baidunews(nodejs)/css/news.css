@@ -1,0 +1,821 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: arial;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol, ul {
+    list-style: none;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.ui-gotop {
+    width: 38px;
+    height: 40px;
+    background: #7f7f7f;
+    color: #fff;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: .9;
+}
+
+#index_view {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+#index_view .ui-new-toolbar {
+    background-image: url(http://ns14.bdstatic.com//static/news/webapp/webappandroid/img/bg-news-logo_344ce44.png);
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    background-size: 77px auto;
+    -webkit-background-size: 77px auto;
+}
+.ui-new-toolbar {
+    position: relative;
+    min-width: 320px;
+    height: 44px;
+    z-index: 2;
+    background-color: #3e98f0;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+}
+
+.btn-search, .btn-product, .btn-modelopen, .btn-subscribe, .btn-baidu, .btn-back, .btn-home, .btn-dld, .btn-config, .btn-bigger, .btn-smaller, .btn-userhome, .ui-toolbar-func .btn-slide, .ui-footer-app-download span, .page-view-list-item-inner div:nth-child(2) span:nth-child(3), .page-view-share span, .ui-gotop span {
+    border: 0;
+    background-image: url(http://ns14.bdstatic.com//static/news/webapp/webappandroid/img/bg-new-toolbar_6e9bc53.png);
+    background-size: 40px 500px;
+    -webkit-background-size: 40px 500px;
+    background-repeat: no-repeat;
+}
+
+
+.ui-gotop span {
+    display: block;
+    height: 100%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABQCAYAAACzg5PLAAAAGXRF…UJFdxzyktuUzflDJw00rm8fheEt9LAgxgAEMADGAAW2H8B/MwwDy3eOUAAAAAAElFTkSuQmCC") no-repeat center center;
+    -webkit-background-size: 38px 40px;
+}
+
+.ui-new-toolbar-l {
+    top: 0;
+    left: 0;
+}
+.ui-new-toolbar-r {
+    top: 0;
+    right: 0;
+}
+
+.ui-new-toolbar-l, 
+.ui-new-toolbar-r {
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.ui-new-toolbar-l .ui-new-toolbar-btn {
+    float: left;
+}
+.ui-new-toolbar-r .ui-new-toolbar-btn {
+    float: left;
+}
+
+.btn-baidu {
+    background-position: center 4px;
+}
+.ui-new-toolbar-btn {
+    width: 34px;
+    height: 100%;
+    font-size: 15px;
+    line-height: 44px;
+}
+
+/*用户图标按钮*/
+.btn-userhome {
+    background-position: center -463px;
+    margin-left: 10px;
+}
+/*搜索图标（放大镜）按钮*/
+.btn-search {
+    background-position: center -162px;
+    margin-right: 10px;
+}
+/*加号（+）按钮*/
+.btn-subscribe {
+    background-position: center -107px;
+}
+
+/*===================================================*/
+/*主题内容部分样式--类别选项*/
+#index_view_navigator {
+    position: relative;
+    background-color: #3e98f0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden;
+    z-index: 2;
+    color: #fff;
+}
+
+/*与头部的分隔线样式*/
+#index_view_navigator .divider {
+    height: 1px;
+    margin: 0 10px;
+    background-color: #5dabf0;
+}
+
+/*分类选项外部容器样式*/
+#index_view_navigator .content {
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
+#index_view_navigator .content table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#index_view_navigator .content td {
+    height: 33px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#index_view_navigator .content tr:first-child, #index_view_navigator .content tr:first-child td {
+    border-top: 0;
+}
+
+#index_view_navigator .content tr:last-child, #index_view_navigator .content tr:last-child td, #index_view_navigator .content tr.last-shown-line, #index_view_navigator .content tr.last-shown-line td {
+    border-bottom: 0;
+}
+
+#index_view_navigator .content td>div {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+#index_view_navigator .content tr td:first-child b {
+    left: -1px;
+}
+
+#index_view_navigator .content td b {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 12px;
+    width: 1px;
+    display: block;
+    overflow-y: hidden;
+    background-color: #5dabf0;
+}
+
+/*分类文字样式*/
+#index_view_navigator .content td span {
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0 2px;
+}
+
+#index_view_navigator .content td span.cur {
+    border-bottom: 1px solid #fff;
+    margin: 0 2px;
+}
+/*"更多按钮样式"*/
+#index_view_navigator .more {
+    position: absolute;
+    left: 1px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    overflow-y: hidden;
+    background-color: #3e98f0;
+    color: #fff;
+    text-align: center;
+}
+
+/*分类展开后分类内容与展开底部的分隔线*/
+#index_view_navigator .divider {
+    height: 1px;
+    margin: 0 10px;
+    background-color: #5dabf0;
+}
+
+/*分类展开后的底部*/
+#index_view_navigator .footer {
+    position: relative;
+    height: 41px;
+    border-bottom: 0 inset #bbc2ce;
+    background-color: #3e98f0;
+    font-size: 15px;
+    line-height: 32px;
+    text-align: center;
+}
+
+#index_view_navigator .footer .btn-group {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    bottom: 6px;
+}
+
+#index_view_navigator .footer .manage-subscribe, #index_view_navigator .footer .add-subscribe, #index_view_navigator .footer .media-rank, #index_view_navigator .footer .reporter-rank {
+    float: left;
+    padding-right: 10px;
+    text-align: left;
+}
+
+#index_view_navigator .footer .media-rank {
+    position: relative;
+    margin-left: 10px;
+}
+
+#index_view_navigator .footer .manage-subscribe b, #index_view_navigator .footer .media-rank b {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: -11px;
+    height: 12px;
+    width: 1px;
+    background-color: #5dabf0;
+}
+
+#index_view_navigator .footer .manage-subscribe {
+    position: relative;
+    width: 96px;
+    margin-left: 10px;
+}
+
+/*“收起”按钮样式*/
+#index_view_navigator .less {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    bottom: 6px;
+    width: 52px;
+    padding-right: 4px;
+    color: #fff;
+}
+/*“收起”按钮右边三角形样式*/
+#index_view_navigator .less .up-triangle, #index_view_navigator .more .down-triangle {
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+#index_view_navigator .more .down-triangle {
+    right: 2px;
+    border-top: 4px solid #fff;
+}
+#index_view_navigator .less .up-triangle {
+    border-bottom: 4px solid #fff;
+}
+
+/*主体内容（从服务器动态获取的）框架样式*/
+#index_view_sections {
+    position: relative;
+    z-index: 1;
+    top: -2px;
+    min-height: 520px;
+}
+
+.index-view-subpage {
+    position: relative;
+    margin-top: -1px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/*“推荐”内容里的最上方最大图片外层容器样式*/
+.topic-gallery-container {
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+#index_view .topic-gallery-container {
+    background: url(http://ns13.bdstatic.com/static/news/webapp_pro/img/carousel_bg.png);
+    background-size: 100px 100px;
+    -webkit-background-size: 100px 100px;
+    position: relative;
+    z-index: 1;
+}
+
+/*“推荐”内容里的最上方最大图片内层容器样式*/
+.topic-gallery {
+    margin-right: -10px;
+    padding-bottom: 7px;
+    overflow: hidden;
+}
+#index_view .topic-gallery {
+    padding-bottom: 0;
+}
+
+
+/*“推荐”【轮播图片】列表容器样式*/
+.topic-gallery .g-list {
+    margin-bottom: 7px;
+    display: -webkit-box;
+    -webkit-box-lines: multiple;
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+}
+.ui-line-icons .g-list {
+    margin-bottom: 0;
+    position: relative;
+}
+
+/*列表中单个图片容器样式（包括底部文字）*/
+.topic-gallery .g-item {
+    width: 50%;
+}
+.topic-gallery .g-item:nth-child(2n) {
+    padding-right: 0;
+}
+
+/*列表中单个图片内层容器样式（包括底部文字）*/
+.topic-gallery .g-item-innerbox {
+    margin-right: 10px;
+    position: relative;
+}
+.topic-gallery .g-item:nth-child(2n) .g-item-innerbox {
+    padding-right: 0;
+    margin-right: 10px;
+}
+
+/*列表中单个图片内层容器样式*/
+.topic-gallery .g-imagebox {
+    overflow: hidden;
+}
+/*列表中单个图片内层容器img标签样式*/
+.topic-gallery .g-imagebox img {
+    width: 100%;
+    height: inherit;
+    min-height: 187px;
+    vertical-align: middle;
+}
+
+/*列表中单个图片内下方文字容器h4标签样式*/
+.topic-gallery .g-title {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 3px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,.8);
+}
+#index_view .topic-gallery .g-title {
+    text-align: left;
+}
+
+/*上面的文字span标签*/
+#index_view .topic-gallery .g-title span {
+    padding-left: 8px;
+}
+
+/*【轮播图】下方的翻页‘按钮’外层div容器样式*/
+.topic-gallery .g-icons {
+    font-size: 0;
+    text-align: center;
+}
+.ui-line-icons .g-icons {
+    height: 3px;
+    background-color: #B8BBC0;
+    z-index: 1;
+    display: -webkit-box;
+    margin-right: 10px;
+}
+
+.topic-gallery .g-icons i {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+    background-color: #d0d1d3;
+}
+
+.ui-line-icons .g-icons i {
+    height: 3px;
+    -webkit-box-flex: 1;
+    display: block;
+    margin: 0;
+}
+
+/*上面按钮i标签，‘按钮’激活状态样式*/
+.topic-gallery .g-icons .cur {
+    background-color: #3e98f0;
+}
+
+/*“推荐”内容最大图片容器下方的【滚动新闻文字】容器样式*/
+.ui-hotword {
+    height: 28px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    margin: 10px 10px 0;
+}
+
+/*【滚动新闻文字】左侧“热点”样式*/
+.ui-hotword-content, .ui-hotword-left {
+    float: left;
+}
+.ui-hotword-left {
+    width: 36px;
+    height: 28px;
+    background-color: #e02f2f;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+/*【滚动新闻文字】右侧滚动列表ul样式*/
+.ui-hotword-content, .ui-hotword-left {
+    float: left;
+}
+.ui-hotword-content {
+    width: 85%;
+    color: #545454;
+    -webkit-backface-visibility: hidden;
+}
+
+/*自加的*/
+.ui-hotword ul {
+    position: relative;
+}
+/*【滚动新闻文字】右侧滚动列表ul内的li样式*/
+.ui-hotword .ui-hotword-item {
+    margin-left: 6px;
+    line-height: 28px;
+    font-size: 15px;
+    height: 28px;
+}
+
+/*【滚动新闻文字】右侧滚动列表ul内的li内的span标签样式*/
+.ui-hotword-item span {
+    max-width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    float: left;
+}
+
+/*【滚动新闻文字】右侧滚动列表文字右侧箭头样式*/
+.ui-hotword-item-right {
+    width: 13px;
+    height: 28px;
+    display: inline-block;
+    background: url(http://ns14.bdstatic.com//static/news/webapp/webappandroid/img/arrorw-right_dde8906.png) no-repeat;
+    -webkit-background-size: 9px 12.5px;
+    background-size: 9px 12.5px;
+    background-position: 50% 50%;
+    margin-left: 2px;
+    float: left;
+}
+
+/*动态加载内容的容器样式*/
+.index-list {
+    width: 100%;
+    background-color: #fff;
+}
+.index-list:first-child {
+    display: block;
+}
+
+/*动态加载内容的单个容器样式*/
+.index-list-item {
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+/**/
+.index-list-item .tip-topnews, 
+.index-list-item .tip-hot, 
+.index-list-item .tip-tag, 
+.index-list-item .tip-recommend, 
+.index-list-item .tip-tag, 
+.index-list-item .tip-ad, 
+.index-list-item .tip-topic, 
+.index-list-item .tip-reason, 
+.index-list-item .tip-contenttype, 
+.index-list-item .tip-topic {
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-top: 1px;
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/**/
+.index-list-item .tip-tag {
+    width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+/*“自媒体”“阿里巴巴”等蓝色标签样式*/
+.index-list-item .tip-strokeblue {
+    color: #1a8afd;
+    border: 1px solid #d2d5de;
+}
+/*"推广"标签样式*/
+.index-list-item .tip-ad {
+    background-color: #b1bfce;
+}
+/**/
+.index-list-item .tip-fillred {
+    background-color: #e02f2f;
+    border: 1px solid transparent;
+}
+/**/
+.index-list-item .tip-tag-trigger {
+    position: absolute;
+    width: 200%;
+    height: 40px;
+    top: -15px;
+    left: -50%;
+}
+/**/
+.index-list-item .tip-topnews, 
+.index-list-item .tip-hot, 
+.index-list-item .tip-ad, 
+.index-list-item .tip-recommend, 
+.index-list-item .tip-topic {
+    display: block;
+}
+/**/
+.index-list-item.touched .index-list-main-title, 
+.index-list-item.touched .index-list-topic-head, 
+.index-list-topic-item.touched,
+.index-list-item.touched span {
+    color: #707070;
+}
+/**/
+.index-list-item .index-list-main-abs {
+    font-size: 13px;
+    line-height: 20px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+/*-----------------------------------*/
+/*第一种单个内容块展示样式（上面一行文字，下面一行三个图片）*/
+
+/*标题文字外层容器*/
+.index-list-item .index-list-main-text {
+    max-height: 40px;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+}
+/*标题文字内层容器*/
+.index-list-item .index-list-main-title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+    margin: -1px 0 4px 0;
+}
+
+/*三个图片外层容器*/
+.index-list-album-container {
+    margin-top: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+/*单个图片外层容器*/
+.index-list-album-container .index-list-album {
+    overflow: hidden;
+    width: 33.33%;
+    max-height: 111px;
+    float: left;
+    position: relative;
+}
+
+/*单个图片内层容器*/
+.index-list-album-container .index-list-album-wrapper {
+    background-color: #F4F7F9;
+    border: 1px solid #e8e8e8;
+}
+.index-list-album-container .index-list-album-wrapper.one {
+    margin-right: 7px;
+}
+.index-list-album-container .index-list-album-wrapper.two {
+    margin: 0 3.5px;
+}
+.index-list-album-container .index-list-album-wrapper.three {
+    margin-left: 7px;
+}
+
+/*单个图片内层容器img标签样式*/
+.index-list-album-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 200px;
+}
+
+/*显示新闻发出时间（xx分钟/小时前）的外层容器*/
+.index-list-bottom {
+    margin-top: 10px;
+}
+
+/*显示新闻发出时间（xx分钟/小时前）的内层容器*/
+.index-list-item .index-list-main-time {
+    font-size: 12px;
+    line-height: 22px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+.index-list-item .index-list-main-time {
+    text-align: left;
+}
+.index-list-item .index-list-main-time {
+    line-height: 20px;
+}
+
+
+
+
+/*-----------------------------------*/
+/*第二种单个内容块展示样式 （图片在左边，右边是标题文字）*/
+
+/*左侧图片外层容器样式*/
+.index-list-item .index-list-image {
+    font-size: 0;
+    height: 68px;
+    vertical-align: middle;
+    width: 95px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    background-color: #F4F7F9;
+    position: relative;
+}
+
+/*“播放”样式（默认隐藏）*/
+.ivideoplay {
+    display: none;
+    background: url(http://ns14.bdstatic.com//static/news/webapp/webappandroid/page/index/img/videoplay_1717b47.png) no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+/*图标内层容器img标签样式*/
+.index-list-item .index-list-image img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*右侧标题最外层容器样式*/
+.showleft .index-list-main-text {
+    height: 40px;
+}
+
+
+/*-----------------------------------*/
+/*第三种单个内容块展示样式（只有标题和文字没有图片）*/
+
+/*重写标题高度*/
+.index-list-item .moretext .index-list-main-text {
+    max-height: 60px;
+}
+
+
+/*-----------------------------------*/
+
+
+/*"点击加载更多"按钮div样式*/
+.ui-refresh {
+    height: 36px;
+    line-height: 36px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border: 1px solid #ebedef;
+    border-radius: 1px;
+    color: #545454;
+    margin: 14px 40px;
+}
+
+/*==================================================*/
+/*页脚样式*/
+.ui-footer {
+    height: 44px;
+    overflow: hidden;
+    background-color: #239bf0;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.ui-footer .item-wrapper {
+    float: left;
+    width: 33.3%;
+    height: 21px;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-top: 12px;
+    text-align: center;
+    border-left: 1px solid #4fadf0;
+    color: #fff;
+}
+
+.ui-footer .item-wrapper:first-child {
+    margin-left: 0;
+    border-left: 0;
+}
+
+.ui-footer .item {
+    display: inline-block;
+    height: 100%;
+    padding-left: 25px;
+}
+
+.ui-footer .feedback, .ui-footer .app-recommend, .ui-footer .app-download {
+    background-image: url(http://ns14.bdstatic.com//static/news/webapp/webappandroid/img/bg-footer_7e7ec6c.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 30px 300px;
+}
+/*“意见反馈”按钮图标位置*/
+.ui-footer .feedback {
+    background-position: 0 3px;
+}
+/*“应用推荐”按钮图标位置*/
+.ui-footer .app-recommend {
+    background-position: 0 -31px;
+}
+/*“客户端”按钮图标位置*/
+.ui-footer .app-download {
+    background-position: 0 -64px;
+}

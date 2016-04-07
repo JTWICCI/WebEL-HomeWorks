@@ -1,0 +1,9 @@
+1.作业用的是restify + orm + mysql
+
+2.导出的数据库文件是news.sql
+
+3.后台界面是back-stage.html
+
+4.后台需要通过http访问，因为用了load()方法，本地直接打开会报错
+
+5.nodejs接口文件是api.js，在api文件夹内，需要通过node访问该文件启动服务

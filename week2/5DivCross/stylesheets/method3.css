@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* Method3的css文件 */
+/* 未用table，用-webkit-box-的方法实现的图片垂直水平居中对齐 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 类名为box的div内部的div共同属性 */
+.box div {
+    height: 100px;
+    width: 100px;
+    float: left;
+    display: -webkit-box;
+    -webkit-box-pack: center; /* 使图片垂直居中显示 */
+    -webkit-box-align: center; /* 使图片水平居中显示 */
+    -webkit-box-shadow: 3px 3px 3px #A3C0BF inset;
+    box-shadow: 3px 3px 3px #A3C0BF inset;
+    border-radius: 50px 50px 50px 50px;    /* 设置成圆形 */
+}
+
+#top {
+    position: relative;
+    float: none;    /* 重新定义float，使其能够独占最上层 */
+    left: 100px;
+    background-color: #E0F4FF;
+}
+
+#left {
+    background-color: #F8FCBF;
+}
+
+#middle {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+    box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+}
+
+#right {
+    background-color: #C4FFE9;
+}
+
+#bottom {
+    position: relative;
+    left: 100px;
+    background-color: #FFE0E0;
+}

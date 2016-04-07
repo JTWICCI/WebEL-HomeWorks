@@ -1,0 +1,12 @@
+作业用的是gulp+less
+
+less原文件在static/less目录下
+
+根目录下的：
+    index.html是直接引入了css文件的页面，
+    index2.html是直接引用的less文件的页面，会通过less.min.js在浏览器端生成css
+
+build文件夹是用gulp生成的上线目录，可以删除后通过命令行在根目录下执行“gulp”指令生成
+
+
+gulpfile.js文件做了分离，用了require-dir引入了gulp/tasks里的任务

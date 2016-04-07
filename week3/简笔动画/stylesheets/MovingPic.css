@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+	position: absolute;
+}
+
+/* 最外层容器 */
+.wrapper {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 轮子旋转动画设置 */
+@keyframes wheelspin{
+	0%{transform: rotateZ(0deg);}
+	20%{transform: rotateZ(72deg);}
+	40%{transform: rotateZ(144deg);}
+	60%{transform: rotateZ(216deg);}
+	80%{transform: rotateZ(288deg);}
+	100%{transform: rotateZ(360deg);}
+}
+@-webkit-keyframes wheelspin{
+	0%{transform: rotateZ(0deg);}
+	20%{transform: rotateZ(72deg);}
+	40%{transform: rotateZ(144deg);}
+	60%{transform: rotateZ(216deg);}
+	80%{transform: rotateZ(288deg);}
+	100%{transform: rotateZ(360deg);}
+}
+
+.wheels {
+	animation: wheelspin linear infinite 2s;
+	transform-origin: 54px 54px;
+	-webkit-animation: wheelspin linear infinite 2s;
+	-webkit-transform-origin: 54px 54px;
+}
+
+/* 共同属性设置 */
+.stick,
+.frontwheel,
+.backwheel,
+.circle {
+    height: 100px;
+    width: 100px;
+}
+
+/* 前轮属性 */
+.frontwheel {
+    transform: translateY(70px);
+    -webkit-transform: translateY(70px);
+}
+
+/* 后轮属性 */
+.backwheel {
+    transform: translateY(70px) translateX(190px);
+    -webkit-transform: translateY(70px) translateX(190px);
+}
+
+/* 轮胎属性 */
+.circle {
+    border: 4px solid;
+    border-radius: 50% 50%;
+}
+
+/* 设置每个车轮钢条的共同属性 */
+.stick div {
+    height: 3px;
+    width: 100px;
+    background: #0FF;
+    top: 52px;
+    left: 4px;
+}
+/* 设置每个车轮钢条的单独属性 */
+.stick1 {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.stick2 {
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+}
+.stick3 {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+}
+
+/* 设置齿轮盒属性 */
+.gearbox {
+    height: 35px;
+    width: 120px;
+    background: #FF7400;
+    border-top-left-radius: 85px 50%;
+    border-bottom-left-radius: 85px 50%;
+    border-top-right-radius: 28px 50%;
+    border-bottom-right-radius: 28px 50%;
+    transform: translateX(64px) translateY(112px);
+    -webkit-transform: translateX(64px) translateY(112px);
+}
+
+/* 设置座位钢架属性 */
+.fleft {
+    height: 65px;
+    width: 4px;
+    background: #FF7400;
+    transform: rotate(-15deg) translateX(81px) translateY(76px);
+    -webkit-transform: rotate(-15deg) translateX(81px) translateY(76px);
+}
+
+/* 设置中间钢架属性 */
+.ftop {
+    height: 4px;
+    width: 130px;
+    background: #FF7400;
+    transform: translateX(95px) translateY(70px);
+    -webkit-transform: translateX(95px) translateY(70px);
+}
+
+/* 设置前轮钢架属性 */
+.fright {
+    height: 80px;
+    width: 4px;
+    background: #FF7400;
+    transform: rotate(-18deg) translateX(203px) translateY(117px);
+    -webkit-transform: rotate(-18deg) translateX(203px) translateY(117px);
+}
+
+/* 设置底部钢架属性 */
+.fbottom {
+    height: 4px;
+    width: 80px;
+    background: #FF7400;
+    transform: rotate(-5deg) translateX(151px) translateY(140px);
+    -webkit-transform: rotate(-5deg) translateX(151px) translateY(140px);
+}
+
+/* 设置车座属性 */
+.seat {
+    height: 60px;
+    width: 120px;
+    background: #5C5C5C;
+    border-top-left-radius: 22px 22%;
+    border-bottom-left-radius: 34px 78%;
+    border-top-right-radius: 98px 30%;
+    border-bottom-right-radius: 86px 70%;
+    transform: translateX(35px) translateY(21px) scale(0.37);
+    -webkit-transform: translateX(35px) translateY(21px) scale(0.37);
+}
+
+/* 设置车把属性 */
+.hander {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    border: 4px solid;
+    border-top-left-radius: 30px 85%;
+    border-bottom-left-radius: 30px 45%;
+    border-top-right-radius: 60px 78%;
+    border-bottom-right-radius: 52px 58%;
+    transform: translateX(177px) translateY(15px) rotate(-18deg);
+    -webkit-transform: translateX(177px) translateY(15px) rotate(-18deg);
+}
+
+/* 盖住车把部分位置的图层 */
+.cover {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    background: #FFF;
+    border-radius: 50% 50%;
+    transform: translateX(158px) rotate(2deg);
+    -webkit-transform: translateX(158px) rotate(2deg);
+}

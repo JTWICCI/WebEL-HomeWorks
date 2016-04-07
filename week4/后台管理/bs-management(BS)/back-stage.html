@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/dashboard.css" />
+</head>
+
+<body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="active" href="#">首页</a></li>
+                    <li><a href="#" target="#">网站首页</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.jscss.me">管理员</a></li>
+                    <li><a href="http://www.jscss.me">修改密码</a></li>
+                    <li><a href="http://www.jscss.me">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏下方所有内容容器-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--左侧边栏-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar text-center">
+                    <li><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;常用操作</a></li>
+                    <li class="active"><a href="design.html"><i class="icon-font">&#xe008;</i>&nbsp;作品管理</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe005;</i>&nbsp;博文管理</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe006;</i>&nbsp;分类管理</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe004;</i>&nbsp;留言管理</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe012;</i>&nbsp;评论管理</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe052;</i>&nbsp;友情链接</a></li>
+                    <li><a href="design.html"><i class="icon-font">&#xe033;</i>&nbsp;广告管理</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li><a href="#"><i class="icon-font">&#xe018;</i>&nbsp;系统管理</a></li>
+                    <li><a href="system.html"><i class="icon-font">&#xe017;</i>&nbsp;系统设置</a></li>
+                    <li><a href="system.html"><i class="icon-font">&#xe037;</i>&nbsp;清理缓存</a></li>
+                    <li><a href="system.html"><i class="icon-font">&#xe046;</i>&nbsp;数据备份</a></li>
+                    <li><a href="system.html"><i class="icon-font">&#xe045;</i>&nbsp;数据还原</a></li>
+                </ul>
+            </div>
+            <!--右侧主体内容-->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">常用操作</h1>
+                <div class="row placeholders">
+                    <form class="form-inline">
+                        <div class="formgroup">
+                            <label class=""></label>
+                            <div class="input-group">
+                                <div class="input-group-addon">请输入关键字</div>
+                                <input class="col-sm-9 input-lg" type="text" placeholder="索引、类别、或标题"></input>
+                                <button type="submit" class="btn btn-default btn-lg col-sm-3">查找</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <h2 class="sub-header">作品管理</h2>
+                <form>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>索引</th>
+                                    <th>类别</th>
+                                    <th>标题</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>时评</td>
+                                    <td>索罗斯唱空中国他的话你信吗</td>
+                                    <td>2016/1/31 08:29</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>时评</td>
+                                    <td>高铁15元盒饭是否“藏着卖”</td>
+                                    <td>2016/1/31 08:32</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>文学</td>
+                                    <td>《红楼梦》中“富二代”与“官二代”</td>
+                                    <td>2016/1/31 08:45</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>史话</td>
+                                    <td>贺子珍在苏联为何被关进精神病医院？</td>
+                                    <td>2016/1/31 09:06</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>史话</td>
+                                    <td>要是张作霖没有死还有张学良的事么？</td>
+                                    <td>2016/1/31 09:29</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>游记</td>
+                                    <td>阿尔卑斯山上雪堆里挖出来的酒店</td>
+                                    <td>2016/1/31 09:42</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>美食</td>
+                                    <td>来炖一锅广州大龙凤的招牌榴莲鸡煲</td>
+                                    <td>2016/1/31 09:56</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>影评</td>
+                                    <td>《熊猫3》为何能帮好莱坞横扫中国</td>
+                                    <td>2016/1/31 09:58</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>八卦</td>
+                                    <td>八卦 | 观众真的那么爱《太子妃》吗</td>
+                                    <td>2016/1/31 10:11</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>情感</td>
+                                    <td>情感 | 从被家暴的神剧男主角，说如何反家暴</td>
+                                    <td>2016/1/31 10:13</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>情感</td>
+                                    <td>当夫妻间的热情只剩那点床上的性生活</td>
+                                    <td>2016/1/31 10:22</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs">编辑</button>
+                                        <button class="btn btn-warning btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

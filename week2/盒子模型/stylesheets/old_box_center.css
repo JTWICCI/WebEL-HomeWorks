@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 旧版弹性盒子的居中布局的css文件 */
+
+/* 实现旧版弹性盒子的居中布局 */
+.old_con {
+    /* 旧版弹性盒声明 */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    height: 300px;
+    width: 300px;
+    background-color: #C2FC5E;
+    -webkit-box-pack: center;   /* 使文字垂直居中显示 */
+    -webkit-box-align: center;  /* 使文字水平居中显示 */
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+}

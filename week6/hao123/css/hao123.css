@@ -1,0 +1,1324 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*对需要的元素初始化内外边距*/
+body, div, dl, 
+dt, dd, ul, ol, 
+li, h1, h2, h3, 
+h4, h5, h6, form, 
+input, textarea, 
+p, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53;
+	background-color: #F9FAFA;
+}
+
+ol, ul, dl {
+	list-style: none;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	outline: 0;
+}
+
+em, strong, th, b, i {
+	font-style: normal;
+	font-weight: normal;
+}
+
+img, input, label, button {
+	vertical-align: middle;
+}
+
+img {
+	border: 0;
+}
+
+/*一些默认样式*/
+a:hover {
+	color: #F50;
+	text-decoration: underline;
+}
+
+/*导航菜单栏字体样式*/
+.width-lg .menus .link:hover .title {
+	text-decoration: none;
+	color: #000;
+}
+/*去掉上面a:hover的下划线样式*/
+.width-lg .menus a:hover {
+	text-decoration: none;
+}
+
+.width-lg .menus .link:hover {
+	background: 0;
+}
+
+.width-lg .menus .link.active {
+	background-color: #0AA770;
+	cursor: pointer;
+	color: #FFF;
+}
+
+.width-lg .menus .link.active:hover {
+	background-color: #0AA770;
+	cursor: pointer;
+	color: #FFF;
+}
+
+
+/*导航栏菜单项在激活状态不显示分隔竖线*/
+.link.active .menu-split {
+	display: none;
+}
+
+.s-br6, .g-br6, .s-br6h:hover, .g-br6h:hover {
+	border: 1px solid #EAEAEA;
+}
+
+.s-fc2, .g-fc2, .s-fc2h:hover, .g-fc2h:hover {
+	color: #999;
+}
+
+/*背景颜色*/
+.s-bg5, .g-bg5, .s-bg5h:hover, .g-bg5h:hover {
+	background-color: #FCFCFC;
+}
+
+/*最顶部工具栏最外层容器样式*/
+.tools-wrap {
+	height: 61px;
+	width: 100%;
+	position: relative;
+}
+/*最顶部工具栏内层容器样式*/
+.hao123-tools {
+	width: 1190px;
+	margin: 0 auto;
+	height: 60px;
+	font-size: 12px;
+	line-height: 22px;
+	clear: both;
+	position: relative;
+	z-index: 996;
+	font-family: 'Tahoma';
+}
+
+/*hao123LOGO容器样式*/
+.width-lg .hao123-logo {
+	float: left;
+	width: 192px;
+	height: 60px;
+	z-index: 20;
+}
+
+/*logo内层容器*/
+.hao123logo {
+	position: relative;
+}
+
+/*logo<a>标签样式*/
+.hao123logo .card {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*设为首页按钮样式*/
+.width-lg .sethome {
+	width: 60px;
+	height: 25px;
+	position: absolute;
+	left: 192px;
+	top: 0;
+	line-height: 1.6;
+	margin-top: 20px;
+	margin-right: 22px;
+	display: none;
+	float: left;
+	color: #FFF;
+	z-index: 30;
+	text-align: center;
+	background: url('../img/index_widthlg.png') no-repeat -20px -172px;
+}
+/*顶部工具栏右侧登陆菜单容器*/
+.hao123-links {
+	float: right;
+	height: 60px;
+	padding: 0 230px 0 0;
+}
+
+/*登录按钮的div样式*/
+.width-lg .loginlink {
+	height: 100%;
+	position: relative;
+	vertical-align: top;
+}
+
+/*登录按钮的a标签样式*/
+.width-lg .loginlink .login {
+	position: relative;
+	padding: 0;
+	line-height: 60px;
+	padding-left: 33px;
+	padding-right: 9px;
+	color: #999;
+	background-image: url('../img/index_widthlg.png');
+	background-repeat: no-repeat;
+	background-position: -30px -110px;
+	z-index: 11;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*邮箱按钮的div样式*/
+.width-lg .mail {
+	width: 68px;
+	height: 60px;
+	display: inline-block;
+}
+
+/*邮箱按钮的a标签样式*/
+.width-lg .mail .link {
+	display: block;
+	width: 36px;
+	height: 60px;
+	color: #999;
+	line-height: 60px;
+	padding: 0 0 0 31px;
+	text-align: left;
+	background-image: url('../img/index_widthlg.png');
+	background-repeat: no-repeat;
+	background-position: -96px -108px;
+}
+
+/*浏览器按钮的span标签样式*/
+.width-lg .header-browser {
+  margin-left: -8px;
+}
+
+.header-browser, 
+.header-phone, 
+.header-desktop {
+	display: inline-block;
+	height: 60px;
+	overflow: hidden;
+	vertical-align: top;
+	position: relative;
+}
+
+/*浏览器按钮的span标签内a标签样式*/
+.width-lg .header-browser .browser {
+	padding: 0;
+	line-height: 60px;
+	padding-left: 32px;
+	padding-right: 9px;
+	color: #999;
+	background-image: url('../img/index_widthlg.png');
+	background-repeat: no-repeat;
+	background-position: -162px -109px;
+	cursor: pointer;
+}
+
+.header-browser .link, 
+.header-phone .link, 
+.header-desktop .link {
+	display: block;
+	width: 36px;
+	height: 60px;
+	padding: 15px 10px 0 10px;
+	text-align: center;
+}
+
+/*换肤按钮的a标签样式*/
+.width-lg .skin-btn {
+	vertical-align: top;
+	width: 68px;
+	height: 60px;
+	color: #999;
+}
+
+/*换肤按钮的a标签内的span标签样式*/
+.width-lg .skin-txt {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 0 0 31px;
+	text-align: left;
+	background-image: url('../img/index_widthlg.png');
+	background-repeat: no-repeat;
+	background-position: -244px -108px;
+}
+
+/*换肤选项菜单外层容器样式*/
+.hao123-banner {
+	position: absolute;
+	right: 0;
+	width: 222px;
+	height: 60px;
+	top: 0;
+	text-align: right;
+	overflow: hidden;
+	z-index: 16;
+}
+
+/*换肤选项菜单内层容器样式*/
+.hao123-banner .ecom {
+	width: 220px;
+	height: 60px;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+/*换肤选项菜单列表项ul样式*/
+#theme-select {
+	width: 220px;
+	height: 60px;
+	text-align: left;
+}
+
+/*换肤选项菜单列表项li样式*/
+#theme-select li {
+	width: 40px;
+	height: 20px;
+	margin: 20px 0;
+	padding: 7px 10px;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 7px;
+}
+
+/*绿色主题li鼠标悬停样式*/
+#theme-green:hover {
+	background: #2ED79C;
+	box-shadow: 0px 0px 4px 6px #BAFFE7 inset; 
+}
+#theme-select #theme-green span{
+	background: #2ED79C;
+}
+
+/*橘色主题li鼠标悬停样式*/
+#theme-orange:hover {
+	background: #F9A35C;
+	box-shadow: 0px 0px 4px 6px #FAE8D9 inset; 
+}
+#theme-select #theme-orange span{
+	background: #F9A35C;
+}
+
+/*粉色主题li鼠标悬停样式*/
+#theme-purple:hover {
+	background: #DF9EFF;
+	box-shadow: 0px 0px 4px 6px #F6E4FF inset; 
+}
+#theme-select #theme-purple span{
+	background: #DF9EFF;
+}
+
+/*蓝色主题li鼠标悬停样式*/
+#theme-blue:hover {
+	background: #53C4FF;
+	box-shadow: 0px 0px 4px 6px #D2F0FF inset; 
+}
+#theme-select #theme-blue span{
+	background: #53C4FF;
+}
+
+/*换肤选项菜单列表项li内span标签样式*/
+#theme-select li span{
+	width: 20px;
+	height: 6px;
+	display: block;
+	vertical-align: middle;
+}
+
+/*百度搜索框部分的div容器样式*/
+.search-warp {
+	height: 82px;
+}
+
+/*百度搜索框部分的内层div容器*/
+.search-panel {
+	width: 1190px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*百度搜索框外套容器*/
+.hao123-search {
+	height: 41px;
+	position: relative;
+	padding: 42px 0 0 166px;
+}
+
+/*百度搜索框容器*/
+.search {
+	width: 800px;
+	display: inline-block;
+	position: relative;
+	zoom: 1;
+}
+
+/*百度logo容器样式*/
+.logo {
+	width: 104px;
+	height: 34px;
+	position: relative;
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+/*存放百度logo图片的span样式*/
+.logopic {
+	width: 104px;
+	height: 34px;
+	display: block;
+	background: url(../img/webv2.png) left top no-repeat;
+}
+
+/*搜索输入框内左侧的“网页”下拉按钮样式*/
+.tabs-toggle, .tabs-toggle:hover {
+	cursor: pointer;
+	position: absolute;
+	top: 1px;
+	left: 125px;
+	z-index: 1;
+	padding: 0 10px;
+	width: 38px;
+	height: 38px;
+	font: normal 12px/38px simsun;
+	text-decoration: none;
+	color: #999;
+	background: url(../img/baidu-form.png) -319px 0;
+}
+
+/*搜索输入框内左侧的“网页”下拉按钮内i标签样式*/
+.tabs-toggle .arrow {
+	overflow: hidden;
+	position: absolute;
+	top: 16px;
+	left: 38px;
+	width: 9px;
+	height: 6px;
+	text-indent: -999px;
+	background: url(../img/index_widthlg.png) -52px -97px;
+}
+
+form {
+	font-size: 0;/* 去掉搜索框和按钮的间距 */
+}
+
+/*搜索输入框外层容器*/
+.input-wrapper {
+	margin-right: 0;
+	position: relative;
+	display: inline-block;
+}
+
+/*输入框内层容器*/
+.input-shadow {
+	width: 538px;
+	height: 38px;
+	border: 1px solid #8A8A8A;
+	border-right: 0;
+	display: inline-block;
+	background: url(../img/baidu-form.png) -319px 0 #FFF no-repeat;
+}
+
+/*搜索的文本输入框样式*/
+.input {
+	width: 448px;
+	height: 18px;
+	padding: 6px 0;
+	border: 0;
+	outline: 0;
+	margin: 4px 30px 0 60px;
+	font: 16px arial;
+	vertical-align: middle;
+}
+
+/*"百度一下"按钮外层容器样式*/
+.button-wrapper {
+	vertical-align: top;
+	display: inline-block;
+}
+
+/*“百度一下”按钮样式*/
+.button {
+	width: 120px;
+	height: 40px;
+	border: 0;
+	font-size: 14px;
+	cursor: pointer;
+	vertical-align: middle;
+	background: url(../img/index_widthlg.png) no-repeat -20px 0;
+}
+
+/*搜索框下面的“热搜”链接的容器*/
+.hotsearchCon {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/*“热搜”链接的外套容器*/
+.hotsearch-box {
+	margin: 6px 0 26px 195px;
+	position: relative;
+	width: 442px;
+	height: 20px;
+}
+
+/*“热搜”链接的内层容器*/
+.hotsearchtop {
+	width: 488px;
+	height: 20px;
+	position: relative;
+}
+
+/*“热搜”链接的列表样式*/
+.boxhot {
+	width: 508px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.boxhot li {
+	display: inline-block;
+}
+
+.boxhot .title{
+	margin-right: 6px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+
+.boxhot .text {
+	margin-right: 20px;
+}
+
+.hotsearch-box .hotsearchtop .boxhot .js-hotword:hover {
+  color: #F30;
+}
+
+/*“更多”字体链接样式*/
+.hotsearch-box .hotsearchtop .ctrlBtn {
+  width: 42px;
+  height: 18px;
+  overflow: hidden;
+  position: absolute;
+  right: -55px;
+  top: 0px;
+  z-index: 105;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/*a标签字体链接样式*/
+.hotsearch-box .hotsearchtop .boxhot a {
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+}
+
+/*搜索框以下的网页主体内容最外层容器*/
+#bodyct {
+	position: relative;
+}
+
+/*主导航栏容器样式*/
+.menu-warp {
+	width: 1190px;
+	height: 38px;
+	border: 0px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+	border-top: 2px solid #099E6A;
+	border-bottom: 1px solid #EAEAEA;
+	background-color: #FCFCFC;
+	font-size: 14px;
+	position: relative;
+}
+
+/*导航栏菜单列表ul样式*/
+.menus-br {
+	width: 1190px;
+	height: 38px;
+	margin: 0 auto;
+	margin-bottom: 0;
+	font-size: 14px;
+	position: relative;
+}
+
+/*菜单单个列表项li样式*/
+.menus-br .menu {
+height: 38px;
+	line-height: 38px;
+	width: 110px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+/*菜单单个列表项li内的<a>标签样式*/
+.menus-br .menu .link {
+	border-right: 0;
+	text-align: center;
+	color: #333;
+	position: relative;
+	font-family: Microsoft Yahei;
+	font-size: 16px;
+}
+.menu .link {
+  display: block;
+  height: 100%;
+  border-right: 1px solid #EAEAEA;
+  cursor: pointer;
+}
+
+/*第一个li“首页”样式*/
+.menu-warp .menus-br .first {
+	width: 81px;
+}
+
+
+.menus-br .first .link {
+	border-left: 0;
+}
+
+/*最后一个li的<a>标签样式*/
+.menus-br .last .link {
+  margin-right: 0;
+}
+
+/*激活的文字span样式*/
+.menu-br .active .title {
+  border-width: 2px 0 0 0;
+}
+
+/*导航栏菜单按钮的分隔竖线*/
+.menu .menu-split {
+	display: block;
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../img/menus_split.png) center left no-repeat;
+}
+
+/*最后一个菜单按钮后的分隔竖线*/
+.last .link .menu-split {
+  display: none;
+}
+
+/*导航栏菜单“激活的”按钮的分隔竖线*/
+.link .active .menu-split{
+	display: none;
+}
+
+/*主导航栏以下的主体内容最外层容器样式*/
+.layout-warp {
+	width: 1190px;
+	clear: both;
+	margin: 0 auto;
+}
+
+/*主导航栏下的中右部主要内容部分容器样式*/
+.main-content {
+	width: 900px;
+	float: right;
+}
+
+/*热门网站的最外层div容器样式*/
+.famoussite {
+	width: 898px;
+	border-width: 1px;
+	position: relative;
+}
+/*主流大站右上角的设置齿轮div*/
+.widget-site .site-manage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 33px;
+	height: 33px;
+	background-repeat: no-repeat;
+	background-position: -316px -128px;
+	cursor: pointer;
+	z-index: 999;
+	background-image: url(../img/index_widthlg.png);
+}
+
+/*主流大站列表ul样式*/
+.widget-site .site-bd {
+	width: 868px;
+	padding-left: 23px;
+	padding-top: 11px;
+	padding-bottom: 5px;
+}
+
+/*主流大站列表li部分样式*/
+.widget-site .site-item-normal {
+	width: 130px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	margin-right: 0px;
+	padding-left: 9px;
+	position: relative;
+}
+/*主流大站列表li部分样式*/
+.widget-site .site-item {
+	color: #000;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+/*主流大站列表li部分样式*/
+.g-ib {
+  display: inline-block;
+}
+
+/*主流大站列表li内的<a>标签样式*/
+.widget-site .site-item-normal a {
+	outline: 0;
+	text-decoration: none;
+	background-image: url(../img/6000.png);
+	background-position: 2px 44%;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	display: inline-block;
+}
+
+/*中间有圆点的链接的后面附属<a>标签样式*/
+.widget-site .site-item-normal .sitesublink {
+	background: 0;
+	padding-left: 0;
+	padding-right: 5px;
+	_padding-right: 0;
+	position: relative;
+	z-index: 88;
+	display: inline-block;
+}
+
+/*主流大站列表右下方“添加网址”的“+”号li样式*/
+.widget-site .site-item-add-short {
+	width: 20px;
+	margin: 4px 0 4px -26px;
+	z-index: 126;
+}
+/*同上*/
+.widget-site .site-item-add {
+  border: 1px dotted #BBB;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/*同上内的i标签样式*/
+.widget-site .site-item-add i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 17px;
+  background-image: url(../img/index_icon.png);
+  background-repeat: no-repeat;
+  background-position: -278px -396px;
+}
+
+/*热门网站中的下半部分门户网址的div容器样式*/
+.box-famoussite {
+	padding-top: 5px;
+	clear: both;
+	position: relative;
+}
+
+/*下半部分门户网址的外层div容器样式*/
+.widget-famoussite {
+	clear: both;
+}
+
+/*热门网站下半部分门户网址的内层div容器样式*/
+.wf-inner {
+	margin-left: 30px;
+	padding-bottom: 3px;
+	padding-top: 4px;
+}
+
+/*包裹链接的span标签样式*/
+.widget-famoussite span {
+	width: 139px;
+	height: 30px;
+	vertical-align: top;
+	position: relative;
+	display: inline-block;
+	line-height: 30px;
+}
+
+/*包裹链接的<a>标签样式*/
+.widget-famoussite span a {
+	padding: 1px 4px;
+	zoom: 1;
+}
+
+/*“工商银行”和“中国移动”右侧的下拉箭头*/
+.sitelinks .open-up {
+	width: 22px;
+	height: 22px;
+	background: url(../img/index_icon.png) no-repeat -583px -683px;
+	position: absolute;
+	cursor: pointer;
+	top: 8px;
+}
+
+/*“工商银行”和“中国移动”的下拉列表外层容器div样式*/
+.sitelinks .bg-box {
+	position: absolute;
+	top: 25px;
+	left: -6px;
+	z-index: 101;
+}
+
+/*“工商银行”和“中国移动”的下拉列表内层容器div样式*/
+.sitelinks .site-inner {
+	padding: 1px 6px;
+	border: 1px solid #D9D9D9;
+	text-align: left;
+	zoom: 1;
+	background: #F7F7F7;
+	float: left;
+}
+
+/*“工商银行”和“中国移动”的下拉列表内<a>标签样式*/
+.sitelinks .site-item {
+	display: block;
+	white-space: nowrap;
+	line-height: 26px;
+}
+
+/*热门网站内容块下方的广告链接最外层容器样式*/
+.layout-adbar {
+	width: 900px;
+	overflow: hidden;
+}
+
+/*热门网站内容块下方的广告链接内层容器样式*/
+.widget-hlbar {
+	height: 32px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 32px;
+	vertical-align: middle;
+	overflow: hidden;
+	padding-left: 25px;
+}
+
+/*广告链接<span>标签样式*/
+.widget-hlbar span {
+	display: inline-block;
+	padding-right: 25px;
+}
+
+/*广告链接<span>标签内的<a>标签样式*/
+.widget-hlbar .hlbar-link {
+	color: #3B5998;
+}
+
+/*“猜你喜欢”的内容块最外层容器样式*/
+.gesslikesite {
+	width: 898px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+/*左侧“猜你喜欢”字样<span>样式*/
+#guesslikesite-block .youlike {
+	width: 20px;
+	height: 60px;
+	display: block;
+	background: url(../img/new_index_icon.png);
+	background-position: 0 0;
+	position: absolute;
+	left: 0;
+	top: 28px;
+	z-index: 10;
+}
+
+/*右侧翻页箭头<a>标签样式*/
+#guesslikesite-block .changeAll {
+	width: 21px;
+	height: 61px;
+	display: block;
+	background: url(../img/new_index_icon.png);
+	background-position: 0 -145px;
+	position: absolute;
+	right: -1px;
+	top: 25px;
+	z-index: 10;
+	outline: 0;
+}
+
+/*“猜你喜欢”的内容块内层容器样式*/
+#guesslikesite-block .bottom-main {
+	padding: 9px 0;
+}
+
+/*第一行链接（游戏类）div容器样式*/
+#guesslikesite-block .guesslike-industry {
+  padding: 0 0 0 35px;
+  width: 862px;
+  height: 32px;
+  line-height: 32px;
+  position: relative;
+}
+
+/*“猜你喜欢”的每行链接前面的分类文字a标签样式*/
+.guesslike-industry-title {
+	width: 40px;
+	color: #118850;
+	overflow: hidden;
+	height: 32px;
+	width: 35px;
+	line-height: 32px;
+	position: relative;
+}
+
+/*第一行游戏类的链接集合容器样式*/
+#guesslikesite-block .show {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+/*行中的每项<span>标签样式*/
+#guesslikesite-block .guesslike-col {
+	width: 103px;
+	text-align: left;
+	padding: 0;
+	overflow: hidden;
+	height: 32px;
+	line-height: 32px;
+	position: relative;
+}
+
+/*行中的每项<span>标签内的<a>标签样式*/
+#guesslikesite-block .guesslike-link {
+	padding-left: 18px;
+}
+
+/*右侧的“换一换”<a>标签样式*/
+#guesslikesite-block .changeBtn {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 12px;
+	position: absolute;
+	outline: 0;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*———————————————————————————————————————————————*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*主导航栏下的左边侧栏最外层容器样式*/
+.side-content-slider {
+	width: 280px;
+	float: left;
+}
+
+/*侧栏上部分类菜单容器样式*/
+.servicetab {
+	width: 278px;
+	border-bottom: 0;
+}
+
+/*侧栏上部分类菜单外层容器样式*/
+.servicetab-bd {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: #FFF;
+}
+/*侧栏上部分类菜单内层容器样式*/
+.starbar {
+	padding: 9px 0 10px 18px;
+}
+
+/*分类菜单列表项样式*/
+.servicetab li {
+	list-style: none;
+}
+
+/*分类菜单列表项li样式*/
+.startbar-list {
+	display: inline-block;
+	margin-bottom: 6px;
+}
+
+/*分类菜单列表项li内的div样式*/
+.baritem {
+	width: 128px;
+}
+
+/*分类菜单列表项li内的最内层div样式*/
+.baritem .category {
+	float: left;
+	position: relative;
+	padding-left: 25px;
+	padding-top: 6px;
+}
+
+/*分类菜单列表项li内的小图标i标签样式*/
+.baritem i {
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	top: 4px;
+	left: 0;
+}
+
+/*分类菜单列表项li内的小图标i标签样式*/
+.baritem .star-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../img/index_menus_widthlg.png) no-repeat;
+}
+
+/*分类菜单列表项文字分隔竖线样式*/
+.baritem .split {
+	padding: 0 1px;
+	color: #999;
+	position: relative;
+	top: -1px;
+}
+
+/*设置雪碧图：文字“电视剧”前小图标位置*/
+.baritem .i-tv {
+	background-position: -20px -81px;
+}
+
+/*设置雪碧图：文字“游戏”前小图标位置*/
+.baritem .i-game {
+	background-position: -19px -301px;
+}
+
+/*设置雪碧图：文字“电影”前小图标位置*/
+.baritem .i-movie {
+	background-position: -20px -160px;
+}
+
+/*设置雪碧图：文字“动画”前小图标位置*/
+.baritem .i-comic {
+	background-position: -20px -381px;
+}
+
+/*设置雪碧图：文字“头条”前小图标位置*/
+.baritem .i-toutiao {
+	background-position: -20px -100px;
+}
+
+/*设置雪碧图：文字“旅游”前小图标位置*/
+.baritem .i-travel {
+  background-position: -20px -261px;
+}
+
+/*设置雪碧图：文字“彩票”前小图标位置*/
+.baritem .i-caipiao {
+  background-position: -20px -21px;
+}
+
+/*设置雪碧图：文字“搞笑”前小图标位置*/
+.baritem .i-gaoxiao {
+  background-position: -20px -121px;
+}
+
+/*分类菜单列表项广告提示文字li样式*/
+.starbar .tips {
+	height: 36px;
+	position: relative;
+	margin-top: -8px;
+}
+
+/*分类菜单列表项广告提示文字框小尖尖*/
+.starbar .tips .tips-toparrow {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 12px;
+	height: 8px;
+	background: url(../img/tip-icon.png) -16px 0 no-repeat;
+	z-index: 20;
+}
+
+/*分类菜单列表项广告提示框文字div容器样式*/
+.starbar .tvtip {
+	width: 220px;
+	height: 24px;
+	background-color: #F7F7F5;
+	border: 1px solid #D9D9D9;
+	position: absolute;
+	padding-right: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	top: 8px;
+	left: 0;
+	z-index: 10;
+}
+
+/*分类菜单列表项广告提示框文字<a>标签样式*/
+.starbar .tvtip .tvtip-txtlink {
+	margin-left: 6px;
+	font-size: 12px;
+	line-height: 2;
+	color: #FF5601;
+	text-decoration: none;
+}
+/*鼠标悬停样式*/
+.starbar .tvtip .tvtip-txtlink:hover {
+  color: #FF5601;
+  text-decoration: underline;
+}
+
+/*分类菜单列表项广告提示框文字后边小叉叉<a>标签样式*/
+.starbar .tvtip .tip-closed {
+	background: url(../img/tip-icon.png) 0 -16px no-repeat;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+/*设置雪碧图：文字“特价”前小图标位置*/
+.baritem .i-tuan {
+	background-position: -20px -281px;
+}
+
+/*设置雪碧图：文字“教育”前小图标位置*/
+.baritem .i-music {
+  background-position: -20px -362px;
+}
+
+/*设置雪碧图：文字“生活”前小图标位置*/
+.baritem .i-life {
+  background-position: -20px -221px;
+}
+
+/*设置雪碧图：文字“美食”前小图标位置*/
+.baritem .i-food {
+  background-position: -19px -42px;
+}
+
+/*分类新闻最外层容器样式*/
+#box-toplist0 {
+	height: 330px;
+}
+
+/*分类新闻顶部菜单栏样式*/
+.toptab {
+	font-size: 14px;
+	color: #616161;
+	background: #F7F7F7;
+	border: 0;
+	width: 278px;
+	position: relative;
+	z-index: 20;
+}
+
+/*分类新闻顶部菜单项<a>标签样式*/
+.toptab .channel {
+	display: inline-block;
+	width: 59px;
+	text-align: center;
+	color: #616161;
+	position: relative;
+}
+
+/*分类新闻顶部菜单项<a>标签样式*/
+#box-toplist0 .toptab .channel {
+	width: 47px;
+}
+
+/*分类新闻顶部菜单项<a>标签内的<span>标签样式*/
+.width-lg .toptab .channel span {
+	margin-top: -1px;
+	width: 100%;
+	height: 34px;
+	border-top-width: 1px;
+}
+
+.toptab .channel span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 32px;
+	_height: 28px;
+	line-height: 32px;
+	_line-height: 30px;
+	position: relative;
+	cursor: pointer;
+}
+
+/*分类新闻顶部菜单项分隔条i标签样式*/
+.toptab .spt {
+	border-width: 0 0 0 1px;
+}
+
+.toptab .em {
+  border-width: 2px 0 0 0;
+}
+
+
+/*分类新闻顶部菜单项右侧下拉菜单箭头*/
+.toptab .drop-down {
+	width: 14px;
+	height: 14px;
+	background: url(../img/index_icon.png) no-repeat -583px -683px;
+	position: absolute;
+	cursor: pointer;
+	top: 8px;
+	right: 8px;
+}
+
+/*分类新闻顶部菜单项右侧隐藏的下拉菜单*/
+.bangdan_drop {
+	position: absolute;
+	top: 34px;
+	right: 0;
+	z-index: 300;
+	background: #F7F7F7;
+	display: none;
+}
+
+/*分类新闻顶部菜单项右侧隐藏的下拉菜单内a标签样式*/
+#box-toplist0 .toptab .drop_channel {
+	width: 70px;
+}
+
+/*分类新闻内容外层容器样式*/
+.topzixun {
+	height: 290px;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+}
+
+/*分类新闻内容内层容器样式*/
+.topzixun-over {
+	height: 290px;
+	overflow: hidden;
+	position: relative;
+}
+
+/*图片新闻容器样式*/
+.toppicture {
+	position: relative;
+	overflow: hidden;
+}
+
+/*新闻滚动图片列表样式*/
+.toppicture .content-pic {
+	width: 278px;
+	height: 110px;
+}
+
+/*新闻滚动图片列表项li样式*/
+.toppicture .content-pic li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 110px;
+	z-index: 1;
+}
+
+/*新闻滚动图片列表项li内的a标签样式*/
+.toppicture .pic {
+	display: inline-block;
+	height: 110px;
+	text-decoration: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+/*新闻滚动图片列表项li内的a标签内的img标签样式*/
+.toppicture .pic img {
+	width: 278px;
+	height: 110px;
+}
+
+/*新闻滚动图片内底部文字块span标签样式*/
+.toppicture .pic .pic-bg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 278px;
+	height: 28px;
+	display: block;
+	background: url(../img/img_title_bg.png);
+	background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,1));
+	background: -webkit-linear-gradient(top,rgba(0, 0, 0, 0),#000);
+	background: -ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,1));
+	background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,1));
+	_background: 0;
+	_filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#CC000000);
+	_zoom: 1;
+}
+
+/*新闻滚动图片内底部文字块文字的span标签样式*/
+.toppicture .pic .pic-txt {
+	position: relative;
+	display: block;
+	width: 278px;
+	height: 20px;
+	padding-top: 6px;
+	text-align: center;
+	top: -26px;
+	color: #FFF;
+	cursor: pointer;
+	_line-height: 20px;
+}
+
+
+/*图片新闻下方的文字新闻p标签样式*/
+.topzixun p {
+	width: 248px;
+	height: 28px;
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+/*文字新闻左侧的列表小图标样式*/
+.toplist #topzixun-over .rank {
+	width: 4px;
+	height: 4px;
+	float: left;
+	margin: 12px 5px 0 0;
+	background: #CECECE;
+}
+
+/*文字新闻a标签样式*/
+.toplist .link {
+	display: inline;
+	line-height: 28px;
+	_line-height: 30px;
+}

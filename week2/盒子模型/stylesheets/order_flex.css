@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* 排序(flex)的css文件 */
+
+/* 设置"排序(flex)"的外部容器属性 */
+.order {
+    height: 200px;
+    width: 600px;
+    background-color: #DAD8D8;
+}
+
+/* 对div块进行不规则排序*/
+.o1 {
+    margin: 5px;
+    background-color: #EA7373;
+    order: 2;
+    -webkit-order: 2;
+}
+
+.o2 {
+    margin: 5px;
+    background-color: #84DB84;
+    order: 3;
+    -webkit-order: 3;
+}
+
+.o3 {
+    margin: 5px;
+    background-color: #9C9CFF;
+    order: 1;
+    -webkit-order: 1;
+}

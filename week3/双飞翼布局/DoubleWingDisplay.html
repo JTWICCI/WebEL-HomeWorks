@@ -1,0 +1,38 @@
+<!doctype html>
+<!--为了演示双飞翼的设计步骤，把css代码写的有些冗余，希望老师理解-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>双飞翼布局</title>
+    <link rel="stylesheet" type="text/css" href="sytlesheets/DbWing.css" />
+</head>
+
+<body>
+    <div class="header">
+        我是头部
+    </div>
+    <div class="content">
+        <div class="main-wrap">
+            <div class="main">
+	            <h2>双飞翼布局的设计步骤：</h2>
+	            <ul>
+	            	<li>第一步,设置好基本的Div样式。</li>
+	            	<li>第二步,将主体部分、左右侧边栏都设成左浮动。</li>
+	            	<li>第三步,对主体内容的Div设置相对于外层容器的左右外边距，以让出左、右边栏的空间。</li>
+	            	<li>第四步,将左侧边栏的左外边距设成负的100%, 让它上来到主体内容的左侧。</li>
+	            	<li>第五步,将右侧边栏的左外边距设成自身宽度的负数, 让它上来到主体内容的右侧。</li>
+	            	<li>第六步,为了让双飞翼等高,先把左、右侧边栏向下拉再收回来。</li>
+	            	<li>第七步,最后把左右侧边栏向下溢出来的隐藏掉。</li>
+	            </ul>
+            </div>
+        </div>
+        <div class="left-column">我是左侧边栏</div>
+        <div class="right-column">我是右侧边栏</div>
+    </div>
+    <div class="footer">
+        我是页脚
+    </div>
+</body>
+
+</html>

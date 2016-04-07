@@ -1,0 +1,168 @@
+    <h2>添加新闻</h2>
+    <ul class="nav nav-tabs display_types">
+      <li role="presentation" class="active"><a href="#"><strong>三图展示</strong></a></li>
+      <li role="presentation"><a href="#"><strong>单图展示</strong></a></li>
+      <li role="presentation"><a href="#"><strong>文本展示</strong></a></li>
+    </ul>
+    <div>
+        <div style="display: block;" class="add-cont">
+            <!--“三图展示”的提交表单-->
+            <form class="add_contype_1">
+                <!--隐式提交值，指明当前表单是为添加数据-->
+                <input type="hidden" name="actype" value="add" />
+                <input type="hidden" name="displaytype" value="1" />
+                <input type="hidden" name="tbname" value="" />
+                <input type="hidden" name="contentid" value="" />
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-7">
+                        <div class="input-group">
+                            <span class="input-group-addon">标题文字</span>
+                            <input type="text" name="title" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">标签</span>
+                            <select name="tagtype" class="form-control">
+                                <option value="0">无</option>
+                                <option value="1">有</option>
+                            </select>
+                            <span class="input-group-addon">标签文字</span>
+                            <input type="text" name="tagtext" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">图片1地址</span>
+                            <input type="text" name="image1_src" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">图片2地址</span>
+                            <input type="text" name="image2_src" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">图片3地址</span>
+                            <input type="text" name="image3_src" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-11">
+                        <div class="input-group">
+                            <span class="input-group-addon">链接指向地址</span>
+                            <input type="text" name="href" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="submit" name="submit" class="btn btn-success" value="添加" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="display: none;" class="add-cont">
+            <!--“单图展示”的提交表单-->
+            <form class="add_contype_2">
+                <input type="hidden" name="actype" value="add" />
+                <input type="hidden" name="displaytype" value="2" />
+                <input type="hidden" name="tbname" value="" />
+                <input type="hidden" name="contentid" value="" />
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-7">
+                        <div class="input-group">
+                            <span class="input-group-addon">标题文字</span>
+                            <input type="text" name="title" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">标签</span>
+                            <select name="tagtype" class="form-control">
+                                <option value="0">无</option>
+                                <option value="1">有</option>
+                            </select>
+                            <span class="input-group-addon">标签文字</span>
+                            <input type="text" name="tagtext" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-7">
+                        <div class="input-group">
+                            <span class="input-group-addon">概述文字</span>
+                            <input type="text" name="discribe" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">图片地址</span>
+                            <input type="text" name="image1_src" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-11">
+                        <div class="input-group">
+                            <span class="input-group-addon">链接指向地址</span>
+                            <input type="text" name="href" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="submit" name="submit" class="btn btn-success" value="添加" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="display: none;" class="add-cont">
+            <!--“文本展示”的提交表单-->
+            <form class="add_contype_3">
+                <input type="hidden" name="actype" value="add" />
+                <input type="hidden" name="displaytype" value="3" />
+                <input type="hidden" name="tbname" value="" />
+                <input type="hidden" name="contentid" value="" />
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-7">
+                        <div class="input-group">
+                            <span class="input-group-addon">标题文字</span>
+                            <input type="text" name="title" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">标签</span>
+                            <select name="tagtype" class="form-control">
+                                <option value="0">无</option>
+                                <option value="1">有</option>
+                            </select>
+                            <span class="input-group-addon">标签文字</span>
+                            <input type="text" name="tagtext" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">概述文字</span>
+                            <input type="text" name="discribe" class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-xs-11">
+                        <div class="input-group">
+                            <span class="input-group-addon">链接指向地址</span>
+                            <input type="text" name="href" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="submit" name="submit" class="btn btn-success" value="添加" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

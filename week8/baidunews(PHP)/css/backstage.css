@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sqlresponse {
+    position: fixed;
+    height: 25px;
+    width: 545px;
+    background: rgba(143, 232, 154, 0.61);
+    margin: 100px 0 0 460px;
+    text-align: center;
+    color: #0B980B;
+    font-weight: bold;
+    line-height: 25px;
+    z-index: 10000;
+    display: none;
+}
+
+.sqlresponse.failed {
+	background: rgba(232, 143, 143, 0.61);
+	color: #D82020;
+}
+
+#error_info {
+    position: fixed;
+    height: 180px;
+    width: 545px;
+    background: rgba(232, 143, 143, 0.61);
+    margin: 150px 0 0 460px;
+    text-align: center;
+    color: #D82020;
+    font-weight: bold;
+    line-height: 25px;
+    z-index: 10000;
+    display: none;
+}
+
+#edit_pannel {
+    display: none;
+}
+
+.edit-cont {
+    display: none;
+}

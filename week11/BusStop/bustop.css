@@ -1,0 +1,215 @@
+/*设置默认字体*/
+body{
+    font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+}
+
+ul,li {
+	margin: 0;
+	padding: 0;
+}
+
+/*最外层容器样式*/
+.wrapper {
+	height: 420px;
+	width: 800px;
+	margin: auto;
+	margin-top: 150px;
+	background: #F5F5F5;
+	border: 2px #000 solid;
+}
+
+/*站牌上半部分白色底的内容框架*/
+.top-box {
+	height: 200px;
+
+}
+
+/*站牌中间部分绿色底的所有站名外层框架*/
+.middle-box {
+	height: 160px;
+	background: #008000;
+	overflow: hidden;
+
+}
+
+/*站牌底部的收费标准和红色箭头容器框架*/
+.bottom-box {
+	height: 60px;
+	text-align: center;
+}
+
+/*设置左侧路线数字和首末班时间容器 和 右侧线路名和当前站点名字的容器样式*/
+.top-box .top-left, 
+.top-box .top-right {
+	height: 200px;
+	float: left;
+}
+
+/*设置左侧路线数字和首末班时间容器的宽度*/
+.top-left {
+	width: 230px;
+}
+
+/*设置右侧线路名和当前站点名字的容器宽度*/
+.top-right {
+	width: 570px;
+}
+
+/*设置左侧路线数字样式*/
+.bus-number {
+	height: 120px;
+	margin-top: 40px;
+	color: #FFF;
+	text-align: center;
+	line-height: 120px;
+	font-size: 100px;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	background: #E20F0F;
+}
+
+/*设置首末班车时间样式*/
+.bus-time {
+	height: 40px;
+	text-align: right;
+	line-height: 40px;
+	font-weight: bold;
+	font-family: '幼圆';
+	letter-spacing: 2px;
+}
+
+/*设置线路名称（东直门枢纽站 — 金盏）样式*/
+.route-name {
+	height: 40px;
+	text-align: center;
+	margin-top: 40px;
+	line-height: 40px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #008000;
+	font-family: '微软雅黑';
+}
+
+/*设置线路名称拼音（DONGZHIMEN SHUNIUZHAN）样式*/
+.route-name-py {
+	height: 30px;
+	margin: 10px 0 0 83px;
+	padding-left: 5px;
+	color: #008000;
+	font-size: 23px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: -2px;
+}
+/*设置线路名称后半段拼音（JINZHAN）样式*/
+.route-name-py .rnp_second-child {
+	margin-left: 30px;
+}
+
+/*设置当前站点文字及容器样式*/
+.stop-name {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	color: #E20F0F;
+	font-family: '微软雅黑';
+}
+
+/*设置所有站点容器ul标签样式*/
+.middle-box ul{
+	display: block;
+	margin-left: 68px;
+}
+
+/*设置所有站点容器ul内的每个站点li标签样式*/
+.middle-box ul li {
+	width: 18px;
+	display: block;
+	float: left;
+	margin-right: 14px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: '幼圆';
+}
+
+/*设置2个字的站点文字属性*/
+.middle-box li .cl_2{
+	line-height: 100px;
+    position: relative;
+    top: -40px;
+}
+/*设置3个字的站点文字属性*/
+.middle-box li .cl_3{
+	line-height: 49px;
+    position: relative;
+    top: -13px;
+}
+/*设置4个字的站点文字属性*/
+.middle-box li .cl_4{
+    line-height: 33px;
+    position: relative;
+    top: -5px;
+}
+/*设置5个字的站点文字属性*/
+.middle-box li .cl_5{
+    line-height: 25px;
+    position: relative;
+    top: -2px;
+}
+/*设置6个字的站点文字属性*/
+.middle-box li .cl_6{
+       line-height: 20px;
+    position: relative;
+    top: 0px;
+}
+
+/*设置当前站点名字下方的三角形样式*/
+.middle-box .triangle {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #FFFFFF;
+    left: 291px;
+    top: 133px;
+}
+
+/*站牌底部的收费标准字体及容器样式*/
+.bottom-box .bottom-text {
+	height: 20px;
+	padding-top: 13px;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	letter-spacing: 2px;
+}
+
+/*站牌底部 箭头的span标签容器属性*/
+.bottom-box .bottom-arrow span{
+	display: block;
+}
+
+/*箭头的横线样式*/
+.bottom-box .arrow_line {
+	height: 5px;
+	width: 600px;
+	background: #E20F0F;
+	margin: 6px 0 0 100px;
+}
+
+/*箭头头儿（三角）样式*/
+.bottom-box .arrow_triangle {
+	position: relative;
+	height: 0px;
+	width: 0px;
+	border: 20px solid transparent;
+    border-bottom: 0px;
+    border-left-width: 60px;
+    border-left-color: #E20F0F;
+    left: 659px;
+    top: -20px;}

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 为了演示双飞翼的设计步骤，把css代码写的有些冗余，希望老师理解^_^ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	line-height: 2em;
+}
+
+/*
+* 双飞翼布局的设计步骤:
+*/
+/*
+* 第一步,设置好基本的Div样式：
+*/
+/* 这是头部信息 */
+.header {
+	height: 150px;
+	width: 100%;
+	background: #7DECCB;
+}
+
+/* 这是主题内容外层容器*/
+.main-wrap {
+	font-weight: bold; 
+	width: 100%;
+}
+
+/* 这是主体内容 */
+.main {
+	background: #83CB42;
+}
+/* 这是左侧边栏 */
+.left-column {
+	width: 150px;
+	background: #FBF8DD;
+}
+/* 这是右侧边栏 */
+.right-column {
+	width: 100px;
+	background: #E0F2DB;
+}
+/* 这是页脚部分 */
+.footer {
+	height: 100px;
+	width: 100%;
+	background: #C4BAC8;
+}
+
+/*
+* 第二步,将主体部分、左右侧边栏都设成左浮动:
+*/
+/* 这是主题内容外层容器*/
+.main-wrap {
+	float: left;
+}
+
+/* 这是左侧边栏 */
+.left-column {
+	float: left;
+}
+
+/* 这是右侧边栏 */
+.right-column {
+	float: left;
+}
+
+/*
+* 第三步,对主体内容的Div设置相对于外层容器的左右外边距，
+* 以让出左、右边栏的空间：
+*/
+/* 这是主体内容 */
+.main {
+	margin-left: 150px; /* 左侧边栏的宽度 */
+	margin-right: 100px; /* 右侧边栏的宽度 */
+}
+/*
+* 第四步,将左侧边栏的左外边距设成负的100%, 让它上来到主体内容的左侧:
+*/
+/* 这是左侧边栏 */
+.left-column {
+	margin-left: -100%;
+}
+
+/*
+* 第五步,将右侧边栏的左外边距设成自身宽度的负数, 让它上来到主体内容的右侧:
+*/
+/* 这是右侧边栏 */
+.right-column {
+	margin-left: -100px;
+}
+
+/*
+* 第六步,为了让双飞翼等高,先把左、右侧边栏向下拉再收回来:
+*/
+.left-column,
+.right-column {
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+
+/*
+* 第七步,最后把左右侧边栏向下溢出来的隐藏掉:
+*/
+/* 这是内容部分的最外层容器 */
+.content {
+	overflow: hidden;
+}

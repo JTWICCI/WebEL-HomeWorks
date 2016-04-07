@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* 弹性盒子column分栏的css文件 */
+
+/* 实现column分栏 */
+.v_divide {
+    margin: 40px;
+    /* 列宽固定，根据容器宽度液态分布列数 */
+    column-width: 250px;
+    -moz-column-width: 250px;
+    -webkit-column-width: 250px;
+}
+
+
+/* 为文章段落设置行高和缩进 */
+p {
+    line-height: 1.4;
+    text-indent: 2em;
+}

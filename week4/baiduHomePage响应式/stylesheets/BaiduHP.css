@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#wrapper_mobile {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body, p, form, ul, li {
+  list-style: none;
+}
+body {
+    font: 12px arial;
+}
+
+div {
+	display: block;
+}
+/* 最外层容器 */
+#wrapper_pc {
+  min-width: 810px;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+/* 头部 */
+#header {
+    height: 63px;
+    overflow: hidden; 
+}
+
+/* 头部导航栏容器属性 */
+#header #nav {
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    width: 492px;
+}
+
+/* 导航的主要链接的字体属性 */
+#header #nav a.mnav:link,
+#header #nav a.mnav:visited {
+    color: #333;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+/* “登录”和“设置”链接的字体颜色 */
+#header #nav a.login:link,
+#header #nav a.login:visited,
+#header #nav .set a.setbtn:link,
+#header #nav .set a.setbtn:visited {
+  float: left;
+  color: #333;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+/* 统一设定导航链接在鼠标悬停时的颜色 */
+#header #nav .set a.setbtn:hover,
+#header #nav a.login:hover,
+#header #nav a.mnav:hover {
+    color: #00c;
+}
+
+/* 让“设置”下拉菜单在鼠标悬停时显示 */
+#header #nav .set:hover .setmenu {
+  display: block;
+}
+
+/* “设置”的弹出下拉菜单 */
+#header #nav .set .setmenu{
+  position: absolute;
+  top: 25px;
+  left: 353px;
+  width: 60px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+  display: none;
+}
+
+/* “设置”下拉菜单顶部的三角型 */
+#header #nav .set .setmenu .icon-sharp {
+  top: -11px;
+  left: 25px;
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #ddd;
+}
+
+/* “设置”下拉菜单顶部的三角型上叠层 */
+#header #nav .set .setmenu .icon-sharp:after {
+  content: '';
+  top: -4px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #FFFFFF;
+}
+
+/* 统一设定设置菜单内的链接属性 */
+#header #nav .set .setmenu a {
+  display: inline-block;
+  width: 100%;
+}
+
+#header #nav .set .setmenu a:link,
+#header #nav .set .setmenu a:visited {
+  color: #333;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+/* 统一设定“设置”下拉菜单链接在鼠标悬停时的颜色 */
+#header #nav .set .setmenu a:hover {
+  background: #317ef3;
+  color: #FFFFFF;
+}
+
+/* 设置“更多产品”按钮的样式 */
+#morepro {
+    background: #38f none repeat scroll 0 0;
+    border-bottom: 1px solid #38f;
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    height: 23px;
+    line-height: 24px;
+    margin-left: 19px;
+    margin-right: 2px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+}
+
+/* “更多产品”的下拉菜单容器属性 */
+#moreprolist {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 85px;
+  border-left: 1px solid #E8E8E8;
+  background-color: #f9f9f9;
+  text-align: center;
+  display: none;
+}
+
+/* “更多产品”下拉菜单列表属性 */
+#moreprolist ul {
+  padding: 12px 10px 0 10px;
+  text-align: center;
+}
+/* “更多产品”下拉菜单单项统一属性 */
+#moreprolist li {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E8E8E8;
+}
+/* “更多产品”文字属性 */
+#moreprolist ul .moreprotext{
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+/* “更多产品”下拉菜单文字属性 */
+#moreprolist li span{
+  display: block;
+}
+
+/* 统一设置“更多产品”下拉菜单所有链接文字样式 */
+#moreprolist a {
+  color: #666;
+  text-decoration: none;
+}
+/* 统一设置“更多产品”拉菜单所有链接鼠标悬停样式 */
+#moreprolist a:hover {
+  text-decoration: underline;
+}
+
+/* “全部产品” 字样属性 */
+#moreprolist .more-all{
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+/* 百度Logo和搜索框容器 */
+.content {
+    position: relative;
+    text-align: center;
+}
+
+/* 百度Logo图片属性 */
+#logo img {
+	border: 0;
+	width: 270px;
+	height: 129px;
+}
+
+/* 搜索框表单属性 */
+#form {
+  margin: 25px auto 0;
+  width: 641px;
+  text-align: left;
+  position: relative;
+}
+
+/* 去掉搜索框和按钮的间距 */
+form {
+	font-size: 0;
+}
+
+/* 文本框外套容器 */
+.textbox {
+  position: relative;
+  background: #FFF;
+  display: inline-block;
+  vertical-align: top;
+  width: 540px;
+  margin-right: 0;
+  border-right-width: 0;
+  border-color: #B8B8B8 rgba(0, 0, 0, 0) #CCC #B8B8B8;
+  overflow: hidden;
+  float: left;
+}
+
+/* 搜索文本框的属性设置 */
+.content input {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    height: 34px;
+    margin-right: 0;
+    padding-left: 7px;
+    font: 16px/18px arial;
+    background: rgba(0, 0, 0, 0);
+    border-right-width: 0;
+    border: 1px solid #B6B6B6;
+    border-color: #B8B8B8 rgba(0, 0, 0, 0) #CCC #B8B8B8;
+    outline: none;
+    overflow: hidden;
+}
+
+/* 鼠标悬停时搜索框边框颜色设定 */
+.content input:hover {
+  border-color: #999 transparent #b3b3b3 #999;
+}
+
+/* 光标在搜索文本框内闪烁时的搜索框颜色 */
+.content input:focus {
+  border-color: #4791ff transparent #4791ff #4791ff;
+} 
+
+/* “百度一下” 按钮容器 */
+.btnbox {
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+/* “百度一下” 按钮 */
+.content button {
+    width: 100px;
+    height: 36px;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385FF;
+    border: 0;
+    border-bottom: 1px solid #2D78F4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    -ms-appearance: none;
+    -ms-border-radius: 0;
+}
+
+/* “百度一下” 按钮鼠标悬停时样式 */
+.content button:hover{
+	width: 100px;
+    height: 36px;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #317ef3 none repeat scroll 0 0;
+    border: 0;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+    outline: medium;
+    padding: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    -ms-appearance: none;
+    -ms-border-radius: 0;
+}
+
+/* 页脚内容最外层容器 */
+#footer {
+  position: absolute;
+  bottom: 44px;
+  text-align: left;
+  font: 12px arial;
+  height: 100px;
+  width: 100%;
+  min-width: 810px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 包裹内容的页脚容器 */
+.ftwrapper {
+    overflow: hidden;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* 页脚左侧的两个二维码和文字包裹容器 */
+#qrcode {
+    display: inline-block;
+}
+/* 包裹单个app内容的容器们 */
+#qrcode .qrcode-item {
+    float: left;
+}
+
+/* 包裹单个二维码图片的容器们 */
+#qrcode .qrcode-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+/* 二维码图片属性 */
+#qrcode .qrcode-img img{
+    width: 60px;
+    height: 60px;
+}
+
+/* 二维码图片右侧所有文字共用属性 */
+#qrcode .qrcode-text span {
+  letter-spacing: 1px;
+}
+/* 二维码图片右侧文字统一属性 */
+#qrcode .qrcode-text {
+  float: left;
+  color: #999;
+  line-height: 23px;
+  margin: 8px 0 0 10px;
+}
+
+/* 手机百度app二维码右侧文字属性 */
+#qrcode .qrcode-text p {
+  text-align: left;
+}
+/* 二维码图片右侧加粗文字属性 */
+#qrcode .qrcode-text b {
+  color: #4C4C4C;
+  font-weight: bold;
+}
+/* 百度糯米外套容器属性 */
+#qrcode .qrcode-item-2 {
+  margin-left: 33px;
+}
+
+
+/* 页脚底部右侧信息最外层容器 */
+#ftConw {
+  display: inline-block;
+  text-align: left;
+  margin-left: 30px;
+  position: relative;
+  top: -12px;
+}
+
+/* 页脚底部右侧信息上行容器 */
+#lh {
+  margin: 16px 0 5px;
+}
+
+/* 页脚底部右侧信息上行文字链接样式 */
+#lh a {
+  color: #272727;
+  margin-right: 17px;
+}
+
+/* 页脚底部右侧信息下行文字样式 */
+#cp, #cp a {
+  color: #666;
+}
+
+/* 页脚底部最右侧的小图标 */
+#cp .c-icon-icrlogo {
+  width: 14px;
+  height: 17px;
+  display: inline-block;
+  overflow: hidden;
+  background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_d99e5dac.png) no-repeat;
+  _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_1f8a4922.gif);
+  background-position: -600px -96px;
+  position: relative;
+  top: 3px;
+}
+

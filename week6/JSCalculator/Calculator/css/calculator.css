@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*使内容不可选*/
+html, body {
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+}
+
+/*包裹整个计算器的容器*/
+#container {
+	width: 500px;
+	height: 500px;
+	border-radius: 8px;
+	margin: auto;
+	font-family: "宋体";
+	box-shadow: 3px 3px 5px 4px #ccc;
+}
+
+/*包裹显示器和键盘的容器*/
+.box {
+	width: 500px;
+	height: 500px;
+	border-radius: 8px;
+	box-sizing: border-box;
+	background: #D2CECE;
+	background: -moz-linear-gradient(left top, #F0F0F0 0%, #D2CECE 36%, #B2B0B4 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#F0F0F0), color-stop(36%,#D2CECE), color-stop(100%,#B2B0B4));
+	background: -o-linear-gradient(left top, #F0F0F0 0%, #D2CECE 36%, #B2B0B4 100%);
+	background: -ms-linear-gradient(left top, #F0F0F0 0%, #D2CECE 36%, #B2B0B4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#D2CECE,endcolorstr=#B2B0B4,gradientType=1);
+}
+/*显示器容器*/
+.screen-wrap {
+	width: 100%;
+	height: 22%;
+	text-align: center;
+}
+
+/*设置显示器样式*/
+.screen {
+	width: 88%;
+	height: 70%;
+	margin:auto;
+	position: relative;
+	top: 20%;
+	display: table;
+	text-align: right;
+	background: #F2F2D7;
+	box-sizing: border-box;
+	border-radius: 6px;
+	box-shadow: 1px 2px 7px 1px #383832 inset;
+	resize: none;
+}
+
+/*设置显示器内文字样式*/
+#display {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px 18px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+/*后加的高级算法按钮容器*/
+.addbuttons {
+	width: 92%;
+	height: 12%;
+	margin: auto;
+	padding-top: 5px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.addbuttons .addbtn {
+	height: 38px;
+	width: 76px;
+	margin-left: 5px;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 1px 2px 3px 1px #7C7979;
+	background: #B2B1B2;
+	background: -moz-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -webkit-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -o-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -ms-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E2E2E2,endcolorstr=#B2B1B2,gradientType=0);
+
+}
+
+.addbuttons .addbtn:active {
+	box-shadow: 0px 1px 2px 0px #7C7979;
+}
+
+#sin {
+	margin-left: 0px;
+}
+
+#sin span, #cos span, #tan span {
+	display: block;
+	line-height: 38px;
+}
+
+#xtwo span, #xthree span {
+	display: block;
+	padding-top: 3px;
+}
+
+#xtwo, #xthree {
+	position: relative;
+	top: 1px;
+}
+
+/*键盘容器*/
+.buttons {
+	width: 92%;
+	height: 66%;
+	margin: auto;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/*使包裹按钮的div都向左浮动*/
+.buttons div {
+	float: left;
+}
+
+/*统一设置按钮样式*/
+.btn {
+	margin: 6px 8px;
+	width: 76px;
+	height:45px;
+	text-align: center;
+	display: table;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 1px 2px 3px 1px #7C7979;
+	background: #B2B1B2;
+	background: -moz-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -webkit-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -o-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	background: -ms-linear-gradient(top,#E2E2E2 0%,#B2B1B2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E2E2E2,endcolorstr=#B2B1B2,gradientType=0);
+}
+
+/*在IE下没有效果，加了权重还是不行 (但单独在计算器外部做demo是有效的)*/ 
+#buttons .btn:active{
+	box-shadow: 0px 1px 2px 0px #7C7979;
+}
+
+/*调整按钮0的大小*/
+#num0 {
+	width: 168px;
+}
+/*调整按钮等号的大小*/
+#equl {
+	height: 102px;
+}
+/*统一设置按钮内部文字居中*/
+.btn span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*第一行按钮容器*/
+.set {
+	width: 100%;
+	height: 20%;
+}
+
+/*数字键盘按钮容器*/
+.num {
+	width: 60%;
+	height: 80%;
+}
+
+/*加减乘除按钮容器和最右排按钮容器*/
+.ope,
+.res {
+	width: 20%;
+	height: 80%;
+}
+
+/*复写第一行和合最后一列按钮的文字颜色*/
+.set,
+.res {
+	color: #F7F7F7;
+}
+
+/*复写清除按钮的颜色*/
+#del,
+#ac,
+#clear {
+	background: #BE4F16;
+	background:-moz-linear-gradient(top,#FFB393 0%,#BE4F16 100%);
+	background:-webkit-linear-gradient(top,#FFB393 0%,#BE4F16 100%);
+	background:-o-linear-gradient(top,#FFB393 0%,#BE4F16 100%);
+	background:-ms-linear-gradient(top,#FFB393 0%,#BE4F16 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#FFB393,endcolorstr=#BE4F16,gradientType=0);
+}
+
+/*复写右边列按钮的颜色*/
+.res .btn,
+#pn, #recip {
+	background: #272427;
+	background: -moz-linear-gradient(top,#4C474C 0%,#272427 100%);
+	background: -webkit-linear-gradient(top,#4C474C 0%,#272427 100%);
+	background: -o-linear-gradient(top,#4C474C 0%,#272427 100%);
+	background: -ms-linear-gradient(top,#4C474C 0%,#272427 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4C474C,endcolorstr=#272427,gradientType=0);
+}
+
+/*复写加减乘除按钮的颜色*/
+.ope .btn {
+	background: #676E73;
+	background: -moz-linear-gradient(top,#A2A2A6 0%,#676E73 100%);
+	background: -webkit-linear-gradient(top,#A2A2A6 0%,#676E73 100%);
+	background: -o-linear-gradient(top,#A2A2A6 0%,#676E73 100%);
+	background: -ms-linear-gradient(top,#A2A2A6 0%,#676E73 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#A2A2A6,endcolorstr=#676E73,gradientType=0);
+}
+
+/*复写根号按钮字体大小*/
+#root {
+	font-size: 16px;
+}
+
+/*复写数字键盘按钮字体大小*/
+.num {
+	font-size: 30px;
+}
+
+/*复写加减乘除按钮字体大小*/
+.ope {
+	font-size: 26px;
+}
+
+/*复写加、减按钮字体大小*/
+#plus, #minus {
+	font-size: 36px;
+}

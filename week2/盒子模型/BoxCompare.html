@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<!--盒子模型作业第2版-->
+<!--将原本在当前页面的css内容整理到了单独的css文件中-->
+<!--增加了一个错误的怪异盒子做对比-->
+<!--增加多浏览器支持-->
+<!--优化了代码-->
+<head>
+    <meta charset="utf-8" />
+    <title>BoxCompare</title>
+    <!--正常盒子与怪异盒子对比的css文件-->
+    <link href="stylesheets/sd_wr_compare.css" type="text/css" rel="stylesheet">
+    <!--弹性盒子column分栏的css文件-->
+    <link href="stylesheets/colmun_divide.css" type="text/css" rel="stylesheet">
+    <!--弹性盒子水平与垂直分栏的css文件-->
+    <link href="stylesheets/box_distribute.css" type="text/css" rel="stylesheet">
+    <!--排序(flex)的css文件-->
+    <link href="stylesheets/order_flex.css" type="text/css" rel="stylesheet">
+    <!--旧版弹性盒子的居中布局的css文件-->
+    <link href="stylesheets/old_box_center.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <h3> 正常盒子 </h3>
+    <div class="sd_outer">
+        <div class="sd_inner">
+            <img src="pics/standard.jpg">
+        </div>
+    </div>
+    <hr/>
+    <h3> 怪异盒子 </h3>
+    <div class="wr_outer">
+        <div class="wr_inner">
+            <img src="pics/weird.jpg">
+        </div>
+    </div>
+    <hr/>
+    <h3> 怪异盒子像正常盒子那样设置的结果 </h3>
+    <div class="swr_outer">
+        <div class="swr_inner">
+            <img src="pics/weird_s.jpg">
+        </div>
+    </div>
+    <hr/>
+    <h3> 弹性盒子column分栏 </h3>
+    <div class="v_divide">
+        <img src="pics/panda.png" style="float: left;">
+        <p>
+            《功夫熊猫》是一部以中国功夫为主题的美国动作喜剧电影，影片以中国古代为背景，其景观、布景、服装以至食物均充满中国元素。故事讲述了一只笨拙的熊猫立志成为武林高手的故事。
+        </p>
+        <p>
+            故事发生在很久以前的古代中国，而且要从一只喜欢滚来滚去、滚来滚去的大熊猫身上说起。话说熊猫阿宝是一家面条店的学徒，虽然笨手笨脚，也勉强算是谋到了一份职业，可是阿宝天天百无禁忌地做着白日梦，梦想着自己有一天能够在功夫的世界里与明星级的大人物进行一场巅峰之战。别看阿宝所在的“和平谷”一派欣欣向荣的安详景象，其实是一个卧虎藏龙的风水宝地，先不说五大功夫高手皆坐镇于此，更有一大师级别的宗师在这里隐居，可是在一场特殊的比武大会上胜出的人要代表“和平谷”将邪恶的大龙永久地驱除出去，啥都不会的阿宝却在经历了一系列阴差阳错之后屏雀中选，让所有人都大跌眼镜。
+        </p>
+        <p>
+            “和平谷”的五位功夫大师对种戏剧性的结果持各种不同的态度：一身正气 功夫熊猫 剧照 功夫熊猫 剧照 (15张) 、勇敢无畏老虎大师将阿宝看成了一个名副其实的笑话；友好、顽皮却很热心肠的猴子大师则是一副看好戏的有趣神情；仙鹤大师是五人中最具“母性”的那一位，他很同情阿宝；自负的毒蛇大师虽然给人的感觉稍显轻浮，但对这件事的态度就有如她善变的性格，不太明朗；螳螂大师算是几位高手中最聪明的一个，对阿宝的现状很是无奈，总是暗中帮忙。
+        </p>
+        <p>
+            最后要将阿宝调教成“功夫高手”的一代宗师“师父”华丽丽地出场了，然而有着一身好功夫并不意味着就是完美的，“师父”因为过去犯下的一个错误，一直纠结着没办法释然。他的任务，就是将那个软弱、除了做面条什么都不会的阿宝训练成一个拥有着足够的武术技巧、可以打败强大敌人的顶级战士。
+        </p>
+        <p>
+            至于那个让人人都如临大敌的大龙，则是一只非常自恋的雪豹，他等待复仇的这一天，已经整整等了20年了，可是他做梦也没想到，自己等来的竟然是一只大熊猫。激烈的战斗后，阿宝以自己对武功的悟性和师父传授的武术，战胜了大龙，拯救了山谷，为山谷带来了和平。
+        </p>
+    </div>
+    <hr/>
+    <h3> 水平分栏 </h3>
+    <div class="hor">
+        <div class="c1">
+        </div>
+        <div class="c2">
+        </div>
+        <div class="c3">
+        </div>
+        <div class="c4">
+        </div>
+        <div class="c5">
+        </div>
+        <div class="c6">
+        </div>
+        <div class="c7">
+        </div>
+    </div>
+    <hr/>
+    <h3> 垂直分栏 </h3>
+    <div class="vir">
+        <div class="c1">
+        </div>
+        <div class="c2">
+        </div>
+        <div class="c3">
+        </div>
+        <div class="c4">
+        </div>
+        <div class="c5">
+        </div>
+        <div class="c6">
+        </div>
+        <div class="c7">
+        </div>
+    </div>
+    <hr/>
+    <h3> 排序(flex) </h3>
+    <div class="order">
+        <div class="o1">
+            第一个DIV放在第2位
+        </div>
+        <div class="o2">
+            第二个DIV放在第3位
+        </div>
+        <div class="o3">
+            第三个DIV放在第1位
+        </div>
+    </div>
+    <hr/>
+    <h3> 旧版弹性盒子居中布局 </h3>
+    <div class="old_con">
+        <div class="old_mid">
+            <img src="pics/square.png">
+        </div>
+    </div>
+</body>

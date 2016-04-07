@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0">
+    <meta charset="utf-8" />
+    <title>百度新闻</title>
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+</head>
+
+<body style="height: 568px;">
+    <div id="wrapper" class="news">
+        <!--“返回顶部”按钮-->
+        <div class="gotop-globalview ui-gotop" style="position: fixed; z-index: 999; bottom: 200px; right: 10px; visibility: visible; display: none;">
+            <span>&nbsp;</span>
+        </div>
+        <div id="index_view" style="display: block;">
+            <header>
+                <!--头部最外层容器-->
+                <div class="ui-new-toolbar">
+                    <div class="ui-new-toolbar-l">
+                        <div data-href="http://m.baidu.com/?from=1000376a" class="ui-new-toolbar-btn btn-baidu"></div>
+                        <div class="ui-new-toolbar-btn btn-userhome"></div>
+                    </div>
+                    <div class="ui-new-toolbar-r">
+                        <div class="ui-new-toolbar-btn btn-search"></div>
+                        <div class="ui-new-toolbar-btn btn-subscribe"></div>
+                    </div>
+                </div>
+            </header>
+            <!--主体内容外层框架（包括内容选项）-->
+            <div id="index_view_content">
+                <!--主体内容分类菜单-->
+                <div id="index_view_navigator">
+                    <div class="divider"></div>
+                    <div class="content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="http://localhost/php/tuijian.php" class="cur" id="tuijian">推荐</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="http://localhost/php/baijia.php" class="" id="baijia">百家</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#" class="">本地</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#" class="">图片</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#" class="">娱乐</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">社会</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="last-shown-line">
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">军事</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">科技</span></div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div><b></b><span data-href="#">互联网</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">女人</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">搞笑</span>
+                                            <div class="more">更多
+                                                <div class="down-triangle"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="display: none;">
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">生活</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">国际</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">国内</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">体育</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">汽车</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">财经</span></div>
+                                    </td>
+                                </tr>
+                                <tr style="display: none;">
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">房产</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">时尚</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">教育</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">游戏</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">旅游</span></div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div><b></b><span data-href="#">人文</span></div>
+                                    </td>
+                                </tr>
+                                <tr style="display: none;">
+                                    <td colspan="2">
+                                        <div><b></b><span data-href="#">创意</span></div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div><b></b><span data-href="#">互联网+</span></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="divider tail" style="display: none;"></div>
+                    <div class="footer" style="display: none;">
+                        <div class="btn-group">
+                            <div class="reporter-rank">记者榜</div>
+                            <div class="media-rank"><b></b>媒体榜</div>
+                            <!-- <div class="add-subscribe">添加订阅</div> -->
+                            <div class="manage-subscribe"><b></b>删除及排序</div>
+                        </div>
+                        <div class="less">收起
+                            <div class="up-triangle"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--主体内容（从服务器动态获取的）容器-->
+                <div id="index_view_sections">
+                    <div class="index-view-subpage index-view-subpage-chosen" id="tuijian_content" style="display: block;">
+                        <!--大轮播图片-->
+                        <div class="topic-gallery-container">
+                            <div class="topic-gallery ui-line-icons">
+                                <div class="g-list" style="left: -310px;">
+                                    <div class="g-item" data-index="2" data-text="约吗？婺源十万亩油菜花开了" data-url="#" style="width: 100%;">
+                                        <div class="g-item-innerbox">
+                                            <div class="g-imagebox" style="height: 187px;">
+                                                <img src="img/lb_2.jpg">
+                                            </div>
+                                            <h4 class="g-title"><span>约吗？婺源十万亩油菜花开了</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="g-item" data-index="0" data-text="广东现云海雪景奇观 游客披棉被赏雪" data-url="#" style="width: 100%;">
+                                        <div class="g-item-innerbox">
+                                            <div class="g-imagebox" style="height: 187px;">
+                                                <img src="img/lb_0.jpg">
+                                            </div>
+                                            <h4 class="g-title"><span>广东现云海雪景奇观 游客披棉被赏雪</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="g-item" data-index="1" data-text="墨尔本夜间发生帮派骚乱 华裔受冲击" data-url="#" style="width: 100%;">
+                                        <div class="g-item-innerbox">
+                                            <div class="g-imagebox" style="height: 187px;">
+                                                <img src="img/lb_1.jpg">
+                                            </div>
+                                            <h4 class="g-title"><span>墨尔本夜间发生帮派骚乱 华裔受冲击</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="g-item" data-index="2" data-text="约吗？婺源十万亩油菜花开了" data-url="#" style="width: 100%;">
+                                        <div class="g-item-innerbox">
+                                            <div class="g-imagebox" style="height: 187px;">
+                                                <img src="img/lb_2.jpg">
+                                            </div>
+                                            <h4 class="g-title"><span>约吗？婺源十万亩油菜花开了</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="g-item" data-index="0" data-text="广东现云海雪景奇观 游客披棉被赏雪" data-url="#" style="width: 100%;">
+                                        <div class="g-item-innerbox">
+                                            <div class="g-imagebox" style="height: 187px;">
+                                                <img src="img/lb_0.jpg">
+                                            </div>
+                                            <h4 class="g-title"><span>广东现云海雪景奇观 游客披棉被赏雪</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--轮播图片翻页按钮-->
+                                <div class="g-icons"><i class="cur"></i><i class=""></i><i class=""></i></div>
+                            </div>
+                        </div>
+                        <!--滚动字幕-->
+                        <div class="ui-hotword">
+                            <div class="ui-hotword-left">
+                                <span>热点</span>
+                            </div>
+                            <ul class="ui-hotword-content" style="top: 0px;">
+                                <li class="ui-hotword-item" data-name="疑似MH370残骸">
+                                    <span>疑似MH370残骸</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="新版iPhone">
+                                    <span>新版iPhone</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="习近平湖南团审议">
+                                    <span>习近平湖南团审议</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="围棋人机大战">
+                                    <span>围棋人机大战</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="全球游客最爱城市">
+                                    <span>全球游客最爱城市</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="AlphaGo 李世石">
+                                    <span>AlphaGo 李世石</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="用人单位怀孕条例">
+                                    <span>用人单位怀孕条例</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="中国直男癌">
+                                    <span>中国直男癌</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="龙煤拖欠工资">
+                                    <span>龙煤拖欠工资</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="311地震5周年">
+                                    <span>311地震5周年</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                                <li class="ui-hotword-item" data-name="疑似MH370残骸">
+                                    <span>疑似MH370残骸</span>
+                                    <b class="ui-hotword-item-right"></b>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--总动态加载内容块的外层框架-->
+                        <div class="index-view-subpage-feed">
+                            <!--所有加载内容块的外层容器-->
+                            <div class="index-list" id="tuijian_load">
+                                <!--以下是从服务器加载的内容-->
+                            </div>
+                            <!--"点击加载更多"按钮的容器-->
+                            <div class="ui-refresh-wrapper">
+                                <div class="ui-refresh">点击加载更多</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-view-subpage" id="baijia_content" style="display: none;">
+                        <div class="index-list" id="baijia_load">
+                            <!--以下是从服务器加载的内容-->
+                        </div>
+                        <div class="ui-refresh-wrapper">
+                            <div class="ui-refresh">点击加载更多</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--页脚部分-->
+            <div id="index_view_footer">
+                <div class="ui-footer">
+                    <div class="item-wrapper">
+                        <div class="item feedback">意见反馈</div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item app-recommend">应用推荐</div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item app-download">客户端</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/news.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+/*紫色主题css文件*/
+
+/*设为首页按钮样式背景*/
+#tools .sethome {
+	background: url('../img/index_widthlg_purple.png') no-repeat -20px -172px;
+}
+
+/*“猜你喜欢”字样<span>样式*/
+#guesslikesite-block .guessyoulike .youlike {
+	background: url(../img/new_index_icon_purple.png);
+}
+
+/*|主题|一些边框颜色*/
+.s-br20, .g-br20, .s-br20h:hover, .g-br20h:hover {
+	border: 1px solid #BC33CB;
+}
+
+/*|主题|一些文字颜色*/
+.s-fc20, .g-fc20, .s-fc20:hover, .s-fc20h:hover, .g-fc20h:hover{
+	color: #B423D3;
+}
+
+/*|主题|“猜你喜欢”分类标题文字颜色*/
+.guesslike-industry .guesslike-industry-title {
+	color: #B423D3;
+}
+
+/*主流大站列表文字鼠标悬停颜色*/
+.widget-site .site-item a:hover {
+	text-decoration: underline;
+	color: #F50;
+}
+.g_red, .tc-orange {
+	color: #F50;
+	text-decoration: none;
+}
+
+/*|主题|样式*/
+.tc-green {
+	color: #B423D3;
+	text-decoration: none;
+}
+
+/*|主题|导航栏颜色*/
+#mainmenu .menus-br {
+	border-top: 2px solid #8A3590;
+	border-bottom: 1px solid #8A3590;
+	background-color: #B841C0;
+}
+
+/*|主题|导航栏单项选中状态颜色*/
+#mainmenu .menus .link.active {
+	background-color: #9E38A5;
+	cursor: pointer;
+}
+
+/*|主题|导航栏单项选态颜色*/
+#mainmenu .menus-br .menu .link {
+	color: #FFF;
+}
+
+/*|主题|部分边框颜色*/
+.s-br21, .g-br21, .s-br21h:hover, .g-br21h:hover {
+	border: 1px solid #D8AADD;
+}
+
+/*|主题|部分边框颜色(包括左侧栏最外层边框)*/
+.s-br3, .g-br3, .s-br3h:hover, .g-br3h:hover {
+	border: 1px solid #D8AADD;
+}
+
+/*分类新闻顶部菜单项鼠标悬停改变字体颜色*/
+.toptab .option_hover {
+	color: #B423D3;
+}
+
+/*分类新闻顶部菜单栏*/
+.toptab .channel:hover {
+	color: #B423D3;
+	text-decoration: none;
+}
+
+/*“热搜”字体链接样式*/
+.hotsearch-box .hotsearchtop .boxhot a.hotsearch-link {
+  color: #B423D3;
+  margin-right: 5px;
+}
+
+/*“更多”字体链接样式*/
+.hotsearch-box .hotsearchtop .ctrlBtn {
+  color: #B423D3;
+}

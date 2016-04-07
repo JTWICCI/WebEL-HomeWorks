@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* 隐藏PC端页面样式*/
+#wrapper_pc,
+#moreprolist {
+	display: none;
+}
+
+/* 把需要的元素边距初始化 */
+body, h1, h2, h3, p, div, ol, ul, input, button {
+ 	margin: 0;
+ 	padding: 0;
+}
+
+/* 初始化基本标签样式 */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+ 	text-align: center;
+ 	-webkit-text-size-adjust: none;
+	background: #EEEFF0;
+	overflow-x: hidden;
+}
+
+input, button, textarea {
+  border: 0;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* 初始化基本标签样式结束 */
+/* 手机端最外层嵌套容器属性 */
+#wrapper_mobile {
+	width: 100%;
+}
+
+#wrapper_mobile .se-input, 
+#wrapper_mobile .se-encode {
+  display: block;
+  -webkit-box-flex: 1;
+  margin: 2px 0;
+  padding: 6px 35px 6px 6px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* 设置头部容器底内边距 */
+#header_mob {
+	padding-bottom: 10px;
+}
+/* 用户信息容器 */
+#userinfo-wrap {
+	position: relative;
+	height: 54px;
+}
+
+/* logo 容器*/
+#logo_mob {
+	height: 55px;
+	padding: 17px 0 15px;
+}
+
+/* 搜索框表单样式 */
+#index-form {
+  margin: 0 10px;
+  height: 42px;
+  background: #FFF;
+  border: 1px solid #949494;
+  border-bottom-color: #BCBCBC;
+}
+
+/* 搜索框和“百度一下”按钮的内容容器 */
+#index-form .con-wrap {
+  display: -webkit-box;
+}
+
+/* 设置搜索输入文本框样式 */
+.adjust-input {
+  position: relative;
+  margin: 0 -74px 0 0;
+  line-height: 29px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.se-input {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 7px 42px 7px 6px;
+  height: 42px;
+  line-height: 28px;
+  resize: none;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 按钮外部容器样式 */
+#wrapper_mobile .se-inner {
+  width: 82px;
+  position: relative;
+}
+
+/* “百度一下” 按钮样式 */ 
+#index-bn {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 82px;
+  height: 42px;
+  background: #38F;
+  color: #FFF;
+  white-space: nowrap;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-size: 16px;
+  border-top: 1px solid #38F;
+  border-bottom: 1px solid #38F;
+  box-sizing: inherit;
+}
+
+/* 搜索框下方导航栏容器 */
+#navs {
+  margin: 17px 0 14px;
+  overflow: hidden;
+}
+/* 导航栏a标签属性 */
+#navs a {
+  float: left;
+  width: 16%;
+  font-size: 12px;
+  color: #666;
+}
+/* 导航栏a标签子属性 */
+#navs a:first-child, 
+#navs a:nth-child(7) {
+  margin-left: 2%;
+}
+/* 导航小图标属性 */
+#navs a i {
+  display: block;
+  margin-bottom: 4px;
+  height: 24px;
+}
+
+/* 导航栏下的更多内容容器 */
+#plus-card {
+  position: relative;
+  padding: 0 8px 10px;
+}
+
+/* 更多内容里的a标签样式 */
+.plus-content a {
+  color: #262626;
+}
+
+/* “常用网址” 容器 */
+.plus {
+  margin-top: 8px;
+  background: #FFF;
+}
+/* “常用网址” 标题容器样式 */
+.plus-title {
+  position: relative;
+  margin: 2px 14px 0;
+  height: 40px;
+  text-align: left;
+}
+/* “常用网址” 标题内部容器 */
+.normal-title {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+/* “常用网址” 标题文字样式 */
+.plus-title h2 {
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #999;
+}
+
+/* “常用网址” 内容里的a标签样式 */
+#nav-list a {
+  float: left;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  padding: 0 6px;
+  width: 25%;
+  height: 42px;
+  line-height: 42px;
+}
+/* “常用网址” 内容容器样式 */
+.plus-content {
+  overflow: hidden;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+/* “常用网址” 内容里的span标签样式 */
+#nav-list a span {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px 0 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* 统一设置一些属性 */
+#nav-list a span, 
+#nav-view .rec p, 
+#nav-view .s-webname, 
+#nav-view .s-weburl {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 为hao123单独设置文字间距 */
+#nav .plus-content a.hao123 {
+  letter-spacing: -1px;
+}
+
+/* 生活服务外层容器 */
+.plus {
+  margin-top: 8px;
+  background: #FFF;
+}
+
+/* “生活服务” 标题容器 */
+.plus-title {
+  position: relative;
+  margin: 2px 14px 0;
+  height: 40px;
+  text-align: left;
+}
+
+/* “生活服务” 内容容器 */
+.plus-content {
+  overflow: hidden;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+/* “定位” 内容容器 */
+#lbs .gps-zone {
+  position: relative;
+  margin: 8px 14px 14px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  color: #262626;
+	
+}
+
+/* “生活服务” 标题文字样式 */
+#lbs .gps-zone p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  padding-right: 70px;
+  line-height: 16px;
+}
+
+/* “定位” 提示文字容器 */
+#lbs .gps-info {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 32px;
+  overflow: hidden;
+}
+/* 设置 “定位” 按钮样式 */
+#lbs .gps-zone button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 30px;
+  border: 1px solid #D2D6DD;
+  border-radius: 2px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+
+/* “定位” 按钮内部图片容器 */
+#lbs .gps-zone span {
+  position: absolute;
+  top: 6px;
+  right: 43px;
+  width: 20px;
+  height: 20px;
+}
+
+/* “生活服务” 的内容列表样式 */
+#lbs-list {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+#lbs-list li,
+#lbs-list a {
+  display: inline-block;
+}
+
+#lbs-list li {
+  width: 24%;
+  text-align: center;
+}
+
+#lbs-list a {
+  padding: 0 10px;
+}
+
+/* “展示全部” 容器*/
+.plus-control {
+  height: 47px;
+  line-height: 47px;
+  border-top: 1px solid #F0F0F0;
+  margin-top: 4px;
+  font-size: 16px;
+  color: #262626;
+}
+
+/* 脚步容器 */
+#foot {
+  margin: 10px 28px 0;
+}
+
+#foot div {
+  overflow: hidden;
+  text-align: center;
+}
+
+#foot div a {
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  width: 95px;
+  line-height: 34px;
+  color: #666;
+  font-size: 13px;
+}
+
+#index-copyright {
+  display: block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  padding: 6px 0 16px;
+  color: #999;
+}

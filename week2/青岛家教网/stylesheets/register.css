@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    margin: 0px;
+    padding: 10px;
+    background-color: #0D7792;
+    background-image: url(../img/beijing.gif);
+    color: #000;
+}
+
+#wrapper {
+    width: 710px;
+    height: 2880px;
+    margin: auto;
+    padding: 0px;
+    background-color: #FFF;
+    border-radius: 30px 30px 30px 30px;
+}
+/* 下面是头部css样式 */
+header {
+    margin: auto;
+    width: 637px;
+    height: 82px;
+}
+
+span {
+	display: inline-block;
+}
+
+header img {
+    display: inline-block;
+}
+
+header span {
+    float: right;
+    margin-top: 60px;
+}
+
+header span a {
+    font-size: 12px;
+    color: #FF0099;
+    text-decoration: none;
+}
+
+/* 下面是主体表单css样式 */
+#main {
+    margin: auto;
+    width: 710px;
+}
+
+/* 标题文字样式 */
+.titleinfo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+td {
+	padding: 3px;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333;
+}
+
+textarea{
+	resize: none;
+}
+
+.red {
+    color: #F00;
+}
+
+.p13 {
+    font-size: 13px;
+    line-height: 150%;
+    color: #003399;
+    font-weight: bold;
+}
+
+.blue {
+    color: #00F;
+}
+
+/* 底部css样式 */
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #333
+}
+
+footer span {
+    color: #666;
+}
+

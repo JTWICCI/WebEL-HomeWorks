@@ -1,0 +1,783 @@
+/*
+*  less的使用：
+*/
+/*颜色变量的使用*/
+@color-gray: #E4E4E4;
+@color-dgray: #666;
+@color-green: #35b558;
+@color-black: #333;
+
+/*混合、嵌套的使用*/
+/*父选择符"&"的使用，包括伪类选择，串联选择*/
+
+
+
+#footer {
+    min-width: 1000px;
+    .jkinfor-block {
+        background: #fafafa;
+        border-top: 1px solid @color-gray;
+        border-bottom: 1px solid @color-gray;
+        .jkinfor {
+            width: 1000px;
+            margin: 0 auto;
+            min-height: 200px;
+            dl {
+                width: 185px;
+                padding-left: 30px;
+                color: gray;
+                margin: 25px 0;
+                float: left;
+                border-left: 1px solid @color-gray;
+                min-height: 175px;
+                dt {
+                    font-size: 14px;
+                    color: @color-dgray;
+                    font-weight: 500;
+                };
+                dd {
+                    font-size: 12px;
+                    margin-top: 10px;
+                };
+            };
+            a {
+                color: gray;
+                padding-left: 5px;
+                &:hover{
+                    color: @color-green;
+                };
+            };
+        };
+    };
+    .search-share {
+        width: 260px;
+        float: left;
+        min-height: 226px;
+        border-left: 1px solid @color-gray;
+        padding: 20px 0 0 40px;
+        .app-download {
+            a {
+                padding-left: 0;
+                &:hover{
+                    p,strong {
+                        color: @color-green;
+                    };
+                };
+            };
+            img {
+                display: block;
+                float: left;
+                margin-right: 15px;
+            };
+            strong {
+                font-size: 18px;
+                color: @color-dgray;
+                margin-bottom: 8px;
+            };
+            p {
+                font-size: 14px;
+                color: gray;
+                background: url(http://s1.jikexueyuan.com/common/images/more-icon_d39346f.png) 160px center no-repeat;
+                background-size: 7px 13px;
+            };
+        };
+        .share {
+            margin-top: 15px;
+            a {
+                background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) -23px 0 no-repeat;
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+                position: relative;
+                &.sina-icon {
+                    background-position: -23px 0;
+                    &:hover{
+                        background-position: -23px -40px;
+                    };
+                };
+                &.qq-icon {
+                    background-position: -23px -82px;
+                    &:hover{
+                        background-position: -23px -122px;
+                        .weinxinpop {
+                            display: block;
+                        };
+                    };
+                    .weinxinpop {
+                        position: absolute;
+                        bottom: 32px;
+                        left: -48px;
+                        z-index: 200;
+                        display: none;
+                    };
+                };
+                &.tieba-icon {
+                    background-position: -145px 0;
+                    &:hover{
+                        background-position: -145px -40px;
+                    };
+                };
+            };
+        };
+    };
+    .copyright {
+        font-size: 12px;
+        color: #999;
+        margin: 0 auto;
+        width: 1000px;
+        text-align: center;
+        padding: 20px;
+        a {
+            color: #999;
+            &:hover{
+                color: @color-green;
+            };
+        };
+    };
+}
+
+.pewm2,
+.pewm3 {
+    font-size: 12px;
+    color: #252525;
+    p {
+        padding-top: 20px;
+    };
+}
+
+.loading_icon {
+    width: 40px;
+    height: 40px;
+    background: url(http://s1.jikexueyuan.com/common/images/loading_25f7326.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 40px;
+    text-align: center
+}
+
+.rotate2_360 {
+    -webkit-animation: rotate 1.5s infinite linear;
+    animation: rotate 1.5s infinite linear
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+.ljbm4 {
+    width: 300px;
+    height: 41px;
+    border: 0;
+    margin-right: 20px;
+    outline: 0;
+    cursor: pointer;
+    background: url(../image/baoming2.png) 0 0 no-repeat;
+    float: left;
+    background-size: 100% 100%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 40px
+}
+
+#navbox {
+    height: 42px;
+    position: relative;
+    z-index: 1100;
+    background: #fff;
+    background: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid #e8e8e8;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    .learnav-content {
+        display: none;
+        width: 100%;
+        height: 160px;
+        background: #343536;
+        background: rgba(52, 53, 54, .95);
+        position: absolute;
+        z-index: 1000;
+        top: 43px;
+        .content-one {
+            width: 1000px;
+            margin: 0 auto;
+            height: 130px;
+            display: none;
+            a,span {
+                display: inline-block;
+                margin-right: 14px;
+                color: #fff;
+                font-size: 12px;
+            };
+            ul {
+                margin-top: 30px;
+            };
+            li {
+                margin-bottom: 15px;
+                line-height: 17px;
+                height: 17px;
+            };
+            .hybox {
+                width: 33.3%;
+                float: left;
+                margin-top: 15px;
+                h4 {
+                    font-size: 22px;
+                    color: #ddd;
+                    span {
+                        color: @color-green;
+                        font-size: 22px;
+                    };
+                };
+                p {
+                    font-size: 12px;
+                    color: #bbb;
+                    padding: 5px 0;
+                };
+                a {
+                    color: @color-green;
+                    font-size: 14px;
+                };
+            };
+            .content-one-h2 {
+                font-size: 12px;
+                line-height: 17px;
+                height: 17px;
+                color: #fff;
+                margin-top: 30px;
+                a {
+                    float: right;
+                    color: #ddd;
+                };
+            };
+            a {
+                font-size: 12px;
+                color: #ddd;
+                &:hover{
+                    color: @color-green!important;
+                    text-decoration: none;
+                };
+            };
+            dl {
+                margin-top: 20px;
+            };
+            dd {
+                width: 100px;
+                float: left;
+                margin-right: 25px;
+                text-align: center;
+                a:hover {
+                    text-decoration: none;
+                    img {
+                        opacity: .8;
+                    };
+                };
+                h2,h3 {
+                    text-align: center;
+                    font-size: 12px;
+                    margin-top: 5px;
+                    width: 120px;
+                };
+            };
+        };
+    };
+    .nav {
+        height: 42px;
+        position: relative;
+        margin: 0 auto;
+        .navbox {
+            width: 740px;
+        };
+        a {
+            display: inline-block;
+            width: 120px;
+            font-size: 14px;
+            color: @color-black;
+            line-height: 42px;
+            padding: 0;
+            text-align: center;
+            &:hover{
+                color: @color-green;
+            };
+            &.current {
+                color: @color-green;
+            };
+            &:nth-child(1) {
+                padding: 0;
+                margin-right: 22px;
+                width: auto;
+            };
+            &.on {
+                background: url(../images/abc.png) center bottom no-repeat;
+                background-size: 13px 7px;
+                -webkit-background-size: 13px 8px;
+                -moz-background-size: 13px 7px;
+            };
+        };
+        .user-need {
+            height: 44px;
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            top: 0;
+            line-height: 44px;
+            font-size: 12px;
+            span {
+                display: inline-block;
+                img {
+                    float: left;
+                    margin-right: 5px;
+                    margin-top: 13px;
+                };
+                &:nth-child(1) img {
+                    margin-top: 14px;
+                };
+            };
+            a {
+                width: auto!important;
+                font-size: 12px;
+                padding: 0;
+                margin-left: 20px;
+                &:nth-child(1) {
+                    margin-right: 0!important;
+                };
+            };
+        };
+    };
+    #prize {
+        width: 14px;
+        height: 15px;
+        position: absolute;
+        z-index: 2000;
+        right: 25px;
+        top: 3px;
+        display: block;
+    };
+    .navbox {
+        &:hover .navpanel {
+            display: block;
+        };
+        .navpanel {
+            display: none;
+            position: absolute;
+            top: 42px;
+            width: 100%;
+            height: 140px;
+            background: rgba(255, 255, 255, .97);
+            border: 1px solid #e8e8e8;
+            border-top: 0;
+            padding-left: 50px;
+            -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+            -moz-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+            box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+            .panel-item {
+                position: relative;
+                width: 120px;
+                margin-left: -1px;
+                border-right: 1px solid #F7F7F7;
+                float: left;
+                padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 14px;
+                height: 100%;
+                &:hover{
+                    background-color: #F7F7F7;
+                };
+                .angle {
+                    display: inline-block;
+                    background-image: url(http://s1.jikexueyuan.com/common/images/nav-angle_f7c86b6.png);
+                    width: 12px;
+                    height: 7px;
+                    position: absolute;
+                    background-size: 100% 100%;
+                    top: -7px;
+                    left: 54px;
+                    display: none;
+                };
+                .item-box li a {
+                    line-height: 29px;
+                    display: block;
+                    text-align: left;
+                    margin-right: 0;
+                    font-size: 12px;
+                    color: @color-dgray;
+                    &:hover{
+                        color: @color-green;
+                    };
+                };
+                &:first-child {
+                    border-left: 1px solid #F7F7F7;
+                };
+                &:hover .angle {
+                    display: block;
+                };
+            };
+        };
+    };
+}
+
+.navpositon {
+    height: 42px;
+    width: 100%
+}
+
+#header .logo {
+    float: left;
+    width: 113px;
+    margin-top: 5px
+}
+
+#header .loginbox,
+#header .loginbox_event {
+    i.tag-icon {
+        background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) 0 -22px no-repeat;
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        float: left;
+        margin: 14px 10px 0 0;
+    };
+    em {
+        padding: 0 5px;
+    };
+    .sj-icon {
+        width: 13px;
+        height: 7px;
+        left: 50%;
+        margin-left: -6.5px;
+        top: -7px;
+    };
+    .user-center {
+        display: none;
+        width: 110px;
+        top: 40px;
+        left: 50%;
+        margin-left: -65px;
+        position: absolute;
+        text-align: center;
+        background: @color-black;
+        z-index: 2200;
+        color: #fff;
+        font-size: 12px;
+        padding: 10px 0;
+        a {
+            height: 26px;
+            line-height: 26px;
+            display: block;
+            font-size: 12px;
+            color: #ddd;
+            &:hover{
+                background: #444;
+            };
+        };
+    };
+    .user-name,span {
+        cursor: pointer;
+        display: inline-block;
+    };
+    .user-name {
+        .vip-icon>img {
+            width: 50px;
+            height: 15px;
+            margin-right: 5px;
+        };
+        p img {
+            width: 10px;
+            height: 6px;
+            margin-left: 5px;
+            -webkit-transition: -webkit-transform .2s ease-in;
+            -moz-transition: -moz-transform .2s ease-in;
+            -o-transition: -o-transform .2s ease-in;
+            transition: transform .2s ease-in;
+        };
+    };
+}
+
+#header .header-ad {
+    width: 160px;
+    height: 50px;
+    overflow: hidden;
+    margin-left: 20px;
+    float: left
+}
+
+.search-section div,
+.search-section input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.search-section {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    margin: 0 0 0 -190px;
+    width: 380px;
+    height: 38px;
+    border: 1px solid @color-gray;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 2000;
+    .search-text {
+        width: 100%;
+        height: 36px;
+        padding: 9px 150px 9px 15px;
+        border: 0;
+        line-height: 18px;
+        color: @color-black;
+        background: #fff;
+        font-size: 12px;
+        text-align: left;
+    };
+    .hot-words {
+        position: absolute;
+        top: 9px;
+        right: 48px;
+        font-size: 12px;
+        a {
+            display: inline-block;
+            padding: 1px 3px;
+            margin-left: 5px;
+            color: gray;
+            background: #f3f3f3;
+            &:hover{
+                color: @color-black;
+                background: #dfdfdf;
+            };
+        };
+    };
+    .search-btn {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 40px;
+        height: 38px;
+        border: 1px solid #dfdfdf;
+        color: #6d6d6d;
+        background: url(http://s1.jikexueyuan.com/common/images/topsearch-icon_e1f5df2.png) center center no-repeat;
+        cursor: pointer;
+    };
+    .search-btn2,.search-btn:hover {
+        border: 1px solid @color-green;
+        background: @color-green url(http://s1.jikexueyuan.com/common/images/topsearch-icon2_8c8d8b0.png) center center no-repeat!important;
+    };
+    .keyword-list {
+        position: absolute;
+        left: -1px;
+        top: 37px;
+        z-index: 2100;
+        width: 380px;
+        padding: 15px 0;
+        border: 1px solid @color-gray;
+        border-top: 0;
+        background: #FFF;
+        display: none;
+        li {
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            color: @color-black;
+            display: block;
+            padding: 0 10px;
+            &:hover{
+                background: #f3f3f3;
+                cursor: pointer;
+            };
+            a {
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 38px;
+                color: @color-black;
+            };
+        };
+    };
+}
+
+#header {
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 10px 0;
+    .loginbox,.loginbox_event {
+        float: right;
+        text-align: right;
+        line-height: 50px;
+        font-size: 12px;
+        color: @color-black;
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    };
+    .mod-tips {
+        margin-bottom: 16px;
+    };
+    .mod-tips>.wrap {
+        padding: 10px 30px;
+    };
+    .userMenu {
+        display: inline-block;
+        margin-right: 8px;
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+        };
+    };
+    .userMenu>a {
+        color: @color-green;
+        display: inline-block;
+        .arrow {
+            position: relative;
+            top: -1px;
+            margin-left: 5px;
+            display: inline-block;
+            -webkit-transition: -webkit-transform .2s ease-in;
+            -moz-transition: -moz-transform .2s ease-in;
+            -ms-transition: -ms-transform .2s ease-in;
+            transition: transform .2s ease-in;
+            &:after,&:before {
+                display: block;
+                width: 0!important;
+                height: 0!important;
+                padding: 0!important;
+                font-size: 0!important;
+                line-height: 0!important;
+                border: 5px solid transparent;
+                border-bottom-width: 0;
+                border-top-color: @color-green;
+                content: " ";
+            };
+        };
+    };
+    .userMenu-menu>.arrow:after,.userMenu>a .arrow:after {
+        position: absolute;
+        bottom: 2px;
+        left: 2px;
+        border-width: 3px;
+        border-bottom-width: 0;
+        border-top-color: #fff;
+    };
+    .loginbox {
+        .user-change,.user-change:hover {
+            color: #2d85ca;
+        };
+    };
+    .userMenu-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1200;
+        width: 94px;
+        margin: -10px 0 0;
+        background: #fff;
+        border: 1px solid @color-gray;
+        padding: 8px 0;
+        color: @color-dgray;
+        text-align: left;
+        a {
+            display: block;
+            padding: 0 14px;
+            color: @color-dgray;
+            line-height: 26px;
+            &:hover{
+                background: #f3f3f3;
+                color: @color-green;
+            };
+        };
+    };
+    .userMenu-menu>.arrow {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        top: auto;
+        right: auto;
+        margin-left: -5px;
+        &:after,&:before {
+            display: block;
+            width: 0!important;
+            height: 0!important;
+            padding: 0!important;
+            font-size: 0!important;
+            line-height: 0!important;
+            border: 5px solid transparent;
+            border-top-width: 0;
+            border-bottom-color: @color-gray;
+            content: " ";
+        };
+        &:after {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            border-width: 4px;
+            border-top-width: 0;
+            border-bottom-color: #fff;
+        };
+    };
+}
+
+#header>.wrap {
+    position: relative;
+    z-index: 1200;
+    &:after {
+        display: table;
+        clear: both;
+        content: " ";
+    };
+}
+
+#header .userMenu:hover .userMenu-menu {
+    display: block
+}
+
+#header .userMenu:hover>a .arrow {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#loading {
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: #f3f3f3;
+    .loading-length {
+        width: 0;
+        height: 2px;
+        overflow: hidden;
+        background: @color-green;
+        background: -webkit-gradient(linear, 10% 10%, 100% 100%, color-stop(0.14, #35b550), color-stop(0.5, #8aca8c), color-stop(1, #2d85ca));
+    };
+}
+
+.greencolor {
+    color: @color-green!important
+}
+
+#header .loginbox span a,
+#header .loginbox span a:hover,
+#header .loginbox_event span a,
+#header .loginbox_event span a:hover {
+    color: @color-black
+}

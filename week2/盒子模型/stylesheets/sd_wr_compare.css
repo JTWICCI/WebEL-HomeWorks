@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 正常盒子与怪异盒子对比的css文件 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 为正常和怪异盒子同时设定外部容器的部分div属性*/
+.sd_outer,
+.wr_outer,
+.swr_outer {
+    background-color: #D8C500;
+    border: 5px solid #F9FF00;
+    box-shadow: 2px 2px 5px 1px #A3C0BF;
+    -webkit-box-shadow: 2px 2px 5px 1px #A3C0BF;
+}
+/* 正常盒子的内部div属性 */
+.sd_inner {
+    width: 528px;   /* 内部容器和图片的宽度都是固定的 */
+    height: 220px;
+    background-color: orange;
+}
+
+/* 正常盒子的外部容器div属性 */
+.sd_outer {
+    width: 528px;   /* 正常盒子的外部容器大小要和内部容器一样 */
+    height: 220px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+/* 怪异盒子的内部div属性 */
+.wr_inner {
+    width: 528px;   /* 内部容器和图片的宽度都是固定的 */
+    height: 220px;
+    background-color: orange;
+}
+
+/* 怪异盒子的外部容器div属性 */
+.wr_outer {
+    width: 558px;   /* 加上了内边距和边框之后的宽度 */
+    height: 250px;  /* 加上了内边距和边框之后的高度 */
+    margin: auto;   /* 设置为居中显示 */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-sizing: border-box;   /* 怪异盒子声明 */
+}
+
+/* 怪异盒子的内部div属性 */
+.swr_inner {
+    width: 528px;   /* 内部容器和图片的宽度都是固定的 */
+    height: 220px;
+    background-color: orange;
+}
+
+/* 怪异盒子的外部容器div属性 */
+.swr_outer {
+    /* 如果外部的大小设的像正常盒子那样与内部容器一样会产生意料之外的效果 */
+    width: 528px;   
+    height: 220px; 
+    margin: auto;   /* 设置为居中显示 */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-sizing: border-box;   /* 怪异盒子声明 */
+}

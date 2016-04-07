@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/* CSS Document */
+body, p, form, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+    font: 12px arial;
+}
+
+div {
+	display: block;
+}
+
+#wrapper {
+  min-width: 810px;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+header {
+    overflow: hidden; 
+}
+
+header nav {
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    width: 492px;
+}
+
+
+header nav a.mnav:link,
+header nav a.mnav:visited {
+    color: #333;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+header nav a.set:link,
+header nav a.login:link,
+header nav a.login:visited {
+  float: left;
+  color: #333;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+header nav a.more:link {
+    background: #38f none repeat scroll 0 0;
+    border-bottom: 1px solid #38f;
+    color: white;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    height: 23px;
+    line-height: 24px;
+    margin-left: 19px;
+    margin-right: 2px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+}
+
+header nav a.set:hover,
+header nav a.login:hover,
+header nav a.mnav:hover {
+    color: #00c;
+}
+
+.content {
+    margin-top: 63px;
+    text-align: center;
+}
+
+#logo {
+	display: block;
+}
+
+img {
+	border: 0;
+	width: 270px;
+	height: 129px;
+}
+#form {
+  margin: 22px auto 0;
+  width: 641px;
+  text-align: left;
+  position: relative;
+  padding: 0;
+}
+
+form {
+	font-size: 0;/* 去掉搜索框和按钮的间距 */
+}
+
+.textbox {
+    position: relative;
+    border: 1px solid #B6B6B6;
+    background: #FFF;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #B8B8B8 rgba(0, 0, 0, 0) #CCC #B8B8B8;
+    overflow: hidden;
+    height: 34px;
+    background-repeat: no-repeat;
+}
+
+.textbox:hover {
+	border-color: #999 transparent #b3b3b3 #999;
+}
+
+.textbox:focus {
+	border-color: #4791ff transparent #4791ff #4791ff;
+}
+.content input {
+    position: relative;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    outline: 0;
+}
+
+.btnbox {
+    width: 96px;
+    height: 34px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content button {
+    width: 100px;
+    height: 36px;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385FF;
+    border-bottom: 1px solid #2D78F4;
+    outline: medium;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+
+.content button:hover{
+	width: 100px;
+    height: 36px;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 1px;
+	background: #317ef3 none repeat scroll 0 0;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border: 0;
+    padding: 0;
+}
+
+footer {
+    margin-top: 269px;
+    text-align: center;
+}
+
+.ftwrapper {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+#qrcode .qrcode-item {
+    float: left;
+}
+
+#qrcode .qrcode-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#qrcode .qrcode-img img{
+    width: 60px;
+    height: 60px;
+}
+
+#qrcode .qrcode-text span {
+  letter-spacing: 1px;
+}
+
+#ftConw {
+  display: inline-block;
+  text-align: left;
+  margin-left: 33px;
+  position: relative;
+  top: -12px;
+}
+
+#qrcode .qrcode-text {
+  float: left;
+  color: #999;
+  line-height: 23px;
+  margin: 8px 0 0 10px;
+}
+
+#qrcode .qrcode-text p {
+  text-align: left;
+}
+
+#qrcode .qrcode-text b {
+  color: #4C4C4C;
+  font-weight: bold;
+}
+
+#qrcode .qrcode-item-2 {
+  margin-left: 33px;
+}
+
+#lh {
+  margin: 16px 0 5px;
+}
+
+#lh a {
+  color: #272727;
+  margin-right: 20px;
+}
+
+#cp, #cp a {
+  color: #666;
+}
+
+#cp .c-icon-icrlogo {
+  width: 14px;
+  height: 17px;
+  display: inline-block;
+  overflow: hidden;
+  background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_d99e5dac.png) no-repeat;
+  _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_1f8a4922.gif);
+  background-position: -600px -96px;
+  position: relative;
+  top: 3px;
+}

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 5DivCross.html的css文件 */
+* {
+    /* 设置整个浏览器的边距为0 */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 最外层容器Div的属性 */
+.box {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;    /* 设置其左上角锚点在垂直方向居中于页面 */
+    left: 50%;    /* 设置其左上角锚点在水平方向居中于页面 */
+    margin-left: -150px;    /* 调整其在水平方向的位置，向左移动于自身的一半以实现整体水平居中 */
+    margin-top: -150px;    /* 调整其在垂直方向的位置，向下移动于自身的一半以实现整体垂直居中 */
+}
+
+/* 所有5个Div小块的共同属性 */
+.boxDiv {
+    height: 100px;
+    width: 100px;
+    float: left;
+    display: table;    /* 设置display为table，以便通过把图片div设置成table-cell样式，实现图片的垂直居中*/
+    text-align: center;    /* 设置内部元素的水平居中 */
+    -webkit-box-shadow: 3px 3px 3px #A3C0BF inset;    /* 设置为内部阴影 */
+    box-shadow: 3px 3px 3px #A3C0BF inset;    /* 设置为内部阴影 */
+}
+
+/* 最上层Div小块属性 */
+.top {
+    position: relative;    /*设置为relative以便于相对于自身移动*/
+    float: none;    /* 重新定义float，使其能够独占最上层 */
+    left: 100px;    /*相对于自身向右偏移100像素，实现在水平位置的居中*/
+    background-color: #E0F4FF;
+    border-radius: 30px 30px 50px 50px;    /* 设置圆角 */
+}
+
+/* 中间层最左边Div小块属性 */
+.left {
+    background-color: #F8FCBF;
+    border-radius: 30px 50px 50px 30px;
+}
+
+/* 正中间Div小块属性 */
+.middle {
+    background-color: #FFFFFF;
+    border-radius: 50px 50px 50px 50px;
+    -webkit-box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+    box-shadow: 2px 2px 5px 1px #A3C0BF;    /* 重新定义阴影为外部阴影 */
+}
+
+/* 中间层最右边Div小块属性 */
+.right {
+    background-color: #C4FFE9;
+    border-radius: 50px 30px 30px 50px;
+}
+
+
+/* 最底层Div小块属性 */
+.bottom {
+    position: relative;
+    left: 100px;    /*相对于自身向右偏移100像素，实现在水平位置的居中*/
+    background-color: #FFE0E0;
+    border-radius: 50px 50px 30px 30px;
+}
+
+/* 嵌套图片的Div小块属性 */
+.pic {
+    display: table-cell;    /*把图片外套的div设置成table-cell样式，以助于实现图片的垂直居中*/
+    vertical-align: middle;    /* 设置垂直居中 */
+}

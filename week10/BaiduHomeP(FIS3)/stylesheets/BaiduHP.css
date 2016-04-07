@@ -1,0 +1,3061 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*初始化一些样式*/
+body, h1, h2, h3, h4, h5, h6, 
+hr, p, blockquote, dl, dt, dd, 
+ul, ol, li, pre, form, fieldset, 
+legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body, p, form, ul, li {
+  list-style: none;
+}
+body {
+    text-align: center;
+    font: 12px arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+div {
+	display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.right {
+    float: right;
+}
+
+/* 最外层容器 */
+#wrapper {
+  min-width: 1000px;
+  height: 100%;
+  min-height: 768px;
+  position: relative;
+}
+
+/* 头部 */
+#header {
+    height: 32px;
+    overflow: hidden; 
+    border-bottom: 1px solid #ebebeb;
+}
+
+/*导航栏左侧天气和换肤文字容器*/
+.s-upfunc-menus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: 32px;
+    padding-right: 15px;
+}
+
+/*天气容器*/
+.s-weather-wrapper {
+    float: left;
+    height: 34px;
+}
+
+/*天气内部容器*/
+.weather-mod {
+    margin: 7px 0 0 15px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    _margin: 6px 0 0 7px;
+}
+/*天气内部a标签容器样式*/
+.city-wather {
+    display: block;
+    cursor: pointer;
+    height: 20px;
+    white-space: nowrap;
+    _text-align: left;
+    _display: inline;
+}
+/*天气容器内部的一些样式*/
+.weather-mod a, .weather-mod em, .weather-mod span {
+    color: #adacac;
+}
+.weather-mod .unknown-text, 
+.unknown-city, 
+.city-wather a, 
+.city-wather em, 
+.city-wather span, 
+.show-pollution a, 
+.show-pollution em, 
+.show-pollution span {
+    color: #555;
+}
+.weather-mod .show-weather, .weather-mod .show-pollution {
+    display: inline-block;
+    height: 20px;
+}
+.weather-mod .show-icon {
+    margin-right: 9px;
+}
+.weather-mod .show-vertical {
+    margin-right: 11px;
+}
+.weather-mod span {
+    display: inline-block;
+    height: 20px;
+    vertical-align: bottom;
+}
+.weather-mod .show-icon .weather-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.weather-mod a {
+    outline: none;
+    text-decoration: none;
+}
+.weather-mod span {
+    display: inline-block;
+    height: 20px;
+    vertical-align: bottom;
+}
+.weather-mod .show-pollution em {
+    margin-right: 7px;
+}
+/*空气质量文字样式*/
+.weather-mod .polution-level-0 .show-polution-name {
+    color: #38f;
+    font-weight: bold;
+}
+/*宝箱、换肤、消息文字容器*/
+.s-upfunc-menus .s-icons {
+    float: left;
+    _display: inline;
+}
+/*宝箱、换肤、消息文字容器内的a标签样式*/
+.s-upfunc-menus .s-icons a {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 19px;
+    color: #555;
+    text-decoration: underline;
+    outline: none;
+    display: inline-block;
+    text-shadow: none;
+}
+
+/* 头部导航栏容器属性 */
+#header #nav {
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px 0 5px 0;
+    text-align: right;
+    width: 560px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* 导航的主要链接的字体属性 */
+#header #nav a.mnav:link,
+#header #nav a.mnav:visited {
+    color: #555;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 25px;
+    text-decoration: underline;
+}
+
+/* “用户”和“设置”链接的字体颜色 */
+#header #nav a.login:link,
+#header #nav a.login:visited,
+#header #nav .set a.setbtn:link,
+#header #nav .set a.setbtn:visited {
+  float: left;
+  color: #555;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+/* 让“用户”和“设置”下拉菜单在鼠标悬停时显示 */
+#header #nav #username:hover .useroption,
+#header #nav .set:hover .setmenu {
+  display: block;
+}
+
+/* “用户”的弹出下拉菜单 */
+#header #nav #username .useroption{
+  position: absolute;
+  top: 25px;
+  left: 349px;
+  width: 66px;
+  text-align: left;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+  z-index: 100;
+  display: none;
+  background: #FFF;
+}
+
+/* “设置”的弹出下拉菜单 */
+#header #nav .set .setmenu{
+  position: absolute;
+  top: 25px;
+  left: 408px;
+  width: 66px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+  z-index: 100;
+  display: none;
+  background: #FFF;
+}
+
+/* “用户”和“设置”下拉菜单顶部的三角型 */
+.icon-sharp {
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #ddd;
+}
+/* “用户”和“设置”下拉菜单顶部的三角型上叠层 */
+.icon-sharp:after {
+  content: '';
+  top: -4px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #FFFFFF;
+}
+
+/* “用户”和“设置”下拉菜单顶部的三角型位置 */
+#header #nav #username .useroption .icon-sharp,
+#header #nav .set .setmenu .icon-sharp {
+  top: -11px;
+  left: 28px;
+}
+
+/* 统一设定用户菜单内的链接属性 */
+#header #nav #username .useroption a {
+  display: inline-block;
+  padding-left: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* 统一设定设置菜单内的链接属性 */
+#header #nav .set .setmenu a {
+  display: inline-block;
+  width: 100%;
+}
+
+#header #nav .set .setmenu a:link,
+#header #nav .set .setmenu a:visited,
+#header #nav #username .useroption a:link,
+#header #nav #username .useroption a:visited {
+  color: #333;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+/* 统一设定“设置”和“用户”下拉菜单链接在鼠标悬停时的颜色 */
+#header #nav .set .setmenu a:hover,
+#header #nav #username .useroption a:hover {
+  background: #317ef3;
+  color: #FFFFFF;
+}
+
+/* 设置“更多产品”按钮的样式 */
+#morepro {
+    background: #38f none repeat scroll 0 0;
+    border-bottom: 1px solid #38f;
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    height: 31px;
+    line-height: 32px;
+    margin-right: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    text-align: center;
+    width: 85px;
+    text-decoration: none;
+}
+
+/* “更多产品”的下拉菜单容器属性 */
+#moreprolist {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 85px;
+  border-left: 1px solid #E8E8E8;
+  background-color: #f9f9f9;
+  text-align: center;
+  display: none;
+  z-index: 100;
+}
+
+/* “更多产品”下拉菜单列表属性 */
+#moreprolist ul {
+  padding: 12px 10px 0 10px;
+  text-align: center;
+}
+/* “更多产品”下拉菜单单项统一属性 */
+#moreprolist li {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E8E8E8;
+}
+/* “更多产品”文字属性 */
+#moreprolist ul .moreprotext{
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+/* “更多产品”下拉菜单文字属性 */
+#moreprolist li span{
+  display: block;
+}
+
+/* 统一设置“更多产品”下拉菜单所有链接文字样式 */
+#moreprolist a {
+  color: #666;
+  text-decoration: none;
+}
+/* 统一设置“更多产品”拉菜单所有链接鼠标悬停样式 */
+#moreprolist a:hover {
+  text-decoration: underline;
+}
+
+/*“音乐”图片*/
+#moreprolist .bdbriimgitem_1 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/music.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+/*“图片”图片*/
+#moreprolist .bdbriimgitem_2 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/pic.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+/*“知道”图片*/
+#moreprolist .bdbriimgitem_3 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/know.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+/*“文库”图片*/
+#moreprolist .bdbriimgitem_4 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/litera.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+/*“风云榜”图片*/
+#moreprolist .bdbriimgitem_5 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/rank.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+/*“百度推广”图片*/
+#moreprolist .bdbriimgitem_6 {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background: url('../img/ad.png?__sprite') no-repeat;
+  cursor: pointer;
+}
+
+/* “全部产品” 字样属性 */
+#moreprolist .more-all{
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+/* 百度Logo和搜索框容器 */
+.content {
+    height: 38.2%;
+    min-height: 270px;
+    position: relative;
+    text-align: center;
+}
+
+/* 百度Logo图片属性 */
+#logo img {
+	border: 0;
+	width: 270px;
+	height: 129px;
+}
+
+/* 搜索框表单属性 */
+#form {
+  margin: 25px auto 0;
+  width: 641px;
+  text-align: left;
+  position: relative;
+}
+
+/* 去掉搜索框和按钮的间距 */
+form {
+	font-size: 0;
+}
+
+/* 文本框外套容器 */
+.textbox {
+  position: relative;
+  background: #FFF;
+  display: inline-block;
+  vertical-align: top;
+  width: 536px;
+  margin-right: 0;
+  border-right-width: 0;
+  border-color: #B8B8B8 rgba(0, 0, 0, 0) #CCC #B8B8B8;
+  overflow: hidden;
+  float: left;
+}
+
+/* 搜索文本框的属性设置 */
+.content input {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    height: 38px;
+    margin-right: 0;
+    padding-left: 7px;
+    font: 16px/18px arial;
+    background: rgba(0, 0, 0, 0);
+    border-right-width: 0;
+    border: 1px solid #B6B6B6;
+    border-color: #B8B8B8 rgba(0, 0, 0, 0) #CCC #B8B8B8;
+    outline: none;
+    overflow: hidden;
+}
+
+/* 鼠标悬停时搜索框边框颜色设定 */
+.content input:hover {
+  border-color: #999 transparent #b3b3b3 #999;
+}
+
+/* 光标在搜索文本框内闪烁时的搜索框颜色 */
+.content input:focus {
+  border-color: #4791ff transparent #4791ff #4791ff;
+} 
+
+/* “百度一下” 按钮容器 */
+.btnbox {
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+/* “百度一下” 按钮 */
+.content button {
+    width: 104px;
+    height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #3385FF;
+    border: 0;
+    border-bottom: 1px solid #2D78F4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    -ms-appearance: none;
+    -ms-border-radius: 0;
+}
+
+/* “百度一下” 按钮鼠标悬停时样式 */
+.content button:hover{
+	width: 104px;
+    height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #317ef3 none repeat scroll 0 0;
+    border: 0;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+    outline: medium;
+    padding: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    -ms-appearance: none;
+    -ms-border-radius: 0;
+}
+
+/*————————————————————————————————————————————————*/
+
+/*“我的关注、推荐、导航”内容和页脚容器样式*/
+#s_wrap {
+    width: 100%;
+    _width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*“我的关注”等内容外层容器样式*/
+#s_main {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 895px;
+}
+
+/*我的关注”等内容内层容器样式*/
+.s-mancacrd-main {
+    position: relative;
+    z-index: 2;
+}
+
+/*我的关注”等导航菜单最外层容器样式*/
+.container {
+    width: 100%;
+    min-height: 35px;
+    _height: 35px;
+}
+
+/*我的关注”等导航菜单外层容器样式*/
+.s-menu-gurd, .s-menu-container {
+    width: 100%;
+    min-height: 35px;
+    _height: 35px;
+}
+
+/*我的关注”等导航菜单内层容器样式*/
+.s-ctner-menus {
+    position: relative;
+    z-index: 11111;
+    width: 893px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+    border-top: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    height: 39px;
+    line-height: 39px;
+}
+
+/*菜单按钮默认样式*/
+.s-ctner-menus .s-menu-item {
+    color: #333;
+    width: 80px;
+    height: 39px;
+    display: inline-block;
+    zoom: 1;
+    margin-right: -4px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*属于main样式内的a标签和span标签样式*/
+.main a, 
+.main span {
+    outline: none;
+}
+
+/*默认的菜单按钮鼠标悬停样式*/
+.s-ctner-menus .s-menu-item:hover {
+    background-color: #b3b6bb !important;
+    color: #fff;
+    background-image: none !important;
+    filter: none !important;
+}
+.s-ctner-menus .s-menu-item:hover {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    border-top: 1px solid #b3b6bb;
+    border-bottom: 1px solid #b3b6bb;
+}
+
+/*选中的菜单按钮样式*/
+.s-ctner-menus .current, 
+.s-ctner-menus .current:hover {
+    margin-bottom: -1px;
+    margin-top: -1px;
+    border-top: 1px solid #9a9da2;
+    border-bottom: 1px solid #9a9da2;
+}
+.s-ctner-menus .current, 
+.s-ctner-menus .current:hover {
+    _position: relative;
+    background-color: #9a9da2 !important;
+    color: #fff;
+    font-weight: bold;
+    background-image: none !important;
+    filter: none !important;
+}
+
+/*我的关注”等导航菜单内“我的关注”按钮的一些样式*/
+.s-menu-gurd .s-ctner-menus .s-menu-mine, 
+.s-ctner-menus .s-menu-mine .mine-icon, 
+.s-ctner-menus .s-menu-mine .mine-text {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+}
+.s-menu-gurd .s-ctner-menus .s-menu-mine {
+    float: left;
+    text-align: left;
+    width: 124px;
+}
+/*“我的关注”按钮内图标样式*/
+.s-ctner-menus .s-menu-mine .mine-icon {
+    margin: 11px 0 0 20px;
+    width: 20px;
+    height: 18px;
+    background: url(../img/card_setts_fdb17359.png) no-repeat -15px 0;
+}
+.s-ctner-menus .s-menu-mine:hover .mine-icon, 
+.s-ctner-menus .current .mine-icon {
+    background-position: -144px 0;
+}
+
+/*“我的关注”文字div样式*/
+.s-ctner-menus .s-menu-mine .mine-text {
+    height: 100%;
+    margin-left: 3px;
+}
+
+
+
+/*“推荐、导航、视频、购物”等文字最外层div容器样式*/
+.s-ctner-menus .s-menus-outer {
+    float: left;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    display: -moz-flex;
+    -moz-flex-flow: row wrap;
+    -moz-align-items: stretch;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -ms-align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    width: 719px;
+}
+
+/*“推荐、导航、视频、购物”等文字和设置小齿轮div容器样式*/
+.s-ctner-menus .menus-wrapper, 
+.s-ctner-menus .s-menu-setting {
+    margin-left: 4px;
+    display: inline-block;
+    zoom: 1;
+    float: left;
+    vertical-align: top;
+    height: 100%;
+}
+
+/*“推荐、导航、视频、购物”等文字最内层div容器样式*/
+.menus-outer .menus-wrapper {
+    width: auto;
+}
+
+/*“推荐、导航、视频、购物”等文字右侧空白div样式*/
+.s-ctner-menus .s-menus-outer .s-bg-space {
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    height: 38px;
+}
+
+/*设置齿轮div样式*/
+.s-ctner-menus .s-menu-setting {
+    float: right;
+    width: 18px;
+    height: 39px;
+    padding: 0 21px 0 11px;
+    cursor: pointer;
+}
+/*设置齿轮图片样式*/
+.s-ctner-menus .menu-icon {
+    width: 100%;
+    height: 18px;
+    margin-top: 11px;
+    overflow: hidden;
+    background: url(../img/card_setts_fdb17359.png) no-repeat -121px -49px;
+}
+
+/*“我的关注、推荐、导航、视频、购物”等内容最外容器样式*/
+.s-ctner-contents {
+    width: 893px;
+    min-height: 363px;
+    _height: 363px;
+    _overflow: visible;
+    border: 1px solid #e9e9e9;
+}
+
+/*“我的关注”内层容器样式*/
+.s-xmancard {
+    min-height: 318px;
+    _height: 318px;
+}
+.s-xmancard-mine {
+    position: relative;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    padding-bottom: 21px;
+}
+
+/*“我的导航”外层容器样式*/
+.s-code-blocks {
+    position: relative;
+    width: 100%;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    _margin-bottom: 5px;
+    _overflow: hidden;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    _border: 0;
+    _margin-top: 13px;
+}
+
+/*“我的导航”内层容器样式*/
+.s-block-nav .s-block-container {
+    width: 844px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*“我的导航”标题外层容器样式*/
+.s-code-blocks .s-mblock-title {
+    position: relative;
+    z-index: 0;
+    height: 30px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/*“我的导航”标题内层容器样式*/
+.s-code-blocks .title-content {
+    height: 100%;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/*“我的导航”前面的三角icon容器样式*/
+.mine-title .mine-title-icon, 
+.mine-title .mine-title-text, 
+.mine-title .mine-title-num {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.s-code-blocks .title-content .mine-title .mine-title-icon {
+    position: relative;
+    z-index: 0;
+    font-size: 0;
+    height: 10px;
+    width: 10px;
+    margin-right: 6px;
+}
+
+/*“我的导航”前面的三角icon样式*/
+.s-code-blocks .title-content .mine-title .mine-title-icon em {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    font-size: 0;
+    border: 5px dashed transparent;
+    border-top: 5px solid #666;
+}
+.s-mblock-up .title-content .mine-title .mine-title-icon em {
+    top: 0;
+    left: 3px;
+    border-top: 5px dashed transparent;
+    border-left: 5px solid #666;
+}
+
+/*“我的导航”字体样式*/
+.s-code-blocks .title-content .mine-title .mine-title-text {
+    line-height: 30px;
+    _line-height: 35px;
+    height: 30px;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+/*“我的导航”后面括号的字体样式*/
+.mine-title .mine-title-icon, 
+.mine-title .mine-title-text,
+.mine-title .mine-title-num {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.mine-title .mine-title-num {
+    letter-spacing: -2px;
+}
+.s-code-blocks .title-content .mine-title .mine-title-num {
+    _line-height: 27px;
+    height: 30px;
+    color: #666;
+}
+
+/*“我的导航”标题鼠标悬停设置容器样式*/
+.s-code-blocks .s-setbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    z-index: 2;
+    font-size: 13px;
+    display: none;
+}
+/*“我的导航”标题右边的设置鼠标悬停时出现*/
+.s-mine-wrapper:hover .s-setbar{
+    display: block;
+}
+/*“我的导航”标题鼠标悬停设置容器内的set-btn样式*/
+.s-code-blocks .s-setbar .set-btn {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 30px;
+    margin-left: 16px;
+    text-align: right;
+}
+.s-code-blocks .s-setbar .set-btn:hover {
+  color: #07F;
+}
+/*“我的导航”标题鼠标悬停设置内层容器样式*/
+.s-code-blocks .s-setbar .set-bar-content {
+    height: 100%;
+    text-align: right;
+    float: right;
+    margin: 0 auto;
+}
+
+/*“我的导航”标题鼠标悬停“添加”字样容器样式*/
+.s-code-blocks .set-menu {
+    height: 100%;
+    text-align: right;
+}
+/*“我的导航”标题鼠标悬停“添加”字样容器样式*/
+.set-menu .set-add {
+    padding-top: 2px;
+}
+
+/*“返利模式”字样外层容器*/
+.s-code-blocks .s-setbar .fanli-class {
+    width: 77px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/*“返利模式”字样前面的选框样式*/
+.s-block-nav .s-mblock-title .edit-add .add-icon, 
+.s-block-nav .s-mblock-title .edit-class .class-icon, 
+.s-block-nav .s-mblock-title .fanli-class .class-icon {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    line-height: 29px;
+    margin-right: 7px;
+    font-size: 0;
+    background: url(../img/mine/mine_set_818172e0.png) no-repeat -34px -12px;
+}
+.s-block-nav .s-mblock-title .classed .class-icon {
+    background-position: -50px -13px;
+}
+
+/*“返利模式”字样span容器样式*/
+.s-code-blocks .s-setbar .edit-class span, 
+.s-code-blocks .s-setbar .fanli-class span {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 29px;
+}
+
+/*“置顶”文字div容器样式*/
+.set-menu .set-totop {
+    padding-top: 2px;
+}
+
+/*“我的导航”标题下方空白容器*/
+.nav-blank {
+  height: 66px;
+}
+
+/*“自定义”内容容器样式*/
+.s-xmancard-mine .tips-manager-area {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin-top: 13px;
+}
+
+/*“自定义”文字容器样式*/
+.s-xmancard-mine .tips-manager-btn {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 25px;
+    width: 60px;
+    cursor: pointer;
+}
+.s-xmancard-mine .tips-manager-btn span, 
+.s-xmancard-mine .tips-manager-btn .manager-notify {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+/*“自定义”文字容器内的“+”图标样式*/
+.s-xmancard-mine .tips-manager-btn .manager-btn-icon {
+    height: 12px;
+    width: 12px;
+    font-size: 0;
+    background: url(../img/mine/mine_set_818172e0.png) no-repeat 0 0;
+}
+/*“自定义”文字span标签样式*/
+.s-xmancard-mine .tips-manager-btn .manager-btn-text {
+    font-size: 14px;
+    color: #333;
+    padding-left: 3px;
+}
+
+/*“导航”下内容外层容器样式*/
+.s-xmancard-nav {
+    position: relative;
+    padding: 10px 0 13px 25px;
+}
+/*“导航”下内容容器内的各类别内容块容器样式*/
+.s-nav-wrapper {
+    margin: 0 auto;
+}
+.clearfix {
+    zoom: 1;
+}
+/*加了这个页面就正常显示了（神奇）*/
+.clearfix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+/*“导航”下内容容器内的各类别标题样式*/
+.s-nav-wrapper h1 {
+    font-size: 14px;
+    text-align: left;
+    margin: 0 0 5px 11px;
+    padding-top: 25px;
+}
+.s-nav-personal h1 {
+    margin: 8px 0 4px;
+    padding: 0;
+}
+
+.s-nav-wrapper .s-nav-area {
+}
+
+/*“导航”下内容容器内的各链接块外层容器样式*/
+.s-nav-wrapper .nav-item {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 15px;
+    _margin-right: 12px;
+    position: relative;
+}
+
+/*“导航”下内容容器内的各链接块内层容器a标签样式*/
+.s-nav-wrapper .nav-block {
+    border: 1px solid #fcfcfc;
+}
+.s-nav-wrapper .nav-item .nav-block {
+    position: relative;
+    display: block;
+    height: 65px;
+    line-height: 65px;
+    width: 126px;
+    background-color: #fcfcfc;
+}
+.s-nav-personal .nav-item .nav-block {
+    height: 58px;
+    line-height: 58px;
+    width: 126px;
+}
+
+/*“导航”下内容容器内的各链接块内层容器a标签内的img标签样式*/
+.s-nav-wrapper .nav-item a img {
+    position: absolute;
+    left: 5px;
+    top: -2px;
+}
+.s-nav-personal .nav-item a img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 16px;
+}
+
+/*“导航”下内容容器内的各链接块内层容器a标签内的文字span标签样式*/
+.s-nav-wrapper .nav-item .nav-txt {
+    font-size: 13px;
+    color: #333;
+    padding-left: 38px;
+}
+.s-nav-personal .nav-item .nav-txt {
+    position: absolute;
+    text-align: left;
+    left: 44px;
+    color: #333;
+    font-size: 14px;
+    padding: 0;
+    max-width: 71px;
+    _width: 71px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+/*“导航”下内容容器内的各链接块内层容器a标签内的鼠标悬停“返利”样式容器*/
+.s-nav-wrapper .nav-item .rebate {
+    position: absolute;
+    display: none;
+    width: 100%;
+    _width: 128px;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    background: #ff8300;
+}
+/*上面容器内的a标签样式*/
+.s-nav-wrapper .nav-item .rebate a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*上面容器内右上角的“返”字角标容器样式*/
+.s-xmancard-nav .s-nav-wrapper .nav-item .fanli-tag {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url("../img/nav/fanli_40794035.png") repeat 0 0;
+}
+.s-xmancard-nav .fanli-patern .s-nav-wrapper .fanli-nav .fanli-tag {
+    display: block;
+}
+
+/*“推荐”外层容器样式*/
+.s-xmancard-news {
+    position: relative;
+    width: 843px;
+    padding: 0 25px 0 25px;
+}
+
+/*“推荐”内右侧“实时热点”容器样式*/
+.s-news-rank-wrapper {
+    position: absolute;
+    right: 5px;
+    width: 300px;
+    margin-top: 20px;
+    text-align: left;
+}
+/*“推荐”内右侧“实时热点”标题容器样式*/
+.s-news-rank-wrapper .s-rank-title {
+    height: 30px;
+    width: 270px;
+}
+.s-news-rank-wrapper .s-rank-title .title-text {
+    float: left;
+    height: 22px;
+    width: 94px;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*“推荐”内右侧“实时热点”标题a标签样式*/
+.s-news-rank-wrapper .s-rank-title .title-text a {
+    text-decoration: none;
+    color: #333;
+}
+/*“推荐”内右侧“实时热点”标题右侧“换一换”容器样式*/
+.s-news-rank-wrapper .s-rank-title .hot-refresh {
+    display: block;
+    float: right;
+    height: 22px;
+    padding-top: 3px;
+    width: 63px;
+    cursor: pointer;
+}
+.s-news-rank-wrapper .s-rank-title .hot-refresh-text, 
+.s-news-rank-wrapper .s-rank-title .hot-refresh-icon {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+}
+/*“推荐”内右侧“实时热点”标题右侧“换一换”图标样式*/
+.s-news-rank-wrapper .s-rank-title .hot-refresh-icon {
+    width: 20px;
+    height: 16px;
+    background: url(../img/news/news_7dd96f5d.png) -23px -25px no-repeat;
+    vertical-align: bottom;
+}
+/*“推荐”内右侧“实时热点”标题右侧“换一换”文字样式*/
+.s-news-rank-wrapper .s-rank-title .hot-refresh-text {
+    font-size: 13px;
+    width: 40px;
+    text-align: center;
+    white-space: nowrap;
+}
+.s-news-rank-wrapper .s-rank-title .hot-refresh:hover .hot-refresh-text {
+    color: #07f;
+}
+/*“推荐”内右侧“实时热点”下方列表ul标签样式*/
+.s-news-rank-wrapper .s-news-rank-content {
+    position: relative;
+    list-style: disc;
+}
+/*“推荐”内右侧“实时热点”下方列表li标签样式*/
+.news-meta-item {
+    width: 145px;
+    margin-right: 3px;
+    display: inline-block;
+    zoom: 1;
+    list-style: square;
+}
+.news-meta-item .news-icon, 
+.news-meta-item .news-title, 
+.news-meta-item .news-count {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    height: 34px;
+    line-height: 34px;
+}
+/*“推荐”内右侧“实时热点”下方列表li标签前点点的样式*/
+.news-meta-item .news-icon {
+    height: 3px;
+    width: 3px;
+    background: #666;
+    text-align: center;
+    margin-right: 4px;
+    font-size: 0;
+}
+/*“推荐”内右侧“实时热点”下方列表li标题样式*/
+.news-meta-item .news-title {
+    width: 135px;
+}
+.news-meta-item .news-title .title-link {
+    float: left;
+    display: block;
+    font-size: 14px;
+}
+
+/*“推荐”内右侧“实时热点”下方列表li内的a标签样式*/
+.news-meta-item .news-title .title-link .title-content {
+    max-width: 113px;
+    _width: 113px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+}
+.news-meta-item .news-title .title-link .title-content, 
+.news-meta-item .news-title .new-identity {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.news-meta-item .news-title .title-link a:hover {
+    color: #0079f4;
+}
+
+/*“推荐”内右侧“实时热点”下方列表li标题右侧“新”字样式*/
+.news-meta-item .news-title .new-identity {
+    display: none;
+    height: 20px;
+    width: 17px;
+    margin-left: 2px;
+    background: url(../img/news/news_7dd96f5d.png) 0 -98px no-repeat;
+}
+.s-news-rank-wrapper .news-artist .news-title .new-identity {
+    display: inline-block;
+}
+
+
+/*“以下信息根据您的兴趣推荐”文字容器样式*/
+.s-xmancard-news .news-flash-tips {
+    width: 100%;
+    height: 38px;
+    text-align: left;
+}
+.s-xmancard-news .news-flash-tips .tips-content {
+    width: 187px;
+    padding-top: 21px;
+    margin: 0 auto;
+}
+.s-xmancard-news .news-flash-tips .tips-icon {
+    height: 14px;
+    width: 12px;
+    margin: 0 6px 0 6px;
+    background: url(../img/news/news_7dd96f5d.png) no-repeat -45px -1px;
+}
+/*文字样式*/
+.s-xmancard-news .news-flash-tips span {
+    font-size: 13px;
+    color: #999;
+    color: rgba(0, 0, 0, .4);
+}
+.s-xmancard-news .news-flash-tips .left-line, 
+.s-xmancard-news .news-flash-tips .right-line {
+    height: 0;
+    width: 172px;
+    font-size: 0;
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 21px;
+}
+.s-xmancard-news .news-flash-tips .left-line, 
+.s-xmancard-news .news-flash-tips .right-line, 
+.s-xmancard-news .news-flash-tips .tips-content, 
+.s-xmancard-news .news-flash-tips .tips-icon, 
+.s-xmancard-news .news-flash-tips span {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+/*“推荐”主要内容里的热门内容容器样式*/
+.s-news-wrapper .s-news-list-wrapper {
+    float: left;
+    text-align: left;
+    width: 538px;
+    _padding-right: none;
+}
+.s-news-wrapper .s-news-list-wrapper:first-child {
+    padding-top: 0;
+}
+
+/*热门内容单独块容器样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item {
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-1 {
+    min-height: 210px;
+    _height: 210px;
+    overflow: visible;
+}
+.s-news-wrapper .s-news-list-wrapper .first {
+    border-top: 0;
+    _padding-top: 0;
+}
+.s-news-wrapper .s-news-list-wrapper:first-child .s-news-item:first-child {
+    border-top: 0;
+}
+
+/*热门内容单独块标题样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-1 h2 {
+    width: 100%;
+    height: 35px;
+    padding-top: 20px;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 {
+    position: relative;
+    z-index: 0;
+}
+.s-yahei {
+    font-family: arial, 'Microsoft Yahei', '微软雅黑';
+}
+
+/*热门内容单独块标题前“热”字样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 .status, 
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 a {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 .status {
+    height: 16px;
+    width: 16px;
+    font-size: 0;
+    margin-right: 5px;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 .prefix-0 {
+    background: url(../img/news/news_7dd96f5d.png) -20px -100px no-repeat;
+}
+
+
+/*热门内容单独块标题a标签样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-1 h2 a, 
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-3 h2 a {
+    display: inline-block;
+    width: 508px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 .status, 
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 a {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 a {
+    color: #333;
+    font-weight: bold;
+    line-height: 22px;
+}
+.s-news-wrapper .s-news-list-wrapper .s-news-item h2 a:hover {
+    color: #07f;
+}
+
+/*热门内容单独块标题下方图片ul样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-1 .s-news-content-imgs {
+    padding: 0 0 16px 0;
+    margin-left: -11px;
+}
+/*热门内容单独块标题下方图片li样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-1 .item-img-wrap {
+    margin-left: 5px;
+}
+.s-news-wrapper .s-news-list-wrapper .item-img-wrap {
+    display: inline-block;
+    zoom: 1;
+    height: 106px;
+    width: 176px;
+    overflow: hidden;
+}
+
+/*热门内容单独块图片下方来自媒体和时间容器样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item .from {
+    color: rgba(0,0,0,0.5);
+    color: #999\9;
+    height: 15px;
+    line-height: 15px;
+    font-size: 14px;
+}
+/*热门内容单独块图片下方来自媒体span标签样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item .from .src-net {
+    margin-right: 10px;
+}
+/*热门内容单独块图片下方来自媒体span标签内的a标签样式*/
+.s-news-wrapper .s-news-list-wrapper .src-net a, 
+.s-news-wrapper .s-news-list-wrapper .src-net a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    color: #999\9;
+}
+/*热门内容单独块图片下方时间span标签样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item .from .src-time {
+    _vertical-align: auto;
+}
+
+/*热门内容单独块只有1张图片的标题包裹div样式*/
+.s-news-wrapper .s-news-item-tpl-2 .s-pic-content, 
+.s-news-wrapper .s-news-item-tpl-2 .s-text-content {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+    margin-top: 20px;
+}
+.s-news-wrapper .s-news-item-tpl-2 .s-text-content {
+    width: 335px;
+    height: 96px;
+    margin-right: 24px;
+    _margin-right: 10px;
+    font-size: 13px;
+    color: #999;
+}
+/*热门内容单独块只有1张图片的标题包裹div样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-2 {
+    min-height: 146px;
+    _height: 146px;
+    overflow: visible;
+}
+/*热门内容单独块只有1张图片的标题包裹div内的h2样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-2 h2 {
+    width: 335px;
+}
+.s-news-wrapper .s-news-item-tpl-2 .s-text-content h2 {
+    position: relative;
+    margin-top: -3px;
+}
+/*热门内容单独块只有1张图片的div下面时间容器样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-2 .from {
+    margin-top: -12px;
+}
+/*热门内容单独块只有1张图片的图片包裹div样式*/
+.s-news-wrapper .s-news-item-tpl-2 .s-pic-content {
+    width: 176px;
+    zoom: 1;
+    position: relative;
+}
+
+/*热门内容单独块没有图片的div样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-3 {
+    min-height: 97px;
+    _height: 97px;
+    overflow: visible;
+}
+/*热门内容单独块没有图片的div内的h2标签样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-3 h2 {
+    width: 100%;
+    padding-top: 20px;
+}
+/*热门内容单独块没有图片的div内的时间容器样式*/
+.s-news-wrapper .s-news-list-wrapper .s-news-item-tpl-3 .from {
+    padding: 15px 0 17px 0;
+}
+
+/*“视频”外层容器样式*/
+.s-xmancard-video {
+    padding: 0 0 0 5px;
+    -webkit-transform: transition3d(0, 0, 0);
+    -moz-transform: transition3d(0, 0, 0);
+    -o-transform: transition3d(0, 0, 0);
+    -ms-transform: transition3d(0, 0, 0);
+    transform: transition3d(0, 0, 0);
+}
+/*“视频”单项容器样式*/
+.s-xmancard-video .video-col {
+    float: left;
+    margin-left: 20px;
+    width: 195px;
+    height: 320px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    _display: inline;
+    overflow: hidden;
+}
+.video-col .item-wrapper {
+    position: relative;
+}
+/*“视频”单项容器样式（有两个图片的）*/
+.s-xmancard-video .video-col .video-item-2 {
+    height: 150px;
+    margin-bottom: 20px;
+    _margin-bottom: 18px;
+}
+.s-xmancard-video .video-col .video-item {
+    width: 195px;
+    text-align: left;
+}
+
+/*“视频”单项图片容器样式*/
+.s-xmancard-video .video-col .v-pic {
+    position: relative;
+    overflow: hidden;
+}
+.s-xmancard-video .video-col .video-item .v-pic-1 {
+    width: 195px;
+    height: 270px;
+}
+.s-xmancard-video .video-col .video-item .v-pic-2 {
+    width: 195px;
+    height: 100px;
+}
+/*“视频”单项图片a标签容器样式*/
+.s-xmancard-video .video-col .video-item .v-pic a {
+    cursor: pointer;
+    text-decoration: none;
+}
+/*“视频”单项图片.bg样式*/
+.s-xmancard-video .video-col .video-item .v-pic .bg {
+    position: absolute;
+    height: 40px;
+    width: 195px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0, rgba(0,0,0,0.5) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.5)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 );
+    cursor: pointer;
+    overflow: hidden;
+}
+/*“视频”单项图片a标签内img标签容器样式*/
+.s-xmancard-video .video-col .video-item .v-pic-1 img {
+    height: 270px;
+    _height: 270px;
+}
+.s-xmancard-video .video-col .video-item .v-pic-2 img {
+    height: 100px;
+}
+.s-xmancard-video .video-col .video-item .pic-hover img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -moz-transition: transform .3s;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -o-transition: transform .3s;
+    -webkit-transition: transform .3s;
+    backface-visibility: hidden;
+}
+/*“视频”单项图片a标签内img标签容器内右下角文字样式*/
+.s-xmancard-video .video-col .v-pic .v-tag {
+    z-index: 3;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+/*“视频”单项图片a标签内img标签容器内右上角“电视剧”、“电影”样式*/
+.s-xmancard-video .item-wrapper .tag-sort {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    z-index: 3;
+    display: block;
+}
+/*“视频”单项图片a标签内img标签容器内右上角“动漫”样式*/
+.s-xmancard-video .video-col .video-item .v-pic .tag-sort1 {
+    background-image: url(../img/video/video_corner_bce72425.png);
+    background-position: 0 0;
+}
+/*“视频”单项图片a标签内img标签容器内右上角“综艺”样式*/
+.s-xmancard-video .video-col .video-item .v-pic .tag-sort2 {
+    background-image: url(../img/video/video_corner_bce72425.png);
+    background-position: -42px 0;
+}
+/*“视频”单项图片a标签内img标签容器内右上角“电视剧”样式*/
+.s-xmancard-video .video-col .video-item .v-pic .tag-sort3 {
+    background-image: url(../img/video/video_corner_bce72425.png);
+    background-position: -84px 0;
+}
+/*“视频”单项图片a标签内img标签容器内右上角“电影”样式*/
+.s-xmancard-video .video-col .video-item .v-pic .tag-sort4 {
+    background-image: url(../img/video/video_corner_bce72425.png);
+    background-position: -126px 0;
+}
+
+/*“视频”单项图片下方文字容器样式*/
+.s-xmancard-video .video-col .video-item .v-txt {
+    display: inline-block;
+    text-decoration: none;
+    zoom: 1;
+    background: #F5F5F5;
+    border: 1px solid #F1F1F1;
+    border-top: none;
+}
+.s-xmancard-video .video-col .video-item-1 .v-txt {
+    height: 49px;
+    width: 175px;
+    overflow: hidden;
+    padding: 0 9px;
+}
+.s-xmancard-video .video-col .video-item-2 .v-txt {
+    padding-top: 5px;
+    line-height: 20px;
+    height: 44px;
+    width: 179px;
+    _width: 179px;
+    overflow: hidden;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/*“视频”单项图片下方文字样式*/
+.s-xmancard-video .video-col .video-item .v-txt .text {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    text-align: left;
+    max-width: 195px;
+    _width: 175px;
+    text-decoration: none;
+}
+.s-xmancard-video .video-col .video-item-1 .v-txt .text {
+    display: block;
+    height: 14px;
+    margin-top: 6px;
+    _margin-top: 9px;
+}
+.s-xmancard-video .video-col .video-item-2 .v-txt .text {
+    display: block;
+    height: 40px;
+}
+
+/*“视频”单项图片下方文字a标签样式*/
+.s-xmancard-video .video-col .video-item .v-txt .text a {
+    font-size: 14px;
+    color: #333;
+    max-width: 195px;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.s-xmancard-video .video-col .video-item-2 .v-txt .text a {
+    margin-top: -2px;
+    white-space: normal;
+    font-size: 13px;
+    line-height: 21px;
+}
+.s-xmancard-video .video-col .video-item .v-txt .text a:hover {
+    color: #07f;
+    text-decoration: underline;
+}
+/*“视频”单项图片下方文字下方评分容器样式*/
+.s-xmancard-video .video-col .video-item-1 .v-txt .score {
+    font-size: 13px;
+    color: #999;
+    margin-top: 6px;
+    _margin-top: 1px;
+}
+
+/*“视频”单项图片下方文字下方评分容器星星图片样式*/
+.s-xmancard-video .video-col .video-item-1 .v-txt .score .score-star {
+    display: inline-block;
+    background-repeat: repeat-x;
+    height: 13px;
+    width: 65px;
+    background-image: url(../img/video/star_592adb7e.png);
+    background-repeat: repeat-x;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    position: relative;
+    margin-right: 5px;
+}
+/*“视频”单项图片下方文字下方评分容器星星图片样式*/
+.s-xmancard-video .video-col .video-item-1 .v-txt .score .score-star .star-active {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url(../img/video/star_592adb7e.png);
+    background-repeat: repeat-x;
+    background-position: 0 -13px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+/*“购物”外层容器样式*/
+.s-xmancard-shopping {
+    position: relative;
+    padding: 4px 0 14px 14px;
+}
+
+/*“购物”单项产品容器样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item {
+    float: left;
+    width: 195px;
+    height: 265px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 21px;
+    _display: inline;
+}
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item:first-child {
+    margin-left: 11px;
+}
+
+/*“购物”单项产品内层容器样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper {
+    position: relative;
+    width: 195px;
+    height: 265px;
+}
+/*“购物”单项产品内层容器a标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .img {
+    display: inline-block;
+    text-decoration: none;
+    width: 195px;
+    height: 265px;
+}
+/*“购物”单项产品内层容器img标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item img {
+    width: 195px;
+    height: 265px;
+}
+
+/*最顶层单个商品容器内的底部文字容器样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .mask {
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    height: 30px;
+    overflow: hidden;
+    width: 175px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    background: none !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .95)), to(rgba(255, 255, 255, .95))) !important;
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9ffffff, endColorstr=#d9ffffff) !important;
+}
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .mask.top {
+    bottom: 42px;
+    height: 34px;
+    line-height: 34px;
+}
+
+/*最顶层单个商品容器内的底部文字样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .mask .bsTitle {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/*最顶层单个商品容器内的底部两层文字中间线样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .cover {
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    bottom: 41px;
+    left: 10px;
+    background: none !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .95)), to(rgba(255, 255, 255, .95))) !important;
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9ffffff, endColorstr=#d9ffffff) !important;
+}
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .cover.right {
+    left: 181px;
+}
+/*最顶层单个商品容器内的底部下层文字返利百分比文字样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .mask .percentdesc {
+    color: #fe673d;
+    margin-left: 5px;
+}
+
+/*最顶层商品右侧文字上半部分容器样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsword {
+    height: 82px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+/*最顶层商品右侧文字上半部分容器内的标题p标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsword p {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+/*最顶层商品右侧文字上半部分容器内的文字span标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsword span {
+    display: inline-block;
+    font-size: 14px;
+    color: #808080;
+    margin: 6px 0 11px;
+}
+/*最顶层商品右侧文字上半部分容器内的文字“去看看”样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsword .buttondesc {
+    font-size: 12px;
+    color: #0771fb;
+}
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsword .buttondesc:hover{
+    text-decoration: underline;
+}
+
+/*最顶层商品右侧文字下半部分容器样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall {
+    text-align: left;
+}
+
+/*最顶层商品右侧文字下半部分“返利商城”文字样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall p {
+    font-size: 14px;
+    color: #000;
+    margin: 15px 0 0;
+    font-weight: bold;
+}
+
+/*最顶层商品右侧文字下半部分“返利商城”文字下的列表样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall ul {
+    list-style: disc;
+    position: relative;
+}
+
+/*最顶层商品右侧文字下半部分“返利商城”文字下的列表li标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall ul li {
+    display: inline-block;
+    margin: 14px 0 0;
+    color: #666;
+    width: 95.5px;
+    font-size: 14px;
+    list-style: square;
+    vertical-align: top;
+}
+/*最顶层商品右侧文字下半部分“返利商城”文字下的列表文字a标签样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall ul li a {
+    color: #666;
+}
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall ul li a:hover {
+    text-decoration: underline;
+}
+/*最顶层商品右侧文字下半部分“返利商城”文字下的列表文字“更多”样式*/
+.s-xmancard-shopping .shopping-card-wrapper .shopping-card-item .shopping-bsmall ul li .last {
+    font-size: 12px;
+    color: #0771fb;
+}
+
+/*“超级返”文字一层容器样式*/
+.s-xmancard-shopping .card-tab-shopping {
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 25px 0 28px 14px;
+}
+
+/*“超级返”文字列表样式*/
+.s-xmancard-shopping .card-tab-shopping .tab_0 {
+    margin-right: 4px;
+    display: inline-block;
+    width: 68px;
+    position: absolute;
+    z-index: 1;
+    padding: 10px 20px 0 13px;
+    left: 26px;
+    margin-top: -10px;
+}
+
+/*“超级返”文字列表内li标签样式*/
+.s-xmancard-shopping .card-tab-shopping li {
+    display: inline-block;
+}
+
+/*“超级返”文字列表内超链接文字样式*/
+.s-xmancard-shopping .card-tab-shopping li a {
+    color: #333;
+    text-decoration: none;
+}
+.s-xmancard-shopping .card-tab-shopping li a:hover {
+    color: #ff4800;
+    font-weight: bold;
+    cursor: pointer;
+}
+.s-xmancard-shopping .card-tab-shopping .tab-name-cur a {
+    color: #ff4800;
+    font-weight: bold;
+}
+.s-xmancard-shopping .card-tab-shopping .tab-name-cur .chaoji {
+    color: #ff4800;
+    font-weight: bold;
+}
+.s-xmancard-shopping .card-tab-shopping .tab-name-cur .lasttab {
+    color: #808080;
+    font-weight: normal;
+}
+
+/*“超级返”文字右侧下拉标签样式*/
+.s-xmancard-shopping .card-tab-shopping .arrow {
+    background: url(../img/shopping/arrow_2a4f3924.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 68px;
+    margin-top: -16px;
+}
+
+/*“超级返”文字下拉菜单样式*/
+.s-xmancard-shopping .card-tab-shopping .wrap-subtab {
+    margin-bottom: 6px;
+}
+
+.s-xmancard-shopping .card-tab-shopping .tab-name-cur .sub {
+    color: #808080;
+    font-weight: normal;
+}
+.s-xmancard-shopping .card-tab-shopping .wrap-subtab .tab-name-cur {
+    color: #ff4800;
+    font-weight: bold;
+}
+
+/*“超级返”文字右侧“9块9”文字样式*/
+.s-xmancard-shopping .card-tab-shopping .tab_1 {
+    font-size: 14px;
+    left: 125px;
+    text-align: center;
+    border-left: 1px solid #f0f0f0;
+    position: absolute;
+    border-right: 1px solid #f0f0f0;
+    line-height: 14px;
+    padding: 0 25px;
+    margin-top: 6px;
+}
+/*“超级返”文字右侧“糯米团购”文字样式*/
+.s-xmancard-shopping .card-tab-shopping .tab_2 {
+    position: absolute;
+    left: 206px;
+    text-align: right;
+    line-height: 14px;
+    margin-top: 6px;
+    border: 0;
+    padding: 0 25px;
+}
+
+/*“超级返”文字下方商品容器*/
+.s-content .tab-content {
+    display: none;
+}
+.s-xmancard-shopping .tab-content-wrap .tab-content {
+    display: none;
+    margin-left: 12px;
+}
+
+/*“超级返”文字下方单个商品容器*/
+.s-xmancard-shopping .s-index-col {
+    float: left;
+    width: 195px;
+    margin-right: 20px;
+}
+
+/*“超级返”文字下方单个商品内层容器*/
+.s-xmancard-shopping .shopping-bstab-item {
+    float: left;
+    width: 195px;
+    height: 312px;
+    overflow: hidden;
+    margin-top: 21px;
+    _padding-bottom: 3px;
+}
+
+/*“超级返”文字下方单个商品图片容器*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-imgwrapper {
+    position: relative;
+    width: 195px;
+    height: 195px;
+}
+/*“超级返”文字下方单个商品图片a标签容器样式*/
+.s-xmancard-shopping .shopping-bstab-item .img {
+    display: inline-block;
+    text-decoration: none;
+    width: 193px;
+    height: 193px;
+    border: 1px solid #f0f0f0;
+}
+/*“超级返”文字下方单个商品图片img标签样式*/
+.s-xmancard-shopping .shopping-bstab-item img {
+    width: 193px;
+    height: 193px;
+}
+
+/*“超级返”文字下方单个商品文字容器*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text {
+    cursor: pointer;
+    margin-top: 7px;
+}
+/*“超级返”文字下方单个商品标题文字容器*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .a-title {
+    text-decoration: none;
+}
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .title {
+    font-size: 14px;
+    margin-top: 10.5px;
+    color: rgb(51, 51, 51);
+    text-align: left;
+    text-decoration: none;
+    font-family: Arial;
+    line-height: 21px;
+    height: 42px;
+}
+
+/*“超级返”文字下方单个商品价格文字容器*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area {
+    margin-top: 9px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    color: #666;
+    cursor: pointer;
+}
+/*“超级返”文字下方单个商品打折后价格文字容器样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area .price {
+    float: left;
+    margin-right: 5px;
+    font-size: 20px;
+    font-family: Arial;
+}
+/*“超级返”文字下方单个商品打折后价格符号样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area .price-sign {
+    padding-right: 3px;
+    font-size: 16px;
+}
+
+/*“超级返”文字下方单个商品打折前价格文字容器样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area .or-price {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    margin-top: 4px;
+}
+/*“超级返”文字下方单个商品打折前价格文字样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area .or-price-text {
+    text-decoration: line-through;
+}
+
+/*“超级返”文字下方单个商品返利价格文字样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .fan-text {
+    float: left;
+    margin-right: 8px;
+    font-family: Arial;
+    color: #ff4800;
+    font-size: 18px;
+    margin-top: 0;
+}
+/*“超级返”文字下方单个商品返利价格“-”负号文字样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .fan-text .sign {
+    font-size: 18px;
+}
+
+/*“超级返”文字下方单个商品返现标签样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .point {
+    float: left;
+    font-family: Arial;
+    border: 1px solid #ff4800;
+    color: #ff4800;
+    padding: 1px 3px;
+    font-size: 12px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-top: 0;
+}
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .point, .s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .mall, .s-xmancard-shopping .shopping-bstab-item .shopping-card-text .price-area .mall {
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+/*“超级返”文字下方单个商品右下角京东标签样式*/
+.s-xmancard-shopping .shopping-bstab-item .shopping-card-text .fan-area .mall {
+    float: right;
+    font-size: 12px;
+    font-family: Arial;
+    color: #999;
+    border: 1px solid #a4a4a4;
+    padding: 0 2px;
+    padding-top: 1px\9;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-top: 1px;
+}
+
+/*页脚容器样式*/
+#wrapper .s-bottom-ctner {
+    position: static;
+    margin: 23px auto 12px;
+}
+.s-bottom-ctner {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 12px;
+    left: 0;
+    overflow: hidden;
+    color: #999;
+    zoom: 1;
+    margin: 0;
+}
+/*页脚a标签样式*/
+.s-bottom-ctner a {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #999;
+}
+
+/*页脚“设为首页”p标签样式*/
+#bottom_container .no-qrcode-layer .lh {
+    display: inline;
+}
+/*页脚“设为首页”文字样式*/
+.s-bottom-ctner .sethome {
+    color: #000;
+    margin-right: 12px;
+}
+
+/*页脚最后面小图标样式*/
+.s-bottom-ctner img {
+    position: relative;
+    margin: 0 0 -2px 0;
+}
+/*有皮肤时候的页脚链接样式*/
+.s-skin-hasbg .s-bottom-ctner, .s-skin-hasbg .s-bottom-ctner a {
+    color: #FFF;
+}
+
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*下面是换肤界面样式*/
+
+/*皮肤界面显示时的覆盖页面容器样式*/
+.s-skin-layer-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1112;
+}
+
+/*换肤界面的最外层容器样式*/
+.s-skin-layer {
+    position: fixed;
+    _position: absolute;
+    top: -500px;
+    left: 0;
+    width: 100%;
+    height: 288px;
+    background: #fff;
+    z-index: 1113;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+}
+
+/*菜单和内容的分界线样式*/
+.s-skin-layer .s-skin-border {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    z-index: -1;
+    border-top: 1px #e3e3e3 solid;
+    border-bottom: 1px #e3e3e3 solid;
+    _width: 1000px;
+    _left: 50%;
+    _margin-left: -500px;
+}
+
+/*换肤界面的内层容器样式*/
+.s-skin-layer .s-skin-layer-cell {
+    width: 911px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*换肤界面的菜单部分容器样式*/
+.s-skin-layer .s-skin-header {
+    height: 46px;
+}
+
+/*换肤界面的菜单容器样式*/
+.s-skin-layer .s-skin-nav {
+    height: 46px;
+    float: left;
+}
+
+/*换肤界面的菜单项li标签容器样式*/
+.s-skin-layer .skin-nav, .s-skin-layer .nav-vertial {
+    cursor: pointer;
+    height: 46px;
+    padding: 0 10px;
+    font-size: 13px;
+    float: left;
+    background: none;
+    transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -webkit-transition: background 500ms;
+}
+div.s-skin-layer .skin-nav, .s-skin-layer .nav-vertial {
+    padding: 0 8px !important;
+}
+/*换肤界面的菜单项选中状态下的li标签容器样式*/
+.s-skin-layer .choose-nav {
+    background: #389cff;
+}
+
+/*换肤界面的菜单项li标签容器内的span标签样式*/
+.s-skin-layer .s-skin-nav .skinnav-nav-name {
+    display: inline-block;
+    margin-top: 19px;
+}
+.s-skin-layer .skin-nav .skinnav-nav-name {
+    color: #666;
+}
+.s-skin-layer .skin-nav:hover .skinnav-nav-name, 
+.s-skin-layer .hover-nav4ie6 .skinnav-nav-name, 
+.s-skin-layer .choose-nav .skinnav-nav-name {
+    color: #fff;
+}
+/*鼠标悬停效果*/
+.s-skin-layer .skin-nav:hover, 
+.s-skin-layer .hover-nav4ie6 {
+    background: #389cff;
+    transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -webkit-transition: background 500ms;
+}
+/*“小清新”和“自定义”中间的竖线*/
+.s-skin-layer .nav-vertial {
+    cursor: default;
+}
+.s-skin-layer .nav-vertial-border {
+    margin-top: 20px;
+    height: 15px;
+    width: 1px;
+    overflow: hidden;
+    background: #dedede;
+    zoom: 1;
+}
+
+
+/*换肤界面的菜单部分右侧“收起”容器样式*/
+.s-skin-layer .s-skin-setting {
+    float: right;
+    margin-top: 19px;
+}
+
+/*换肤界面的菜单部分右侧“收起”容器里的透明度设置容器样式*/
+.s-skin-opacity-set {
+    color: #666;
+    float: left;
+    width: 160px;
+}
+.s-skin-opacity-set .bg-hideOrShowAjax {
+    display: block;
+    width: 100%;
+}
+.s-skin-opacity-set .bg-alphaBarTitle {
+    font-size: 13px;
+    margin-right: 10px;
+}
+.s-skin-opacity-set .bg-alphaBar, 
+.s-skin-opacity-set .bg-alphaBarMoveBtn {
+    display: inline-block;
+}
+.s-skin-opacity-set .bg-alphaBar {
+    position: relative;
+    width: 80px;
+    height: 4px;
+    border-top: 1px solid #e1e1e1;
+    background: #f2f2f2;
+    font-size: 0;
+    cursor: pointer;
+    line-height: 16px;
+}
+.s-skin-opacity-set .bg-alphaBarMoveBtn {
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fff;
+    cursor: pointer;
+}
+.s-skin-opacity-set .bg-alphaBarOpacity {
+    font-size: 11px;
+    display: block;
+    width: 28px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    top: -16px;
+    left: -8px;
+    color: #666;
+    cursor: default;
+}
+
+/*“收起”容器内隐藏的“不使用皮肤”容器样式*/
+.s-skin-layer .s-skin-set {
+    cursor: pointer;
+    float: left;
+    margin-left: 30px;
+    width: 87px;
+}
+.s-skin-layer .s-skin-set.skin-no-bg {
+    display: none;
+}
+
+.s-skin-layer .skin-bg-icon {
+    font-size: 13px;
+    background: url('../img/skin/skin_icon_82b6ef5b.png') no-repeat -1000px -1000px;
+}
+.s-skin-layer .s-skin-set span {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    vertical-align: middle;
+}
+.s-skin-layer .skinset-hasBg {
+    background-position: -24px -176px;
+    width: 14px;
+    height: 13px;
+}
+.s-skin-layer .is-hover .skinset-hasBg {
+    background-position: -24px -192px;
+    width: 14px;
+    height: 13px;
+}
+/*“不使用皮肤”文字样式*/
+.s-skin-layer .s-skin-set .skinset-title {
+    color: #666;
+    margin-left: 3px;
+}
+.s-skin-layer .s-skin-set.is-hover .skinset-title{
+    color: #0079f5;
+}
+
+
+/*“收起”字样容器样式*/
+.s-skin-layer .s-skin-up {
+    cursor: pointer;
+    float: left;
+    width: 40px;
+    margin-left: 25px;
+    color: #0079f5;
+}
+/*“收起”字样容器背景span标签样式*/
+.s-skin-layer .s-skin-up span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.s-skin-layer .s-skin-up .bg {
+    margin-right: 2px;
+    background: url('../img/skin/skin_icon_82b6ef5b.png') no-repeat -44px -175px;
+    width: 11px;
+    height: 15px;
+}
+/*“收起”字样文字样式*/
+.s-skin-layer .s-skin-up span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*换肤界面的内容部分容器样式*/
+.s-skin-layer .s-skin-photo-body {
+    padding: 25px 0 0 0;
+    height: 215px;
+    position: relative;
+}
+
+/*“背景皮肤效果预览”容器样式*/
+.s-skin-layer .s-skin-preview {
+    float: right;
+    width: 294px;
+}
+/*“背景皮肤效果预览”内层容器样式*/
+.s-skin-layer .preview-view {
+    position: relative;
+    float: right;
+    width: 264px;
+    height: 180px;
+    overflow: hidden;
+}
+/*“背景皮肤效果预览”最内层容器样式*/
+.s-skin-layer .preview-view-container {
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    width: 260px;
+    height: 163px;
+    overflow: hidden;
+}
+
+/*疑似“背景皮肤效果预览”样式*/
+.s-skin-layer .preview-skin-view {
+    border: none;
+}
+.s-skin-layer .preview-nobg img {
+    display: none;
+}
+
+.s-skin-layer .preview-defined-view {
+    border: none;
+    position: relative;
+    display: none;
+}
+.s-skin-layer .hide-defined-preview .preview-defined-view {
+    display: none;
+}
+
+/*“背景皮肤效果预览”样式*/
+.s-skin-layer .preview-pageUI {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 264px;
+    height: 180px;
+    background: url('../img/skin/skin_preview_05c7c9e3.png') no-repeat -1000px -1000px;
+}
+/*“背景皮肤效果预览”无背景时的logo样式*/
+.s-skin-layer .preview-nobg .preview-pageUI {
+    background-position: -275px 0;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://su.bdimg.com/static/superman/img/skin/skin_preview_nobg_ie6_ef8f408f.png", enabled="true",sizingMethod="crop");
+}
+/*“背景皮肤效果预览”有背景时的logo样式*/
+.s-skin-layer .preview-whitelogo .preview-pageUI {
+    background-position: 0 0;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://su.bdimg.com/static/superman/img/skin/skin_preview_nobg_ie6_ef8f408f.png", enabled="true",sizingMethod="crop");
+}
+/*“背景皮肤效果预览”文字样式*/
+.s-skin-layer .preview-title {
+    float: right;
+    margin-right: 0;
+    margin-top: 7px;
+    text-align: center;
+    width: 262px;
+    font-size: 12px;
+    color: #666;
+}
+
+/*图片选择界面的图片最外层容器样式*/
+.s-skin-layer .s-skin-border-content {
+    float: left;
+    width: 587px;
+    height: 179px;
+}
+
+/*图片选择界面的图片ul容器样式*/
+.s-skin-layer .s-skin-content {
+    position: relative;
+}
+/*图片选择界面的图片ul容器内li容器样式*/
+.s-skin-layer .s-skin-border-content li {
+    display: none;
+    height: 186px;
+    overflow: hidden;
+}
+/*统一设置所有图片选择界面内的图片ul容器内li容器样式*/
+.s-skin-layer .show-nav-1000 .content-1000, .s-skin-layer .show-nav-1001 .content-1001, .s-skin-layer .show-nav-1002 .content-1002, .s-skin-layer .show-nav-1003 .content-1003, .s-skin-layer .show-nav-1004 .content-1004, .s-skin-layer .show-nav-1005 .content-1005, .s-skin-layer .show-nav-1006 .content-1006, .s-skin-layer .show-nav-7777 .content-7777, .s-skin-layer .show-nav-8888 .content-8888, .s-skin-layer .show-nav-9999 .content-9999, .s-skin-layer .show-nav-1009 .content-1009, .s-skin-layer .show-nav-1010 .content-1010, .s-skin-layer .show-nav-1011 .content-1011, .s-skin-layer .show-nav-1012 .content-1012, .s-skin-layer .show-nav-1012 .content-1013, .s-skin-layer .show-nav-9999 .content-9999 {
+    display: block;
+}
+
+/*图片选择界面的图片第二层ul内的单个图片容器li样式（小图片）*/
+.s-skin-layer .pos-1, .s-skin-layer .pos-2, .s-skin-layer .pos-3, .s-skin-layer .pos-4, .s-skin-layer .pos-5, .s-skin-layer .pos-6, .s-skin-layer .pos-7, .s-skin-layer .pos-8, .s-skin-layer .pos-10, .s-skin-layer .pos-11 {
+    width: 97px;
+    height: 59px;
+}
+
+/*图片选择界面的图片第二层ul内的单个图片容器li样式（大图片）*/
+.s-skin-layer .s-skin-border-content .skin-img-item {
+    position: absolute;
+    cursor: pointer;
+    height: 59px;
+    width: 97px;
+}
+.s-skin-layer .s-skin-border-content .big-img-li {
+    width: 195px;
+    height: 119px;
+}
+
+.s-skin-layer .pos-0, .s-skin-layer .pos-9 {
+    width: 195px;
+    height: 119px;
+}
+
+.s-skin-layer .show-page-0 .page-0, .s-skin-layer .show-page-1 .page-1, .s-skin-layer .show-page-2 .page-2, .s-skin-layer .show-page-3 .page-3, .s-skin-layer .show-page-4 .page-4, .s-skin-layer .show-page-5 .page-5, .s-skin-layer .show-page-6 .page-6, .s-skin-layer .show-page-7 .page-7, .s-skin-layer .show-page-8 .page-8, .s-skin-layer .show-page-9 .page-9 {
+    display: block;
+}
+
+/*“新”背景图片的"新"字icon样式*/
+.s-skin-layer .skin-img-item .skin-img-item-new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-position: -184px -20px;
+    display: none;
+}
+
+
+
+/*图片选择界面的图片第二层ul内的单个图片容器li内的img标签下面的div标签样式*/
+.s-skin-layer .skin-img-item img, .s-skin-layer .skin-img-item .skin-img-item-writer, .s-skin-layer .skin-img-item .skin-img-shadow {
+    width: 97px;
+    height: 59px;
+    line-height: 59px;
+}
+.s-skin-layer .big-img-li img, .s-skin-layer .big-img-li .skin-img-item-writer, .s-skin-layer .big-img-li .skin-img-shadow {
+    width: 195px;
+    height: 119px;
+    line-height: 119px;
+}
+.s-skin-layer .skin-img-item .skin-img-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #3c3c3c;
+    opacity: 0;
+    filter: alpha(opacity=0) \9;
+    color: #fff;
+    transition: opacity 1000ms;
+    -moz-transition: opacity 1000ms;
+    -o-transition: opacity 1000ms;
+    -webkit-transition: opacity 1000ms;
+}
+.s-skin-layer .img-hide-shadow .skin-img-shadow {
+    display: none;
+}
+
+/*图片选择界面的图片第二层ul内的单个图片容器li内的img标签下面的p标签样式*/
+.s-skin-layer .skin-img-item .skin-img-item-writer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    outline: none;
+    opacity: 0;
+    filter: alpha(opacity=0) \9;
+    color: #fff;
+    transition: opacity 1000ms;
+    -moz-transition: opacity 1000ms;
+    -o-transition: opacity 1000ms;
+    -webkit-transition: opacity 1000ms;
+}
+
+/*设置每个背景图片的位置*/
+.s-skin-layer .pos-0 {
+    top: 0;
+    left: 0;
+}
+.s-skin-layer .pos-1 {
+    top: 120px;
+    left: 0;
+}
+.s-skin-layer .pos-2 {
+    top: 120px;
+    left: 98px;
+}
+.s-skin-layer .pos-3 {
+    top: 0;
+    left: 196px;
+}
+.s-skin-layer .pos-4 {
+    top: 60px;
+    left: 196px;
+}
+.s-skin-layer .pos-5 {
+    top: 120px;
+    left: 196px;
+}
+.s-skin-layer .pos-6 {
+    top: 0;
+    left: 294px;
+}
+.s-skin-layer .pos-7 {
+    top: 0;
+    left: 392px;
+}
+.s-skin-layer .pos-8 {
+    top: 60px;
+    left: 294px;
+}
+.s-skin-layer .pos-9 {
+    top: 0;
+    left: 490px;
+}
+.s-skin-layer .pos-10 {
+    top: 60px;
+    left: 490px;
+}
+.s-skin-layer .pos-11 {
+    top: 120px;
+    left: 490px;
+}
+
+/*选中背景图片后的右下角绿色对号*/
+.s-skin-layer .skin-bg-png24-icon {
+    background: url('../img/skin/skin_icon_png24_62d35ae7.png') no-repeat -1000px -1000px;
+}
+.s-skin-layer .skin-img-item .skin-img-item-choose {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background-position: -180px 0;
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://su.bdimg.com/static/superman/img/skin/skin_chooseicon_ie6_1d7b7d99.png", enabled="true",sizingMethod="crop");
+    display: none;
+}
+
+.s-skin-layer .choose-li .skin-img-item-choose {
+    display: block;
+}
+
+/*背景选择图片下方的翻页箭头容器样式*/
+.s-skin-layer .s-skin-page {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 587px;
+    height: 33px;
+}
+/*背景选择图片下方的翻页箭头容器内的ul样式*/
+.s-skin-layer .s-skin-page ul {
+    margin: 0 auto;
+}
+
+/*背景选择图片下方的翻页箭头容器里ul内的li样式*/
+.s-skin-layer .page-pre {
+    margin-right: 18px;
+}
+.s-skin-layer .skin-page-dire, .s-skin-layer .skin-page-dire div {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+.s-skin-layer .s-skin-page li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/*背景选择图片下方的翻页箭头容器里←箭头样式*/
+.s-skin-layer .page-pre div {
+    background-position: 8px -55px;
+}
+
+/*背景选择图片下方的翻页箭头容器里选页方块样式*/
+.s-skin-layer .skin-page-number.choose-page-btn {
+    background-position: 4px -12px;
+}
+.s-skin-layer .skin-page-number {
+    width: 15px;
+    height: 25px;
+    background-position: -11px -12px;
+}
+
+/*背景选择图片下方的翻页箭头容器里→箭头样式*/
+.s-skin-layer .page-next {
+    margin-left: 18px;
+}
+
+.s-skin-layer .page-next div {
+    background-position: 9px -32px;
+}
+
+
+
+/*皮肤背景图片容器样式*/
+.s-skin-container {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+}
+
+/*有皮肤背景图片时的头部容器样式*/
+.s-skin-hasbg #header {
+    border: none;
+    background: none;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(15,25,50,.3)),to(rgba(15,25,50,.3)));
+    background-image: -moz-linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
+    background-image: -ms-linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
+    background-image: -o-linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
+    background-image: linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#330f1932,endColorstr=#330f1932);
+}
+
+/*有皮肤背景图片时的头部容器内文字样式*/
+.s-skin-hasbg #header a {
+    _color: #fff;
+}
+.s-skin-hasbg #header a{
+    color: #fff;
+}
+
+.s-skin-hasbg .city-wather em {
+    color: #fff;
+}
+
+.s-skin-hasbg .s-mod-weather .unknown-text, .s-skin-hasbg .unknown-city, .s-skin-hasbg .city-wather a, .s-skin-hasbg .city-wather em, .s-skin-hasbg .city-wather .show-vertical, .s-skin-hasbg .show-pollution a, .s-skin-hasbg .show-pollution em, .s-skin-hasbg .show-pollution span {
+    color: #fff;
+}
+
+.s-skin-hasbg #header #nav a.mnav:link, .s-skin-hasbg #header #nav a.mnav:visited {
+    color: #fff;
+}
+
+.s-skin-hasbg #header #nav a.login:link, .s-skin-hasbg #header #nav a.login:visited, .s-skin-hasbg #header #nav .set a.setbtn:link, .s-skin-hasbg #header #nav .set a.setbtn:visited {
+    color: #fff;
+}
+
+
+/*有皮肤背景图片时的搜索框样式*/
+.s-skin-hasbg .content input {
+    border: 1px solid #fff;
+}
+
+/*有皮肤背景图片时的百度一下按钮样式*/
+.s-skin-hasbg .content button {
+    width: 104px;
+    height: 40px;
+    line-height: 40px;
+    line-height: 37px\9;
+    padding: 0;
+    border: 0;
+    background-position: -464px -42px;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+}
+.s-skin-hasbg .content button {
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.s-skin-hasbg .content button, .s-skin-hasbg .btn_wr {
+    background-image: url('../img/skin_dark_aab96bcc.png');
+}
+.s-skin-hasbg .content button {
+    background-position: -206px 0;
+}
+
+/*有皮肤背景图片时的搜索框下方内容导航样式*/
+.s-opacity-90 .s-opacity-blank8 {
+    border-color: rgba(226,226,226,0.9) !important;
+}
+.s-skin-hasbg .s-ctner-menus {
+    color: #333;
+    border-bottom: 1px solid #e9e9e9;
+    _background: #fff;
+    z-index: 1111111111;
+}
+.s-skin-hasbg .s-ctner-menus, #s_menu_gurd.s-down .s-ctner-menus {
+    height: 39px;
+    line-height: 40px;
+    width: 893px;
+    border: none;
+    width: 895px;
+}
+
+
+/*有皮肤背景图片时的搜索框下方内容导航内的菜单项选中状态样式*/
+.s-skin-hasbg .s-ctner-menus .current, .s-skin-hasbg .s-ctner-menus .current:hover {
+    _filter: none !important;
+    _background-color: #9a9da2 !important;
+    _color: #fff !important;
+}
+.s-opacity-90 .s-ctner-menus .current, .s-opacity-90 .s-ctner-menus .current:hover {
+    color: #333 !important;
+    background-color: transparent !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(240,240,240,.7)),to(rgba(240,240,240,.7))) !important;
+    background-image: -moz-linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    background-image: -o-linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    background-image: linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2f0f0f0,endColorstr=#b2f0f0f0) !important;
+}
+.s-skin-hasbg .s-ctner-menus .current {
+    border: none;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.s-skin-hasbg .s-ctner-menus .s-menu-item {
+    color: #333;
+    height: 39px;
+}
+
+/*有皮肤背景图片时的搜索框下方内容导航内“推荐”到“购物”容器样式*/
+.s-skin-hasbg .s-ctner-menus .s-menus-outer {
+    width: 721px;
+}
+
+/*有皮肤背景图片时的搜索框下方内容导航内“推荐”到“购物”按钮单项样式*/
+.s-skin-hasbg .s-ctner-menus .s-menu-item {
+    color: #333;
+    height: 39px;
+}
+
+.s-opacity-90 .s-opacity-white-background {
+    background: none !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.9)),to(rgba(255,255,255,0.9))) !important;
+    background-image: -moz-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: -o-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5FFFFFF,endColorstr=#E5FFFFFF) !important;
+}
+
+/*有皮肤背景图片时的搜索框下方内容导航内“购物”右侧空白容器样式*/
+.s-skin-hasbg .s-ctner-menus .s-menus-outer .s-bg-space {
+    height: 39px;
+    position: relative;
+    left: 4px;
+}
+
+/*有皮肤背景图片时的搜索框下方内容导航内的菜单项鼠标悬停样式*/
+.s-opacity-90 .s-ctner-menus .s-menu-item:hover {
+    color: #333 !important;
+    background-color: transparent !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(240,240,240,.6)),to(rgba(240,240,240,.6))) !important;
+    background-image: -moz-linear-gradient(rgba(240,240,240,.6) 0,rgba(240,240,240,.6) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(240,240,240,.6) 0,rgba(240,240,240,.6) 100%) !important;
+    background-image: -o-linear-gradient(rgba(240,240,240,.6) 0,rgba(240,240,240,.6) 100%) !important;
+    background-image: linear-gradient(rgba(240,240,240,.6) 0,rgba(240,240,240,.6) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99f0f0f0,endColorstr=#99f0f0f0) !important;
+}
+.s-skin-hasbg .s-menu-item:hover {
+    border: none;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFW…AAVcLTfgAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=) repeat\0 !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.1)),to(rgba(0,0,0,0.1)));
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.1) 0,rgba(0,0,0,0.1) 100%);
+    background-image: -ms-linear-gradient(rgba(0,0,0,0.1) 0,rgba(0,0,0,0.1) 100%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0.1) 0,rgba(0,0,0,0.1) 100%);
+    background-image: linear-gradient(rgba(0,0,0,0.1) 0,rgba(0,0,0,0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#19000000);
+    cursor: pointer;
+    margin: 0 -4px 0 0;
+}
+
+/*有皮肤背景图片时的搜索框下方的整个内容背景样式*/
+.s-opacity-90 .s-opacity-white-background {
+    /* background: none !important; */
+    /* background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.9)),to(rgba(255,255,255,0.9))) !important; */
+    background-image: -moz-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: -o-linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    background-image: linear-gradient(rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5FFFFFF,endColorstr=#E5FFFFFF) !important;
+}
+
+/*出现滚动条时页面右下角的回到顶部标签最外层容器样式*/
+.s-mancacrd-main .top-feed {
+    visibility: hidden;
+    position: fixed;
+    _position: absolute;
+    left: 50%;
+    margin-left: 447px;
+    width: 51px;
+    bottom: 30px;
+    _top: 200px;
+    _bottom: auto;
+}
+/*出现滚动条时页面右下角的回到顶部标签内层容器样式*/
+.s-mancacrd-main .top-feed .to-top, .s-mancacrd-main .top-feed .icon-qrcode {
+    position: relative;
+    height: 25px;
+    width: 38px;
+    padding-top: 12px;
+    border: 1px solid #e3e3e3;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+.s-mancacrd-main .top-feed .to-top {
+    height: 26px;
+    margin: 0 0 6px 10px;
+}
+
+/*“回到顶部”文字容器样式*/
+.s-mancacrd-main .icon-mask .text {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    line-height: 16px;
+    width: 30px;
+}
+.s-mancacrd-main .top-feed .icon-mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 38px;
+    line-height: 38px;
+    width: 38px;
+    z-index: 3;
+    font-size: 13px;
+    background-color: #eee;
+    color: #999;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #e3e3e3;
+}
+/*鼠标不在上方时的向上箭头*/
+.s-mancacrd-main .top-feed .to-top span {
+    display: block;
+    height: 17px;
+    width: 33px;
+    margin: 0 auto;
+    background: url(../img/topfed_c531aae6.png) no-repeat -1px -10px;
+    _background: url(../img/topfed_ie_a6a8d214.png) no-repeat -1px -10px;
+}
+/*鼠标在上方时隐藏向上箭头*/
+.s-mancacrd-main .top-feed .icon-over .icon {
+    background: none;
+}
+
+/*有主题背景时的样式*/
+.s-skin-hasbg .top-feed .icon-mask {
+    background: none;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5)));
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.5) 0,rgba(0,0,0,0.5) 100%);
+    background-image: -ms-linear-gradient(rgba(0,0,0,0.5) 0,rgba(0,0,0,0.5) 100%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0.5) 0,rgba(0,0,0,0.5) 100%);
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0,rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);
+    margin: 0;
+}
+.s-skin-hasbg .s-mancacrd-main .top-feed .icon-mask {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: 0;
+    color: #fff;
+}
+
+.s-skin-hasbg .s-mancacrd-main .icon-mask .text {
+    left: 5px;
+    line-height: 17px;
+}
+
+
+
+.s-skin-hasbg #s_top_feed .icon-over {
+    background-image: none;
+}
+
+
+
+.s-skin-hasbg .s-mancacrd-main .top-feed .icon-qrcode, .s-skin-hasbg .top-feed .to-top {
+    background: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)),to(rgba(0,0,0,0.3)));
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 100%);
+    background-image: -ms-linear-gradient(rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 100%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 100%);
+    background-image: linear-gradient(rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000, endColorstr=#4c000000);
+    width: 40px;
+    border: 0;
+}
+.s-mancacrd-main .top-feed .to-top {
+    height: 26px;
+    margin: 0 0 6px 10px;
+}
+.s-skin-hasbg .s-mancacrd-main .top-feed .to-top {
+    height: 28px;
+}
+.s-skin-hasbg .s-mancacrd-main .top-feed .to-top span {
+    background-position: -39px -9px;
+}
+element.style {
+    visibility: visible;
+}
+
+
+

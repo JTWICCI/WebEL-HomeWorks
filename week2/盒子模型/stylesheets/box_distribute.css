@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* 弹性盒子水平与垂直分栏的css文件 */
+
+/* 为所有需要flex声明的元素统一声明*/
+.hor,
+.vir,
+.order,
+.o1,
+.o2,
+.o3,
+.old_con {
+    /* 居中显示 */
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px;
+    /* 新版弹性盒声明 */
+    display: flex;
+    display: -webkit-flex;
+}
+
+/* 弹性盒子水平分栏 */
+.hor {
+    height: 100px;
+    width: 600px;
+    background-color: black;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+/* 为所有水平分栏的内部div设定高度*/
+.hor div {
+    height: 100px;
+}
+
+/* 弹性盒子垂直分栏 */
+.vir {
+    height: 200px;
+    width: 400px;
+    background-color: black;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+/* 为所有垂直分栏的内部div设定宽度*/
+.vir div {
+    width: 400px;
+}
+
+/* 设置每个分栏div块的颜色和占比 */
+.c1 {
+    background-color: red;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.c2 {
+    background-color: orange;
+    flex: 2;
+    -webkit-flex: 2;
+}
+
+.c3 {
+    background-color: yellow;
+    flex: 3;
+    -webkit-flex: 3;
+}
+
+.c4 {
+    background-color: green;
+    flex: 4;
+    -webkit-flex: 4;
+}
+
+.c5 {
+    background-color: aqua;
+    flex: 5;
+    -webkit-flex: 5;
+}
+
+.c6 {
+    background-color: blue;
+    flex: 6;
+    -webkit-flex: 6;
+}
+
+.c7 {
+    background-color: purple;
+    flex: 7;
+    -webkit-flex: 7;
+}

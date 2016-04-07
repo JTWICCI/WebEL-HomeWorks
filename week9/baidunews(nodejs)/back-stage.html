@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/backstage.css" />
+</head>
+
+<body>
+    <div id="add_success" class="sqlresponse">数据添加成功！</div>
+    <div id="edit_success" class="sqlresponse">数据修改成功！</div>
+    <div id="update_success" class="sqlresponse">数据更新成功！</div>
+    <div id="delete_success" class="sqlresponse">数据删除成功！</div>
+    <div id="add_failed" class="sqlresponse failed">数据添加失败！</div>
+    <div id="edit_failed" class="sqlresponse failed">数据修改失败！</div>
+    <div id="update_failed" class="sqlresponse failed">数据更新失败！</div>
+    <div id="delete_failed" class="sqlresponse failed">数据删除失败！</div>
+    <div id="error_info"></div>
+
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" target="#" style="font-weight: bold; font-size: 1.5em">百度新闻后台管理系统</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">管理员</a></li>
+                    <li><a href="#">修改密码</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏下方所有内容容器-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--左侧边栏-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar text-center">
+                    <li class="active" pgtype="1"><a href="#"><i class="icon-font">&#xe052;</i>&nbsp;图片轮播</a></li>
+                    <li pgtype="2"><a href="#"><i class="icon-font">&#xe005;</i>&nbsp;滚动文字</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li pageid="1" pgtype="3"><a href="#"><i class="icon-font">&#xe008;</i>&nbsp;推荐内容</a></li>
+                    <li pageid="2" pgtype="3"><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;百家内容</a></li>
+                    <li pageid="3" pgtype="3"><a href="#"><i class="icon-font">&#xe006;</i>&nbsp;本地内容</a></li>
+                    <li pageid="4" pgtype="3"><a href="#"><i class="icon-font">&#xe033;</i>&nbsp;图片内容</a></li>
+                    <li pageid="5" pgtype="3"><a href="#"><i class="icon-font">&#xe012;</i>&nbsp;娱乐内容</a></li>
+                    <li pageid="6" pgtype="3"><a href="#"><i class="icon-font">&#xe004;</i>&nbsp;社会内容</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li pageid="7" pgtype="3"><a href="#"><i class="icon-font">&#xe008;</i>&nbsp;军事内容</a></li>
+                    <li pageid="8" pgtype="3"><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;科技内容</a></li>
+                    <li pageid="9" pgtype="3"><a href="#"><i class="icon-font">&#xe006;</i>&nbsp;互联内容</a></li>
+                    <li pageid="10" pgtype="3"><a href="#"><i class="icon-font">&#xe033;</i>&nbsp;女人内容</a></li>
+                    <li pageid="11" pgtype="3"><a href="#"><i class="icon-font">&#xe012;</i>&nbsp;搞笑内容</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li pageid="12" pgtype="3"><a href="#"><i class="icon-font">&#xe008;</i>&nbsp;生活内容</a></li>
+                    <li pageid="13" pgtype="3"><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;国际内容</a></li>
+                    <li pageid="14" pgtype="3"><a href="#"><i class="icon-font">&#xe006;</i>&nbsp;国内内容</a></li>
+                    <li pageid="15" pgtype="3"><a href="#"><i class="icon-font">&#xe033;</i>&nbsp;体育内容</a></li>
+                    <li pageid="16" pgtype="3"><a href="#"><i class="icon-font">&#xe012;</i>&nbsp;汽车内容</a></li>
+                    <li pageid="17" pgtype="3"><a href="#"><i class="icon-font">&#xe004;</i>&nbsp;财经内容</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li pageid="18" pgtype="3"><a href="#"><i class="icon-font">&#xe008;</i>&nbsp;房产内容</a></li>
+                    <li pageid="19" pgtype="3"><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;时尚内容</a></li>
+                    <li pageid="20" pgtype="3"><a href="#"><i class="icon-font">&#xe006;</i>&nbsp;教育内容</a></li>
+                    <li pageid="21" pgtype="3"><a href="#"><i class="icon-font">&#xe033;</i>&nbsp;游戏内容</a></li>
+                    <li pageid="22" pgtype="3"><a href="#"><i class="icon-font">&#xe012;</i>&nbsp;旅游内容</a></li>
+                    <li pageid="23" pgtype="3"><a href="#"><i class="icon-font">&#xe004;</i>&nbsp;人文内容</a></li>
+                </ul>
+                <ul class="nav nav-sidebar text-center">
+                    <li pageid="24" pgtype="3"><a href="#"><i class="icon-font">&#xe008;</i>&nbsp;创意内容</a></li>
+                    <li pageid="25" pgtype="3"><a href="#"><i class="icon-font">&#xe003;</i>&nbsp;互联网加</a></li>
+                </ul>
+            </div>
+            <!--右侧主体内容框架-->
+            <div id="cont_display">
+                <!--根据左侧按钮选择变化异步加载内容-->
+            </div>
+        </div>
+    </div>
+    <!--点“编辑”后弹出的修改数据界面（编辑面板）-->
+    <nav class="navbar navbar-default navbar-fixed-bottom" id="edit_pannel">
+        <div class="container panel">
+            <div class="edit-cont edit-cont-1">
+                <!--“三图展示”的提交表单-->
+                <form  id="edit_contype_1">
+                    <!--隐式提交值，指明当前表单是为修改数据-->
+                    <input type="hidden" name="actype" value="edit" />
+                    <input type="hidden" name="displaytype" value="1" />
+                    <input type="hidden" name="contid" value="" />
+                    <input type="hidden" name="tbname" value="" />
+                    <input type="hidden" name="contentid" value="" />
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-7">
+                            <div class="input-group">
+                                <span class="input-group-addon">标题文字</span>
+                                <input type="text" name="title" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">标签</span>
+                                <select name="tagtype" class="form-control">
+                                    <option value="0">无</option>
+                                    <option value="1">有</option>
+                                </select>
+                                <span class="input-group-addon">标签文字</span>
+                                <input type="text" name="tagtext" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">图片1地址</span>
+                                <input type="text" name="image1_src" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">图片2地址</span>
+                                <input type="text" name="image2_src" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">图片3地址</span>
+                                <input type="text" name="image3_src" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">链接指向地址</span>
+                                <input type="text" name="href" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="submit" name="submit" class="btn btn-success" value="修改" />
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="edit-cont edit-cont-2" >
+                <!--“单图展示”的提交表单-->
+                <form id="edit_contype_2">
+                    <input type="hidden" name="actype" value="edit" />
+                    <input type="hidden" name="displaytype" value="2" />
+                    <input type="hidden" name="contid" value="" />
+                    <input type="hidden" name="tbname" value="" />
+                    <input type="hidden" name="contentid" value="" />
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-7">
+                            <div class="input-group">
+                                <span class="input-group-addon">标题文字</span>
+                                <input type="text" name="title" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">标签</span>
+                                <select name="tagtype" class="form-control">
+                                    <option value="0">无</option>
+                                    <option value="1">有</option>
+                                </select>
+                                <span class="input-group-addon">标签文字</span>
+                                <input type="text" name="tagtext" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-7">
+                            <div class="input-group">
+                                <span class="input-group-addon">概述文字</span>
+                                <input type="text" name="discribe" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">图片地址</span>
+                                <input type="text" name="image1_src" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">链接指向地址</span>
+                                <input type="text" name="href" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="submit" name="submit" class="btn btn-success" value="修改" />
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="edit-cont edit-cont-3">
+                <!--“文本展示”的提交表单-->
+                <form id="edit_contype_3">
+                    <input type="hidden" name="actype" value="edit" />
+                    <input type="hidden" name="displaytype" value="3" />
+                    <input type="hidden" name="contid" value="" />
+                    <input type="hidden" name="tbname" value="" />
+                    <input type="hidden" name="contentid" value="" />
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-7">
+                            <div class="input-group">
+                                <span class="input-group-addon">标题文字</span>
+                                <input type="text" name="title" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">标签</span>
+                                <select name="tagtype" class="form-control">
+                                    <option value="0">无</option>
+                                    <option value="1">有</option>
+                                </select>
+                                <span class="input-group-addon">标签文字</span>
+                                <input type="text" name="tagtext" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">概述文字</span>
+                                <input type="text" name="discribe" class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">链接指向地址</span>
+                                <input type="text" name="href" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="submit" name="submit" class="btn btn-success" value="修改" />
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="edit-cont edit-cont-4">
+                <form id="edit_contype_4">
+                    <input type="hidden" name="actype" value="edit" />
+                    <input type="hidden" name="displaytype" value="4" />
+                    <input type="hidden" name="contid" value="" />
+                    <input type="hidden" name="tbname" value="" />
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-xs-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">滚动字幕标题</span>
+                                <input type="text" name="title" class="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="submit" class="btn btn-success" value="修改" />
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-default">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript" src="js/jQuery-v2-1-1.js"></script>
+    <script type="text/javascript" src="js/backstage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/BaiduHP_mobile.css" media="screen and (max-width:500px)">
+    <link rel="stylesheet" type="text/css" href="stylesheets/BaiduHP.css" media="screen and (min-width:500px)">
+</head>
+
+<body>
+    <!--手机端百度页面布局-->
+    <div id="wrapper_mobile">
+        <div id="header_mob">
+            <div id="userinfo-wrap">
+                <a id="login" class="icon-login"></a>
+            </div>
+            <div id="logo_mob">
+                <img src="./img/plus_logo.png" width="175" height="55" alt="百度一下,你就知道">
+            </div>
+            <form class="se-form" id="index-form" action="/from=844b/s" method="get" autocomplete="off">
+                <div class="con-wrap">
+                    <textarea autocomplete="off" autocorrect="off" maxlength="64" id="index-kw" name="word" class="se-input adjust-input" data-sug="1"></textarea>
+                    <div class="se-inner">
+                        <button id="index-bn" class="se-bn" type="submit">百度一下</button>
+                    </div>
+                </div>
+            </form>
+            <div id="navs">
+                <a href="http://m.baidu.com/news?fr=mohome&amp;ssid=0&amp;from=844b&amp;uid=&amp;pu=sz%401320_2004%2Cta%40iphone_1_8.0_19_&amp;bd_page_type=1" data-stats="10|2|navs|a1_l1">
+                	<i class="navs-news"></i>
+                	新闻
+                </a>
+                <a href="http://dushu.baidu.com" data-stats="10|2|navs|a1_l2">
+                	<i class="navs-novel"></i>
+                	小说
+                </a>
+                <a href="http://video.m.baidu.com/?from=wise_nav" data-stats="10|2|navs|a1_l3">
+                	<i class="navs-video"></i>
+                	视频
+                </a>
+                <a href="http://life.m.baidu.com?sfrom=wise_nav" data-stats="10|2|navs|a1_l4">
+                	<i class="navs-life"></i>
+                	糯米
+                </a>
+                <a href="http://map.baidu.com/mobile/webapp/index/index/?itj=45&amp;wtj=wi&amp;ssid=0&amp;from=844b&amp;uid=&amp;pu=sz%401320_2004%2Cta%40iphone_1_8.0_19_&amp;bd_page_type=1" data-schema="baidumap://map?src=wise.show.index.nav" data-stats="10|2|navs|a1_l5">
+                	<i class="navs-map"></i>
+                	地图
+                </a>
+                <a href="javascript:;" data-stats="10|2|navs|a1_l6">
+                	<i class="navs-more"></i>
+                	更多
+                </a>
+            </div>
+        </div>
+        <div id="plus-card" style="display: block;">
+            <div id="nav_mob" class="plus">
+                <div class="plus-title">
+                    <div class="normal-title">
+                        <h2>常用网址</h2>
+                    </div>
+                </div>
+                <div class="plus-content " id="nav-list" href="javascript:;" style="display: block">
+                	<a data-basicurl="http://m.hao123.com?itj=49" data-type="1007" href="http://m.hao123.com?itj=49" class="hao123" data-stype="0" data-rid="7729528778317364611" data-extra="0">
+                		<span>hao123</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://image.baidu.com/search/wiseindex?tn=wiseindex&amp;wiseps=1" data-type="1007" href="http://image.baidu.com/search/wiseindex?tn=wiseindex&amp;wiseps=1" data-stype="0" data-rid="4370446148754932850" data-extra="0">
+                		<span>图片</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://sina.cn/" data-type="1007" href="http://sina.cn/" data-stype="0" data-rid="7020664812555100974" data-extra="0">
+                		<span>新浪</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://i.ifeng.com/" data-type="1007" href="http://i.ifeng.com/" data-stype="0" data-rid="1047946086876991163" data-extra="0">
+                		<span>凤凰网</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://m.taobao.com/" data-type="1007" href="http://m.taobao.com/" data-stype="0" data-rid="1240026075366240122" data-extra="0">
+                		<span>淘宝</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://3g.qq.com/" data-type="1007" href="http://3g.qq.com/" data-stype="0" data-rid="408424208967191828" data-extra="0">
+                		<span>腾讯</span>
+                		<div data-icon="edit-close"></div>
+                	</a>
+                	<a data-basicurl="http://www.iqiyi.com/" data-type="1007" href="http://www.iqiyi.com/" data-stype="0" data-rid="2265095729623294092" data-extra="0">
+                		<span>爱奇艺</span>
+                		<div data-icon="edit-close"></div></a><a class="to-view edit-add icon-add" href="javascript:;">
+                	</a>
+                    <a class="index-arrow icon-arrow" href="javascript:;" style="display: none">
+                        <div>
+                            <p>添加网址</p>
+                            <p>常用网址，等你来添加</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="lbs" class="plus">
+            	<link rel="stylesheet" type="text/css" href="./stylesheets/LS_btn.css">
+            	<div class="plus-title">
+	            	<div class="normal-title">
+		            	<h2> 生活服务</h2>
+	            	</div>
+            	</div>
+            	<div class="plus-content">
+	            	<div class="gps-zone">
+	            		<div class="gps-info">
+	            			<p>点击定位，查看附近位置信息</p>
+	            		</div>
+	            			<button>定位</button>
+	            			<span>
+	            				<i class="icon-position"></i>
+	            				<i class="icon-position-loading"></i>
+	            			</span>
+	            	</div>
+            		<ul id="lbs-list" class="">
+            			<li>
+            				<a href="http://vip.baidu.com/wiseui/goto/i?mall_id=601&amp;url=592c5sZv3Kgf2TJLdElUpL2qU3UZ7y5EbQyw1n8LcjFUuZOfb%2FOROc2VUD4FR4%2F4AkR%2FUNExJYNX5udQadVmvG0xn6Qk3MhbPznrhMiErxAsGtc0jJ%2FGb2I%2B&amp;statkey=zw_wiseshdy_m_601&amp;vip_frm=wise_shdy&amp;w=&quot;0_0_%E7%94%B5%E5%BD%B1&quot;" data-stats="10|2|lbs|a2_l1">
+            					<div class="icon-film"></div>
+            					<p>电影</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/wiseui/show/gotopartner?id=112&amp;url=febfzhq9de9L%2BbqHP5xwB9R4SSHjAAEMDxzRX%2FZW5SsERUvmnr3JLsLK5QockAB3SOpH%2BLpFdlrL7iQRnQo&amp;statkey=zw_wiseshnm_m_112&amp;vip_frm=wise_shnm&amp;w=&quot;0_0_%E5%9B%A2%E8%B4%AD&quot;" data-stats="10|2|lbs|a2_l2">
+            					<div class="icon-groupon"></div>
+            					<p>团购</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://waimai.baidu.com/mobile/waimai?utm_source=baidu&amp;utm_medium=wise&amp;utm_content=default&amp;utm_term=default&amp;utm_campaign=default&amp;cid=993678&amp;w=&quot;0_0_%E5%A4%96%E5%8D%96&quot;" data-stats="10|2|lbs|a2_l3">
+            					<div class="icon-takeout"></div>
+            					<p>外卖</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="https://rentcar.baidu.com/zuche/index/?third_party=wiseshfw_uber&amp;src_from=wiseshfw_uber&amp;w=&quot;0_0_%E6%89%93%E8%BD%A6&quot;" data-stats="10|2|lbs|a2_l4">
+            					<div class="icon-taxi"></div>
+            					<p>打车</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=4&amp;w=&quot;0_0_%E9%85%92%E5%BA%97&quot;" data-stats="10|2|lbs|a2_l5">
+            					<div class="icon-hotel"></div>
+            					<p>酒店</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/wiseui/show/gotopartner?id=112&amp;url=7a52%2FE0wVmFLcKD7npLqlmghh49JAQakv8TPglZ2PUeVrBnAe3QlwS1jfiEBPOCl8lLyuefLXWpc%2FsDnhAfkGLOtXKDOP2zbvjRkbqFMaw&amp;statkey=zw_wiseshnm_m_112&amp;vip_frm=wise_shnm&amp;w=&quot;0_0_%E7%BE%8E%E9%A3%9F&quot;" data-stats="10|2|lbs|a2_l6">
+            					<div class="icon-delicacy"></div>
+            					<p>美食</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/wiseui/show/gotopartner?id=112&amp;url=5b8bnOzY7eam2VaPfoL%2FkiAwz2azJar8R0apFLXV%2Bn3dIC3BMXcMrY83ZYJfMqUIbhXF95f9jEgqyPZp0UaQx7y4%2FICZhgBaXGosORdT%2FA&amp;statkey=zw_wiseshnm_m_112&amp;vip_frm=wise_shnm&amp;w=&quot;0_0_KTV&quot;" data-stats="10|2|lbs|a2_l7">
+            					<div class="icon-KTV"></div>
+            					<p>KTV</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://map.baidu.com/mobile/webapp/search/search/qt=s&amp;wd=%E9%93%B6%E8%A1%8C&amp;third_party=webapp_wise_nearby&amp;w=&quot;0_0_%E9%93%B6%E8%A1%8C&quot;" data-stats="10|2|lbs|a2_l8">
+            					<div class="icon-bank"></div>
+            					<p>银行</p>
+            				</a>
+            			</li>
+            			<!-- <li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=1&amp;w=&quot;0_0_%E9%A3%9E%E6%9C%BA%E7%A5%A8&quot;" data-stats="10|2|lbs|a2_l9">
+            					<div class="icon-plane"></div>
+            					<p>飞机票</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=3&amp;w=&quot;0_0_%E7%81%AB%E8%BD%A6%E7%A5%A8&quot;" data-stats="10|2|lbs|a2_l10">
+            					<div class="icon-train"></div>
+            					<p>火车票</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=5&amp;w=&quot;0_0_%E6%B1%BD%E8%BD%A6%E7%A5%A8&quot;" data-stats="10|2|lbs|a2_l11">
+            					<div class="icon-car"></div>
+            					<p>汽车票</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://map.baidu.com/mobile/webapp/search/search/qt=s&amp;wd=%E5%85%AC%E4%BA%A4%E7%AB%99&amp;third_party=webapp_wise_nearby&amp;w=&quot;0_0_%E5%85%AC%E4%BA%A4%E7%AB%99&quot;" data-stats="10|2|lbs|a2_l12">
+            					<div class="icon-bus"></div>
+            					<p>公交站</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=2&amp;w=&quot;0_0_%E6%97%85%E8%A1%8C&quot;" data-stats="10|2|lbs|a2_l13">
+            					<div class="icon-travel"></div>
+            					<p>旅行</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://yi.baidu.com/search?bidword=&amp;zt=dasoushouji&amp;w=&quot;0_0_%E6%8C%82%E5%8F%B7&quot;" data-stats="10|2|lbs|a2_l14">
+            					<div class="icon-medical"></div>
+            					<p>挂号</p>
+            				</a>
+            			</li>
+            			<li>
+            				<a href="http://vip.baidu.com/cps/push/xiechenggotourl?type=6&amp;w=&quot;0_0_%E9%97%A8%E7%A5%A8&quot;" data-stats="10|2|lbs|a2_l15">
+            					<div class="icon-ticket"></div>
+            					<p>门票</p>
+            				</a>
+            			</li> -->
+            		</ul>
+            		<div class="plus-control">
+            			<span class="prompt">展示全部</span>
+            			<i class="icon-arrow"></i>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div id="bottom">
+        	<link rel="stylesheet" type="text/css" href="./stylesheets/bottom_mob.css"/>
+        	<ul class="uzv34">
+        		<li class="hotIcon">
+        			<a href="http://uil.cbs.baidu.com/urlsafe/redirect?rid=100055">百度浏览器，上网提速200%
+        			</a>
+        		</li>
+        		<li class="baiduIcon">
+        			<a href="https://itunes.apple.com/app/apple-store/id382201985?pt=328057&amp;ct=n-wise-20160121&amp;mt=8">手机百度，最省流量的极速搜索APP
+        			</a>
+        		</li>
+        		<li class="hotIcon">
+        			<a href="http://e.baidu.com/m2/?refer=209">百度推广，让有需求的客户找到你
+        			</a>
+        		</li>
+        	</ul>
+        	<div id="foot">
+        		<div>
+        			<a href="http://ufosdk.baidu.com/?m=Client&amp;a=postView&amp;appid=517&amp;activityId=1&amp;needEmail=false&amp;u=wise&amp;bw=7CD07297DA48D237853C52B0079F38BB&amp;kw=&amp;tn=iphone" data-stats="10|2|foot|a1_b2">
+        				<i class="icon-feedback"></i>
+        				用户反馈
+        			</a>
+        		</div>
+        		<a id="index-copyright" href="http://m.baidu.com/pub/help.php?pn=25&amp;ssid=0&amp;from=844b&amp;uid=&amp;pu=sz%401320_2004%2Cta%40iphone_1_8.0_19_&amp;bd_page_type=1" data-stats="10|2|foot|a2_l1">
+        			使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号
+        		</a>
+        	</div>
+        	<div id="admin-bottom" style="display: none;">
+        		管理我的卡片
+        	</div>
+        </div>
+    </div>
+    <!--PC端百度页面布局-->
+    <div id="wrapper_pc">
+        <div id="header">
+            <div id="nav">
+                <a href="http://www.nuomi.com/?cid=002540" class="mnav">糯米</a>
+                <a href="http://news.baidu.com/" class="mnav">新闻</a>
+                <a href="http://www.hao123.com/" class="mnav">hao123</a>
+                <a href="http://map.baidu.com/" class="mnav">地图</a>
+                <a href="http://v.baidu.com/" class="mnav">视频</a>
+                <a href="http://tieba.baidu.com/" class="mnav">贴吧</a>
+                <a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" class="login">登录</a>
+                <div class="set">
+                    <a href="javascript:;" class="setbtn">设置</a>
+                    <div class="setmenu">
+                        <span class="icon-sharp"></span>
+                        <a href="javascript:;" class="searchset">搜索设置</a>
+                        <a href="https://www.baidu.com/gaoji/advanced.html" class="advsearch">高级搜索</a>
+                        <a href="javascript:;" class="closepre">关闭预测</a>
+                        <a href="javascript:;" class="searchis">搜索历史</a>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="javascript:;" id="morepro">更多产品</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="logo">
+                <img src="img/bd_logo1.png" alt="百度Logo">
+            </div>
+            <form id="form" action="http://www.baidu.com/s" method="get" target="_blank">
+                <span class="textbox">
+					<input type="text" name="wd" value maxlength="255" autocomplete="off" autofocus="autofocus" />
+				</span>
+                <span class="btnbox">
+					<button type="submit">百度一下</button>
+				</span>
+            </form>
+        </div>
+        <div id="footer">
+            <div class="ftwrapper">
+                <div id="qrcode">
+                    <div class="qrcode-item qrcode-item-1">
+                        <div class="qrcode-img">
+                            <img src="img/shouji.png">
+                        </div>
+                        <div class="qrcode-text">
+                            <p>
+                                <b>手机百度</b>
+                            </p>
+                            <p>
+                                <span>快人一步</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qrcode-item qrcode-item-2">
+                        <div class="qrcode-img">
+                            <img src="img/nuomi.png">
+                        </div>
+                        <div class="qrcode-text">
+                            <p>
+                                <b>百度糯米</b>
+                            </p>
+                            <p>
+                                <span>一元大餐</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ftConw">
+                    <p id="lh">
+                        <a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>
+                        <a href="http://home.baidu.com/">关于百度</a>
+                        <a href="http://ir.baidu.com/">About&nbsp;&nbsp;Baidu</a>
+                    </p>
+                    <p id="cp">
+                        ©2016&nbsp;Baidu
+                        <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                        <a href="http://jianyi.baidu.com/" class="cp-feedback">意见反馈</a> 京ICP证030173号
+                        <i class="c-icon-icrlogo"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--更多产品下拉菜单列表-->
+    <div id="moreprolist">
+        <ul>
+            <li class="moreprotext">更多产品</li>
+            <li>
+                <a href="http://music.baidu.com/" class="more-music">
+                    <img src="img/music.png">
+                    <span>音乐</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://image.baidu.com/" class="more-pic">
+                    <img src="img/pic.png">
+                    <span>图片</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://zhidao.baidu.com/" class="more-know">
+                    <img src="img/know.png">
+                    <span>知道</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://wenku.baidu.com/" class="more-litera">
+                    <img src="img/litera.png">
+                    <span>文库</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://top.baidu.com/" class="more-rank">
+                    <img src="img/rank.png">
+                    <span>风云榜</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://e.baidu.com/?refer=888" class="more-ad">
+                    <img src="img/ad.png">
+                    <span>百度推广</span>
+                </a>
+            </li>
+        </ul>
+        <a href="https://www.baidu.com/more/" class="more-all">全部产品</a>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/BaiduHP.js"></script>
+    <!-- jQuery 1.7.2 or higher -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</body>
+
+</html>
